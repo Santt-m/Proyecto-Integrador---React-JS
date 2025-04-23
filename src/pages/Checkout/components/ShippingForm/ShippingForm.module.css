@@ -1,0 +1,119 @@
+.shippingForm {
+  background-color: var(--background-card);
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
+}
+
+.shippingForm h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.formRow {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -10px;
+}
+
+.formGroup {
+  flex: 1 1 250px;
+  margin: 0 10px 15px;
+  position: relative;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.formGroup input[type="text"],
+.formGroup input[type="email"],
+.formGroup input[type="tel"] {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  background-color: var(--input-background);
+  color: var(--text-primary);
+}
+
+.formGroup input[type="text"]:focus,
+.formGroup input[type="email"]:focus,
+.formGroup input[type="tel"]:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.inputError {
+  border-color: var(--error) !important;
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+}
+
+.checkboxContainer {
+  display: flex;
+  align-items: center;
+  margin-top: 5px;
+}
+
+.checkboxContainer input[type="checkbox"] {
+  margin-right: 10px;
+  accent-color: var(--primary);
+}
+
+.checkboxContainer label {
+  color: var(--text-primary);
+}
+
+.formActions {
+  margin-top: 25px;
+  display: flex;
+  justify-content: flex-end;
+}
+
+.continueButton {
+  background-color: var(--primary);
+  color: var(--text-on-primary);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.continueButton:hover {
+  background-color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+  }
+  
+  .formGroup {
+    margin-bottom: 20px;
+  }
+  
+  .error {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 5px;
+  }
+}

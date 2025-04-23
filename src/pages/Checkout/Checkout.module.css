@@ -1,0 +1,186 @@
+.checkoutContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.pageTitle {
+  font-size: 2rem;
+  color: var(--text-primary);
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+.stepIndicator {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 40px;
+  position: relative;
+}
+
+.step {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  z-index: 1;
+}
+
+.stepNumber {
+  width: 35px;
+  height: 35px;
+  background-color: var(--background-secondary);
+  color: var(--text-secondary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  font-weight: bold;
+  margin-bottom: 8px;
+  transition: all 0.3s ease;
+}
+
+.stepLabel {
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+  font-weight: 500;
+  transition: color 0.3s ease;
+}
+
+.step.active .stepNumber {
+  background-color: var(--primary);
+  color: var(--text-on-primary);
+}
+
+.step.active .stepLabel {
+  color: var(--text-primary);
+  font-weight: 600;
+}
+
+.stepConnector {
+  height: 3px;
+  background-color: var(--border-color);
+  flex: 1;
+  max-width: 100px;
+  margin: 0 15px;
+  margin-top: -25px;
+  transition: background-color 0.3s ease;
+}
+
+.step.active + .stepConnector {
+  background-color: var(--primary);
+}
+
+.checkoutContent {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.shippingSection, 
+.paymentSection {
+  display: grid;
+  grid-template-columns: 1fr 300px;
+  gap: 20px;
+  align-items: start;
+}
+
+.cartSummaryMini {
+  position: sticky;
+  top: 20px;
+}
+
+.actionButtons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.continueButton {
+  background-color: var(--primary);
+  color: var(--text-on-primary);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.continueButton:hover {
+  background-color: var(--primary-dark);
+}
+
+.backButton {
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.backButton:hover {
+  background-color: var(--background-tertiary);
+}
+
+.loadingOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-background);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.spinner {
+  width: 50px;
+  height: 50px;
+  border: 5px solid var(--background-secondary);
+  border-top: 5px solid var(--primary);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+  margin-bottom: 15px;
+}
+
+.loadingOverlay p {
+  color: var(--text-primary);
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+.confirmationSection {
+  margin-top: 20px;
+}
+
+@media (max-width: 768px) {
+  .shippingSection, 
+  .paymentSection {
+    grid-template-columns: 1fr;
+  }
+  
+  .cartSummaryMini {
+    position: static;
+    order: -1;
+  }
+  
+  .stepIndicator {
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  
+  .stepConnector {
+    max-width: 50px;
+  }
+}

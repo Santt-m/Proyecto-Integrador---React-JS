@@ -1,0 +1,195 @@
+.paymentMethod {
+  background-color: var(--background-card);
+  border-radius: 8px;
+  padding: 25px;
+  box-shadow: var(--box-shadow);
+  margin-bottom: 20px;
+}
+
+.paymentMethod h2 {
+  font-size: 1.5rem;
+  margin-bottom: 20px;
+  color: var(--text-primary);
+  border-bottom: 1px solid var(--border-color);
+  padding-bottom: 10px;
+}
+
+.paymentOptions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  margin-bottom: 25px;
+}
+
+.paymentOption {
+  flex: 1 1 150px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 15px;
+  border: 2px solid var(--border-color);
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.paymentOption:hover {
+  border-color: var(--primary-light);
+  background-color: var(--background-hover);
+}
+
+.paymentOption.selected {
+  border-color: var(--primary);
+  background-color: var(--background-selected);
+}
+
+.paymentIcon {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  background-color: var(--background-secondary);
+}
+
+.paypalIcon, .mercadoPagoIcon {
+  font-weight: bold;
+  color: #3b7bbf;
+}
+
+.mercadoPagoIcon {
+  color: #009ee3;
+}
+
+.paymentLabel {
+  font-weight: 500;
+  color: var(--text-primary);
+}
+
+.cardForm {
+  margin-top: 20px;
+}
+
+.formGroup {
+  margin-bottom: 20px;
+  position: relative;
+}
+
+.formGroup label {
+  display: block;
+  margin-bottom: 6px;
+  font-size: 0.9rem;
+  color: var(--text-secondary);
+}
+
+.formGroup input {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  font-size: 1rem;
+  transition: border-color 0.3s;
+  background-color: var(--input-background);
+  color: var(--text-primary);
+}
+
+.formGroup input:focus {
+  border-color: var(--primary);
+  outline: none;
+}
+
+.inputError {
+  border-color: var(--error) !important;
+}
+
+.error {
+  color: var(--error);
+  font-size: 0.8rem;
+  position: absolute;
+  bottom: -18px;
+  left: 0;
+}
+
+.formRow {
+  display: flex;
+  gap: 15px;
+}
+
+.formRow .formGroup {
+  flex: 1;
+}
+
+.alternativePayment {
+  background-color: var(--background-secondary);
+  padding: 20px;
+  border-radius: 4px;
+  margin-top: 20px;
+  text-align: center;
+}
+
+.alternativePayment p {
+  margin: 0;
+  color: var(--text-secondary);
+}
+
+.formActions {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.backButton {
+  background-color: var(--background-secondary);
+  color: var(--text-primary);
+  border: none;
+  padding: 12px 25px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.backButton:hover {
+  background-color: var(--background-tertiary);
+}
+
+.payButton {
+  background-color: var(--primary);
+  color: var(--text-on-primary);
+  border: none;
+  padding: 12px 30px;
+  font-size: 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.payButton:hover {
+  background-color: var(--primary-dark);
+}
+
+@media (max-width: 768px) {
+  .formRow {
+    flex-direction: column;
+    gap: 20px;
+  }
+  
+  .error {
+    position: relative;
+    bottom: auto;
+    left: auto;
+    margin-top: 5px;
+  }
+  
+  .formActions {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  
+  .backButton, .payButton {
+    width: 100%;
+  }
+}

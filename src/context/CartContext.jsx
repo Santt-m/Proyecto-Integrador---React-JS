@@ -18,7 +18,12 @@ export const CartProvider = ({ children }) => {
 
   useEffect(() => {
     try {
-      localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      if (cartItems.length > 0) {
+        localStorage.setItem('cartItems', JSON.stringify(cartItems));
+      } else {
+        // Si el carrito está vacío, eliminamos la entrada del localStorage
+        localStorage.removeItem('cartItems');
+      }
     } catch (error) {
       console.error("Error saving cart to localStorage", error);
     }
@@ -61,6 +66,12 @@ export const CartProvider = ({ children }) => {
 
   const clearCart = () => {
     setCartItems([]);
+    try {
+      // Eliminamos explícitamente el carrito del localStorage
+      localStorage.removeItem('cartItems');
+    } catch (error) {
+      console.error("Error removing cart from localStorage", error);
+    }
   };
 
   const getTotalItems = () => {

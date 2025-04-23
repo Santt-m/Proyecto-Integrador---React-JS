@@ -121,9 +121,23 @@
   transition: color var(--transition-duration) ease; /* Añadir transición suave */
 }
 
-.cartIconLink {
+.cartButton {
   position: relative;
-  text-decoration: none; /* Remove underline from Link */
+  padding: 5px;
+  font-size: 1.4rem;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary-light);
+  transition: transform 0.2s ease;
+}
+
+.cartButton:hover {
+  transform: scale(1.1);
+}
+
+.darkHeader .cartButton {
+  color: var(--color-text-secondary-dark);
 }
 
 .cartItemCount {
@@ -131,14 +145,19 @@
   top: -5px;
   right: -10px;
   background-color: var(--color-primary);
-  color: var(--color-text-secondary-light); /* Ensure text color contrasts with primary */
+  color: white;
   border-radius: 50%;
   padding: 0.1em 0.4em;
   font-size: 0.7rem;
   font-weight: bold;
-  min-width: 16px; /* Ensure circle shape even for single digit */
+  min-width: 16px;
   text-align: center;
-  line-height: 1; /* Adjust line height */
+  line-height: 1;
+}
+
+.darkHeader .cartItemCount {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-primary-dark);
 }
 
 .themeToggleButton {
