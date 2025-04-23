@@ -1,0 +1,72 @@
+/* src/pages/About/components/OurValues/OurValues.module.css */
+.valuesSection {
+  margin-bottom: var(--spacing-xl);
+}
+
+.sectionTitle {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  color: var(--color-primary);
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+}
+
+.sectionTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+.valuesGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: var(--spacing-lg);
+}
+
+.valueCard {
+  flex: 1 1 200px;
+  max-width: 250px;
+  text-align: center;
+  padding: var(--spacing-md);
+  transition: transform 0.3s ease;
+}
+
+.valueCard:hover {
+  transform: translateY(-5px);
+}
+
+.valueTitle {
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-primary-light);
+}
+
+.valueDescription {
+  color: var(--color-text-secondary-light);
+  line-height: var(--line-height-base);
+}
+
+/* Dark mode */
+:global(body.dark) .valueTitle {
+  color: var(--color-text-primary-dark);
+}
+
+:global(body.dark) .valueDescription {
+  color: var(--color-text-secondary-dark);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .valuesGrid {
+    gap: var(--spacing-md);
+  }
+  
+  .valueCard {
+    flex: 1 1 150px;
+  }
+}

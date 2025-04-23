@@ -1,0 +1,39 @@
+/* src/pages/About/components/MissionVision/MissionVision.module.css */
+.missionVisionSection {
+  margin-bottom: var(--spacing-xl);
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+}
+
+.missionCard,
+.visionCard {
+  flex: 1 1 300px;
+  padding: var(--spacing-lg);
+  background-color: var(--color-surface-light);
+  border-radius: var(--border-radius-md);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+}
+
+.cardTitle {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.cardText {
+  line-height: var(--line-height-base);
+}
+
+/* Dark mode */
+:global(body.dark) .missionCard,
+:global(body.dark) .visionCard {
+  background-color: var(--color-surface-dark);
+  box-shadow: 0 4px 6px rgba(0,0,0,0.3);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .missionVisionSection {
+    flex-direction: column;
+  }
+}

@@ -1,0 +1,111 @@
+/* src/components/ProductCard/ProductCard.module.css */
+.productCard {
+  background-color: var(--color-surface-light);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: transform var(--transition-duration) ease, box-shadow var(--transition-duration) ease;
+  height: 100%;
+}
+
+.productCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.15);
+}
+
+.productLink {
+  display: block;
+  text-decoration: none;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.imageContainer {
+  position: relative;
+  width: 100%;
+  padding-top: 75%; /* 4:3 aspect ratio */
+  overflow: hidden;
+}
+
+.productImage {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform var(--transition-duration) ease;
+}
+
+.productCard:hover .productImage {
+  transform: scale(1.05);
+}
+
+.productInfo {
+  padding: var(--spacing-md);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.productName {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-primary-light);
+}
+
+.productPrice {
+  font-size: 1.3rem;
+  font-weight: bold;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.addToCartButton {
+  margin-top: auto;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-weight: 500;
+  transition: background-color var(--transition-duration) ease;
+}
+
+.addToCartButton:hover {
+  background-color: var(--color-primary-dark);
+}
+
+/* Estilos para modo oscuro */
+:global(body.dark) .productCard {
+  background-color: var(--color-surface-dark);
+}
+
+:global(body.dark) .productName {
+  color: var(--color-text-primary-dark);
+}
+
+:global(body.dark) .productPrice {
+  color: var(--color-primary-dark);
+}
+
+:global(body.dark) .addToCartButton {
+  background-color: var(--color-primary-dark);
+}
+
+:global(body.dark) .addToCartButton:hover {
+  background-color: var(--color-primary);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .productName {
+    font-size: 1.1rem;
+  }
+  
+  .productPrice {
+    font-size: 1.2rem;
+  }
+}

@@ -1,0 +1,24 @@
+# Dependencies
+/node_modules
+
+# Build artifacts
+/build
+/dist
+
+# Environment variables
+.env
+.env.*
+!.env.example
+
+# Logs
+*.log
+.md
+# OS generated files
+.DS_Store
+Thumbs.db
+
+# IDE files
+.vscode/
+.idea/
+context.md
+dev markdown.md

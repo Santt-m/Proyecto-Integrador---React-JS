@@ -1,0 +1,206 @@
+/* src/pages/Products/Products.module.css */
+.productsPage {
+  padding: var(--spacing-md);
+}
+
+.pageTitle {
+  text-align: center;
+  margin-bottom: var(--spacing-lg);
+  font-size: 2rem;
+  color: var(--color-text-primary-light);
+  position: relative;
+  padding-bottom: var(--spacing-sm);
+}
+
+.pageTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 60px;
+  height: 3px;
+  background-color: var(--color-primary);
+}
+
+.filtersContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
+  padding: var(--spacing-md);
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: var(--border-radius-md);
+}
+
+.filterGroup {
+  flex: 1 1 200px;
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-xs);
+}
+
+.filterSelect,
+.searchInput {
+  padding: var(--spacing-sm);
+  border: 1px solid #ddd;
+  border-radius: var(--border-radius-sm);
+  font-size: 1rem;
+  background-color: white;
+}
+
+.searchInput {
+  width: 100%;
+}
+
+.productsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.productItem {
+  height: 100%;
+}
+
+.noResults {
+  text-align: center;
+  padding: var(--spacing-xl);
+  background-color: rgba(0, 0, 0, 0.03);
+  border-radius: var(--border-radius-md);
+  margin-top: var(--spacing-lg);
+}
+
+.resetButton {
+  margin-top: var(--spacing-md);
+  padding: var(--spacing-sm) var(--spacing-lg);
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  transition: background-color var(--transition-duration) ease;
+}
+
+.resetButton:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.smallResetButton {
+  padding: var(--spacing-xs) var(--spacing-sm);
+  background-color: transparent;
+  color: var(--color-primary);
+  border: 1px solid var(--color-primary);
+  border-radius: var(--border-radius-sm);
+  cursor: pointer;
+  font-size: 0.9rem;
+  transition: all var(--transition-duration) ease;
+}
+
+.smallResetButton:hover {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.loadingContainer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xl);
+  height: 400px;
+}
+
+.loadingSpinner {
+  width: 40px;
+  height: 40px;
+  border: 4px solid rgba(0, 0, 0, 0.1);
+  border-radius: 50%;
+  border-top-color: var(--color-primary);
+  animation: spin 1s linear infinite;
+  margin-bottom: var(--spacing-md);
+}
+
+.resultsInfo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: var(--spacing-md);
+  padding: 0 var(--spacing-sm);
+}
+
+/* Estilos para el modo oscuro */
+:global(body.dark) .pageTitle {
+  color: var(--color-text-primary-dark);
+}
+
+:global(body.dark) .pageTitle::after {
+  background-color: var(--color-primary-dark);
+}
+
+:global(body.dark) .filtersContainer {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+:global(body.dark) .filterSelect,
+:global(body.dark) .searchInput {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-primary-dark);
+  border-color: #444;
+}
+
+:global(body.dark) .noResults {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+:global(body.dark) .resetButton {
+  background-color: var(--color-primary-dark);
+}
+
+:global(body.dark) .resetButton:hover {
+  background-color: var(--color-primary);
+}
+
+:global(body.dark) .smallResetButton {
+  color: var(--color-primary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+:global(body.dark) .smallResetButton:hover {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-primary-dark);
+}
+
+:global(body.dark) .loadingSpinner {
+  border-color: rgba(255, 255, 255, 0.1);
+  border-top-color: var(--color-primary-dark);
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .filtersContainer {
+    flex-direction: column;
+  }
+  
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+  
+  .resultsInfo {
+    flex-direction: column;
+    gap: var(--spacing-sm);
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 576px) {
+  .productsGrid {
+    grid-template-columns: 1fr;
+  }
+}

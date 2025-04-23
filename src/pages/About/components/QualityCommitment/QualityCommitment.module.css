@@ -1,0 +1,31 @@
+/* src/pages/About/components/QualityCommitment/QualityCommitment.module.css */
+.qualitySection {
+  padding: var(--spacing-xl);
+  background-color: var(--color-surface-light);
+  border-radius: var(--border-radius-md);
+  text-align: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.sectionTitle {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.qualityText {
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: var(--line-height-base);
+}
+
+/* Dark mode */
+:global(body.dark) .qualitySection {
+  background-color: var(--color-surface-dark);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .qualitySection {
+    padding: var(--spacing-lg);
+  }
+}

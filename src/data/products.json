@@ -1,0 +1,503 @@
+[
+  {
+    "id": 1,
+    "name": "Smartphone Galaxy X10",
+    "description": "Smartphone de última generación con 128GB de almacenamiento, 8GB de RAM y cámara de 48MP. Incluye cargador rápido y audífonos.",
+    "longDescription": "Este smartphone de última generación cuenta con una pantalla Super AMOLED de 6.5 pulgadas, procesador octa-core de 2.8GHz, batería de 4500mAh con carga rápida de 25W, reconocimiento facial y lector de huellas bajo pantalla. Su sistema de cámaras múltiples incluye un lente principal de 48MP, gran angular de 12MP y macro de 5MP. Resistente al agua y polvo con certificación IP68.",
+    "price": 699.99,
+    "stock": 15,
+    "rating": 4.7,
+    "category": "electronica",
+    "featured": true,
+    "discount": 10,
+    "tags": ["smartphone", "android", "galaxy", "5G", "gama alta"],
+    "image": "https://picsum.photos/seed/smartphone1/400/400",
+    "images": [
+      "https://picsum.photos/seed/smartphone1a/400/400",
+      "https://picsum.photos/seed/smartphone1b/400/400",
+      "https://picsum.photos/seed/smartphone1c/400/400"
+    ],
+    "specifications": {
+      "pantalla": "6.5 pulgadas Super AMOLED",
+      "procesador": "Octa-core 2.8GHz",
+      "almacenamiento": "128GB",
+      "ram": "8GB",
+      "bateria": "4500mAh",
+      "camara": "48MP + 12MP + 5MP",
+      "sistema": "Android 12"
+    }
+  },
+  {
+    "id": 2,
+    "name": "Laptop ProBook Air",
+    "description": "Laptop ultraligera con procesador de última generación, 512GB SSD y 16GB de RAM. Ideal para profesionales y estudiantes.",
+    "longDescription": "Laptop ultradelgada con un espesor de solo 14mm y un peso de 1.3kg. Equipada con un potente procesador de última generación, disco SSD de 512GB para arranque instantáneo de aplicaciones y 16GB de memoria RAM para un rendimiento excepcional en multitarea. Su pantalla Retina de 13.3 pulgadas ofrece colores vibrantes y alta resolución. La batería dura hasta 12 horas de uso continuo y cuenta con Touch ID para inicio de sesión seguro.",
+    "price": 1249.50,
+    "stock": 8,
+    "rating": 4.8,
+    "category": "electronica",
+    "featured": true,
+    "discount": 5,
+    "tags": ["laptop", "ultrabook", "ssd", "ligera", "gama alta"],
+    "image": "https://picsum.photos/seed/laptop1/400/400",
+    "images": [
+      "https://picsum.photos/seed/laptop1a/400/400",
+      "https://picsum.photos/seed/laptop1b/400/400",
+      "https://picsum.photos/seed/laptop1c/400/400"
+    ],
+    "specifications": {
+      "pantalla": "13.3 pulgadas Retina",
+      "procesador": "Intel Core i7 11ª gen",
+      "almacenamiento": "512GB SSD",
+      "ram": "16GB",
+      "bateria": "12 horas",
+      "grafica": "Intel Iris X",
+      "sistema": "MacOS"
+    }
+  },
+  {
+    "id": 3,
+    "name": "Auriculares Inalámbricos NoiseCancel Pro",
+    "description": "Auriculares con cancelación de ruido activa, 30 horas de batería y sonido de alta definición. Perfectos para viajes y trabajo.",
+    "longDescription": "Auriculares premium con la mejor tecnología de cancelación de ruido activa del mercado, reduciendo hasta un 95% del ruido ambiente. Disfruta de hasta 30 horas de reproducción continua con una sola carga y 5 horas adicionales con solo 10 minutos de carga rápida. Su diseño ergonómico con almohadillas de espuma viscoelástica garantiza comodidad durante largas sesiones. Compatibles con asistentes virtuales y pueden conectarse a dos dispositivos simultáneamente.",
+    "price": 199.00,
+    "stock": 25,
+    "rating": 4.6,
+    "category": "electronica",
+    "featured": true,
+    "tags": ["auriculares", "inalámbricos", "bluetooth", "cancelación de ruido"],
+    "image": "https://picsum.photos/seed/headphones1/400/400",
+    "images": [
+      "https://picsum.photos/seed/headphones1a/400/400",
+      "https://picsum.photos/seed/headphones1b/400/400"
+    ],
+    "specifications": {
+      "tipo": "Over-ear",
+      "conectividad": "Bluetooth 5.0",
+      "bateria": "30 horas",
+      "anc": "Sí, adaptativo",
+      "resistencia": "IPX4",
+      "microfono": "Integrado con reducción de ruido"
+    }
+  },
+  {
+    "id": 4,
+    "name": "Smartwatch FitPro",
+    "description": "Reloj inteligente con monitor cardíaco, GPS integrado y más de 20 modos deportivos. Batería de larga duración.",
+    "longDescription": "Reloj inteligente completo con pantalla AMOLED siempre activa que ofrece excelente visibilidad incluso bajo luz solar directa. Cuenta con GPS integrado para registrar tus rutas sin necesidad de llevar el teléfono. Mide oxígeno en sangre, frecuencia cardíaca 24/7, calidad del sueño y nivel de estrés. Con más de 20 modos deportivos y resistencia al agua de 5 ATM, es ideal para nadadores. La batería dura hasta 14 días en uso normal.",
+    "price": 149.99,
+    "stock": 20,
+    "rating": 4.5,
+    "category": "electronica",
+    "discount": 15,
+    "tags": ["smartwatch", "fitness", "deportes", "gps", "resistente al agua"],
+    "image": "https://picsum.photos/seed/smartwatch1/400/400",
+    "images": [
+      "https://picsum.photos/seed/smartwatch1a/400/400",
+      "https://picsum.photos/seed/smartwatch1b/400/400"
+    ],
+    "specifications": {
+      "pantalla": "1.3 pulgadas AMOLED",
+      "bateria": "14 días",
+      "resistencia": "5 ATM",
+      "gps": "Sí, integrado",
+      "conexion": "Bluetooth 5.0",
+      "compatibilidad": "Android e iOS"
+    }
+  },
+  {
+    "id": 5,
+    "name": "Cámara DSLR 4K Ultra",
+    "description": "Cámara profesional con sensor CMOS full frame, grabación 4K y sistema de enfoque automático de 61 puntos.",
+    "longDescription": "Cámara réflex digital de nivel profesional con sensor CMOS de formato completo de 30.4 megapíxeles. Capaz de grabar video 4K a 30fps y Full HD a 60fps con seguimiento de enfoque continuo. Su avanzado sistema de enfoque automático de 61 puntos garantiza imágenes nítidas en cualquier condición de luz. Incluye pantalla LCD táctil orientable, doble ranura para tarjetas de memoria y conectividad WiFi y Bluetooth para transferencia instantánea de imágenes.",
+    "price": 1899.00,
+    "stock": 6,
+    "rating": 4.9,
+    "category": "electronica",
+    "tags": ["cámara", "dslr", "4k", "fotografia", "profesional"],
+    "image": "https://picsum.photos/seed/camera1/400/400",
+    "images": [
+      "https://picsum.photos/seed/camera1a/400/400",
+      "https://picsum.photos/seed/camera1b/400/400",
+      "https://picsum.photos/seed/camera1c/400/400"
+    ],
+    "specifications": {
+      "sensor": "CMOS Full Frame 30.4MP",
+      "iso": "100-32000 (expandible)",
+      "enfoque": "61 puntos",
+      "video": "4K 30fps, Full HD 60fps",
+      "conectividad": "WiFi, Bluetooth, NFC",
+      "bateria": "1800mAh (aprox. 900 disparos)"
+    }
+  },
+  {
+    "id": 6,
+    "name": "Zapatillas RunFlex Pro",
+    "description": "Zapatillas de running con tecnología de amortiguación avanzada, transpirables y ultraligeras.",
+    "longDescription": "Zapatillas de alto rendimiento diseñadas para corredores que buscan velocidad y comodidad. Incorporan la revolucionaria espuma RunFlex que proporciona un 20% más de retorno de energía que los modelos anteriores. La parte superior está confeccionada con un tejido transpirable de una sola pieza que se adapta como un calcetín. La suela cuenta con un patrón de tracción optimizado mediante análisis biomecánico para mayor estabilidad y agarre en diversas superficies.",
+    "price": 129.95,
+    "stock": 30,
+    "rating": 4.7,
+    "category": "deportes",
+    "featured": true,
+    "tags": ["zapatillas", "running", "deporte", "ligeras", "transpirables"],
+    "image": "https://picsum.photos/seed/shoes1/400/400",
+    "images": [
+      "https://picsum.photos/seed/shoes1a/400/400",
+      "https://picsum.photos/seed/shoes1b/400/400"
+    ],
+    "specifications": {
+      "peso": "255g (talla 42)",
+      "drop": "8mm",
+      "plantilla": "Extraíble, OrthoLite",
+      "suela": "Goma de carbono",
+      "tecnologia": "RunFlex Foam",
+      "uso": "Asfalto y superficies firmes"
+    }
+  },
+  {
+    "id": 7,
+    "name": "Mochila Hiking Expedition 50L",
+    "description": "Mochila resistente al agua de 50L con sistema de ventilación dorsal y compartimentos organizados.",
+    "longDescription": "Mochila de trekking de alta gama con capacidad de 50 litros, perfecta para expediciones de 2-5 días. Fabricada con nylon ripstop resistente a desgarros y con tratamiento DWR que repele el agua. Su sistema de ventilación dorsal Flow-Tech mantiene la espalda fresca incluso en climas cálidos. Cuenta con compartimento inferior separado para saco de dormir, bolsillos laterales para botellas, compartimento para hidratación compatible y múltiples puntos de sujeción para equipo externo. Los tirantes y el cinturón lumbar están acolchados con espuma EVA para máxima comodidad.",
+    "price": 159.00,
+    "stock": 12,
+    "rating": 4.8,
+    "category": "deportes",
+    "discount": 20,
+    "tags": ["mochila", "hiking", "camping", "impermeable", "trekking"],
+    "image": "https://picsum.photos/seed/backpack1/400/400",
+    "images": [
+      "https://picsum.photos/seed/backpack1a/400/400",
+      "https://picsum.photos/seed/backpack1b/400/400"
+    ],
+    "specifications": {
+      "capacidad": "50 litros",
+      "peso": "1.8 kg",
+      "material": "Nylon Ripstop 420D",
+      "impermeabilidad": "Tratamiento DWR",
+      "ventilacion": "Sistema Flow-Tech",
+      "extras": "Funda para lluvia incluida"
+    }
+  },
+  {
+    "id": 8,
+    "name": "Bicicleta Montaña TrailRider X3",
+    "description": "Bicicleta de montaña con cuadro de aluminio, suspensión delantera y transmisión de 21 velocidades.",
+    "longDescription": "Bicicleta de montaña versátil ideada para senderos y rutas moderadas. Cuadro de aluminio 6061 hidroformado que ofrece el equilibrio perfecto entre ligereza y resistencia. Equipada con suspensión delantera con bloqueo y 100mm de recorrido para absorber impactos en terrenos irregulares. Sistema de transmisión Shimano de 21 velocidades con cambios precisos. Frenos de disco hidráulicos que proporcionan una potencia de frenado superior incluso en condiciones húmedas. Ruedas de 29 pulgadas con cubiertas de tacos para máxima tracción off-road.",
+    "price": 549.99,
+    "stock": 7,
+    "rating": 4.6,
+    "category": "deportes",
+    "tags": ["bicicleta", "mtb", "ciclismo", "montaña", "aluminio"],
+    "image": "https://picsum.photos/seed/bike1/400/400",
+    "images": [
+      "https://picsum.photos/seed/bike1a/400/400",
+      "https://picsum.photos/seed/bike1b/400/400",
+      "https://picsum.photos/seed/bike1c/400/400"
+    ],
+    "specifications": {
+      "cuadro": "Aluminio 6061",
+      "horquilla": "Suspensión 100mm",
+      "cambios": "Shimano 21v",
+      "frenos": "Disco hidráulico",
+      "ruedas": "29 pulgadas",
+      "tallas": "S, M, L, XL"
+    }
+  },
+  {
+    "id": 9,
+    "name": "Set de Cocina GourmetPro",
+    "description": "Juego de 10 piezas de cocina en acero inoxidable con mangos ergonómicos y aptos para todo tipo de cocinas.",
+    "longDescription": "Set de cocina profesional de 10 piezas fabricado con acero inoxidable 18/10 de la más alta calidad. Incluye cazuela, sartenes de distintos tamaños, cazo y tapas de vidrio templado con respiradero. Su construcción de triple capa garantiza una distribución uniforme del calor para resultados perfectos. Compatible con todo tipo de cocinas, incluyendo inducción. Los mangos ergonómicos permanecen fríos durante la cocción y todas las piezas son aptas para lavavajillas. Viene con garantía de 10 años.",
+    "price": 249.50,
+    "stock": 15,
+    "rating": 4.8,
+    "category": "hogar",
+    "tags": ["cocina", "ollas", "sartenes", "acero inoxidable", "chef"],
+    "image": "https://picsum.photos/seed/cookware1/400/400",
+    "images": [
+      "https://picsum.photos/seed/cookware1a/400/400",
+      "https://picsum.photos/seed/cookware1b/400/400"
+    ],
+    "specifications": {
+      "material": "Acero inoxidable 18/10",
+      "piezas": "10 (ollas, sartenes y tapas)",
+      "compatibilidad": "Todo tipo de cocinas",
+      "lavavajillas": "Sí",
+      "garantia": "10 años"
+    }
+  },
+  {
+    "id": 10,
+    "name": "Robot Aspirador SmartClean",
+    "description": "Robot aspirador inteligente con mapeo láser, control por app y función de fregado. Ideal para hogares con mascotas.",
+    "longDescription": "Robot aspirador y friegasuelos 2 en 1 con tecnología de navegación láser que crea mapas precisos de tu hogar para una limpieza eficiente. Su potente motor de succión de 2700Pa elimina eficazmente polvo, pelo de mascotas y suciedad de todo tipo de superficies. Cuenta con tanque de agua de 250ml con control electrónico para fregar sin empapar el suelo. La batería de alta capacidad proporciona hasta 150 minutos de autonomía. Control total desde la app: programa limpiezas, establece áreas restringidas y selecciona modos de limpieza personalizados.",
+    "price": 299.00,
+    "stock": 10,
+    "rating": 4.5,
+    "category": "hogar",
+    "featured": true,
+    "tags": ["robot", "aspirador", "limpieza", "smart home", "wifi"],
+    "image": "https://picsum.photos/seed/vacuum1/400/400",
+    "images": [
+      "https://picsum.photos/seed/vacuum1a/400/400",
+      "https://picsum.photos/seed/vacuum1b/400/400"
+    ],
+    "specifications": {
+      "succion": "2700Pa",
+      "bateria": "150 minutos",
+      "deposito": "600ml polvo / 250ml agua",
+      "mapeo": "Láser LDS",
+      "conectividad": "WiFi + App",
+      "sensores": "Anti-caída y anti-colisión"
+    }
+  },
+  {
+    "id": 11,
+    "name": "Sofá Seccional ModernLiving",
+    "description": "Sofá modular de 4 piezas con chaise longue, tapizado en tela premium y estructura de madera maciza.",
+    "longDescription": "Sofá seccional modular que te permite configurar tu espacio según tus necesidades. Compuesto por 4 módulos independientes incluyendo un chaise longue para máximo confort. Tapizado en tela de alta resistencia con tratamiento antimanchas y estructura interna de madera maciza de pino que garantiza durabilidad. Los cojines del asiento contienen espuma de alta densidad con tecnología de recuperación lenta que proporciona un soporte perfecto. La altura ideal de asiento y respaldo ha sido diseñada siguiendo principios ergonómicos para largas sesiones de descanso.",
+    "price": 1299.00,
+    "stock": 5,
+    "rating": 4.7,
+    "category": "hogar",
+    "discount": 10,
+    "tags": ["sofá", "seccional", "muebles", "salón", "modular"],
+    "image": "https://picsum.photos/seed/sofa1/400/400",
+    "images": [
+      "https://picsum.photos/seed/sofa1a/400/400",
+      "https://picsum.photos/seed/sofa1b/400/400",
+      "https://picsum.photos/seed/sofa1c/400/400"
+    ],
+    "specifications": {
+      "materiales": "Madera de pino, espuma de alta densidad",
+      "tapizado": "Tela premium antimanchas",
+      "modulos": "4 piezas intercambiables",
+      "dimensiones": "320 x 200 x 85 cm",
+      "colores": "Gris, beige, azul oscuro",
+      "mantenimiento": "Fundas extraíbles"
+    }
+  },
+  {
+    "id": 12,
+    "name": "Vestido Elegance Noir",
+    "description": "Vestido de cóctel negro con corte elegante, espalda abierta y acabados de alta costura.",
+    "longDescription": "Vestido de cóctel negro que combina elegancia y sofisticación para ocasiones especiales. Confeccionado en crepe elástico de alta calidad que realza la figura mientras proporciona comodidad. Presenta un escote halter con detalle de pedrería y espalda abierta con cierre de botón en el cuello. El largo midi con abertura lateral aporta un toque de sensualidad contenida. Las costuras y los acabados reflejan el trabajo de alta costura, con forro interior completo que garantiza un ajuste perfecto.",
+    "price": 189.95,
+    "stock": 18,
+    "rating": 4.8,
+    "category": "moda",
+    "featured": true,
+    "tags": ["vestido", "elegante", "fiesta", "negro", "mujer"],
+    "image": "https://picsum.photos/seed/dress1/400/400",
+    "images": [
+      "https://picsum.photos/seed/dress1a/400/400",
+      "https://picsum.photos/seed/dress1b/400/400"
+    ],
+    "specifications": {
+      "material": "96% Crepe, 4% Elastano",
+      "forro": "Poliéster",
+      "largo": "Midi",
+      "escote": "Halter con pedrería",
+      "tallas": "XS a XL",
+      "cuidados": "Limpieza en seco"
+    }
+  },
+  {
+    "id": 13,
+    "name": "Chaqueta Urban Explorer",
+    "description": "Chaqueta impermeable de estilo urbano con capucha, múltiples bolsillos y forro térmico desmontable.",
+    "longDescription": "Chaqueta versátil diseñada tanto para la aventura urbana como para actividades al aire libre. Exterior fabricado con tejido técnico impermeable y transpirable con costuras selladas que protege eficazmente de la lluvia y el viento. Cuenta con capucha ajustable y forro térmico interior desmontable que permite adaptarla a diferentes temperaturas. Los múltiples bolsillos con cierre impermeable ofrecen espacio para todos tus esenciales. Su diseño contemporáneo con detalles reflectantes la hace perfecta para el uso diario en la ciudad o escapadas de fin de semana.",
+    "price": 179.99,
+    "stock": 20,
+    "rating": 4.6,
+    "category": "moda",
+    "discount": 15,
+    "tags": ["chaqueta", "impermeable", "unisex", "urbano", "outdoor"],
+    "image": "https://picsum.photos/seed/jacket1/400/400",
+    "images": [
+      "https://picsum.photos/seed/jacket1a/400/400",
+      "https://picsum.photos/seed/jacket1b/400/400"
+    ],
+    "specifications": {
+      "material": "Poliéster reciclado con membrana",
+      "impermeabilidad": "10.000mm",
+      "transpirabilidad": "8.000g/m²/24h",
+      "aislamiento": "Forro térmico desmontable",
+      "tallas": "S a XXL",
+      "caracteristicas": "Capucha ajustable, puños con velcro"
+    }
+  },
+  {
+    "id": 14,
+    "name": "Reloj Vintage Chronograph",
+    "description": "Reloj analógico con caja de acero inoxidable, cronógrafo y correa de cuero genuino.",
+    "longDescription": "Reloj de inspiración vintage con tecnología moderna que combina estilo y funcionalidad. La caja de 42mm de acero inoxidable cepillado alberga un movimiento de cuarzo japonés de alta precisión. La esfera, protegida por cristal de zafiro resistente a arañazos, presenta tres subesferas de cronógrafo y fecha a las 4:30. El fondo transparente permite admirar el mecanismo interior. La correa está confeccionada en cuero italiano curtido vegetalmente que desarrolla una pátina única con el tiempo. Resistente al agua hasta 100 metros, es adecuado para natación recreativa.",
+    "price": 249.00,
+    "stock": 10,
+    "rating": 4.7,
+    "category": "moda",
+    "tags": ["reloj", "cronógrafo", "acero", "cuero", "vintage"],
+    "image": "https://picsum.photos/seed/watch1/400/400",
+    "images": [
+      "https://picsum.photos/seed/watch1a/400/400",
+      "https://picsum.photos/seed/watch1b/400/400"
+    ],
+    "specifications": {
+      "caja": "Acero inoxidable 42mm",
+      "cristal": "Zafiro",
+      "movimiento": "Cuarzo japonés",
+      "funciones": "Cronógrafo, fecha",
+      "correa": "Cuero genuino 20mm",
+      "resistencia": "10 ATM (100m)"
+    }
+  },
+  {
+    "id": 15,
+    "name": "Gafas de Sol AviatorClassic",
+    "description": "Gafas de sol estilo aviador con montura metálica y lentes polarizadas de alta definición.",
+    "longDescription": "Gafas de sol icónicas que nunca pasan de moda, reinterpretadas con materiales premium y tecnología moderna. La montura ligera de aleación de titanio proporciona resistencia y flexibilidad, con plaquetas ajustables para un ajuste personalizado. Las lentes polarizadas de alta definición eliminan los reflejos y ofrecen una claridad visual excepcional mientras protegen completamente contra los rayos UVA/UVB. El diseño atemporal combina con cualquier estilo y ocasión. Incluye estuche rígido, paño de limpieza de microfibra y certificado de autenticidad.",
+    "price": 139.95,
+    "stock": 25,
+    "rating": 4.5,
+    "category": "moda",
+    "tags": ["gafas", "sol", "polarizadas", "aviador", "unisex"],
+    "image": "https://picsum.photos/seed/sunglasses1/400/400",
+    "images": [
+      "https://picsum.photos/seed/sunglasses1a/400/400",
+      "https://picsum.photos/seed/sunglasses1b/400/400"
+    ],
+    "specifications": {
+      "material": "Titanio",
+      "lentes": "Polarizadas, protección UV400",
+      "puente": "Ajustable",
+      "dimensiones": "Frente: 140mm, Patillas: 145mm",
+      "colores": "Negro/Verde, Dorado/Marrón, Plata/Azul",
+      "incluye": "Estuche rígido y paño de limpieza"
+    }
+  },
+  {
+    "id": 16,
+    "name": "Juego de Mesa StrategyMaster",
+    "description": "Juego de estrategia para 2-5 jugadores con más de 300 piezas y múltiples modos de juego. Recomendado +12 años.",
+    "longDescription": "Juego de mesa de estrategia y conquista que ofrece infinitas horas de entretenimiento. Incluye un tablero modulable con 30 losetas reversibles que garantiza que cada partida sea diferente. Sus más de 300 piezas incluyen miniaturas detalladas, tokens de recursos, cartas de evento y dados especiales. Ofrece diferentes modos de juego que van desde el cooperativo hasta el competitivo, con partidas que duran entre 60 y 120 minutos. Ideal para noches de juegos en familia o con amigos, combina elementos de gestión de recursos, negociación y conflictos tácticos en un equilibrio perfecto.",
+    "price": 69.99,
+    "stock": 15,
+    "rating": 4.9,
+    "category": "entretenimiento",
+    "tags": ["juego de mesa", "estrategia", "family", "miniaturas", "multijugador"],
+    "image": "https://picsum.photos/seed/boardgame1/400/400",
+    "images": [
+      "https://picsum.photos/seed/boardgame1a/400/400",
+      "https://picsum.photos/seed/boardgame1b/400/400"
+    ],
+    "specifications": {
+      "jugadores": "2-5",
+      "duracion": "60-120 minutos",
+      "edad": "+12 años",
+      "componentes": "300+ piezas, tablero modular",
+      "mecanicas": "Gestión de recursos, control de territorio",
+      "idioma": "Español"
+    }
+  },
+  {
+    "id": 17,
+    "name": "Consola GameStation 5",
+    "description": "Consola de última generación con procesador octa-core, 1TB SSD, resolución 4K y retrocompatibilidad.",
+    "longDescription": "La consola más potente del mercado, capaz de ofrecer experiencias de juego inmersivas con gráficos fotorrealistas. Su SSD ultrarrápido de 1TB elimina virtualmente los tiempos de carga y el procesador personalizado de 8 núcleos permite alcanzar hasta 120fps en juegos compatibles. El sistema de audio 3D crea paisajes sonoros envolventes sin necesidad de equipos adicionales. Incluye un mando inalámbrico con retroalimentación háptica avanzada y gatillos adaptativos que responden a la acción del juego. Totalmente retrocompatible con la generación anterior y capaz de mejorar automáticamente la calidad visual de los juegos antiguos.",
+    "price": 499.99,
+    "stock": 8,
+    "rating": 4.9,
+    "category": "entretenimiento",
+    "featured": true,
+    "tags": ["consola", "videojuegos", "4k", "ssd", "gamer"],
+    "image": "https://picsum.photos/seed/console1/400/400",
+    "images": [
+      "https://picsum.photos/seed/console1a/400/400",
+      "https://picsum.photos/seed/console1b/400/400",
+      "https://picsum.photos/seed/console1c/400/400"
+    ],
+    "specifications": {
+      "procesador": "AMD Zen 2 8 núcleos",
+      "grafica": "RDNA 2 10.28 TFLOPS",
+      "almacenamiento": "1TB SSD NVMe",
+      "memoria": "16GB GDDR6",
+      "resolucion": "4K (hasta 8K compatible)",
+      "extras": "Ray-tracing, VRR, HDMI 2.1"
+    }
+  },
+  {
+    "id": 18,
+    "name": "Set de Arte Profesional",
+    "description": "Kit completo de arte con 120 lápices de colores, acuarelas, pinceles y cuaderno de dibujo.",
+    "longDescription": "Set de arte premium para artistas de todos los niveles que quieran explorar diferentes técnicas. Incluye 120 lápices de colores profesionales con núcleo suave y alta pigmentación, set de 36 acuarelas en pastilla, 24 rotuladores con doble punta, juego de 15 pinceles de diferentes tamaños y cerdas, goma moldeable, sacapuntas de precisión, carboncillos, lápices de grafito y un cuaderno de dibujo A4 de 30 hojas con papel de 220g/m². Todo viene organizado en un elegante maletín de aluminio con compartimentos personalizados para proteger cada elemento. Perfecto como regalo para entusiastas del arte o para iniciar una colección de materiales de calidad.",
+    "price": 129.95,
+    "stock": 20,
+    "rating": 4.7,
+    "category": "arte",
+    "tags": ["arte", "dibujo", "pintura", "lapices", "acuarela"],
+    "image": "https://picsum.photos/seed/artset1/400/400",
+    "images": [
+      "https://picsum.photos/seed/artset1a/400/400",
+      "https://picsum.photos/seed/artset1b/400/400"
+    ],
+    "specifications": {
+      "contenido": "120 lápices, 36 acuarelas, 24 rotuladores, 15 pinceles",
+      "material": "Pigmentos profesionales",
+      "estuche": "Maletín de aluminio",
+      "papel": "220g/m², 30 hojas A4",
+      "peso": "3.2kg"
+    }
+  },
+  {
+    "id": 19,
+    "name": "Teclado Mecánico GamerPro RGB",
+    "description": "Teclado mecánico para gaming con switches Cherry MX, retroiluminación RGB personalizable y reposamuñecas ergonómico.",
+    "longDescription": "Teclado mecánico diseñado para gaming competitivo y uso profesional intensivo. Equipado con switches Cherry MX Brown que ofrecen feedback táctil sin ser demasiado ruidosos, perfecto para jugar y escribir. Su construcción con placa de aluminio garantiza durabilidad y estabilidad incluso en las sesiones más intensas. La retroiluminación RGB por tecla es totalmente personalizable con 16.8 millones de colores y efectos dinámicos mediante software dedicado. Incluye teclas multimedia dedicadas, memoria interna para guardar perfiles, reposamuñecas magnético acolchado y cable USB-C trenzado desmontable. La tecnología N-key rollover asegura que todas tus pulsaciones sean registradas incluso al presionar múltiples teclas simultáneamente.",
+    "price": 149.99,
+    "stock": 15,
+    "rating": 4.8,
+    "category": "electronica",
+    "discount": 10,
+    "tags": ["teclado", "gaming", "mecanico", "rgb", "cherry mx"],
+    "image": "https://picsum.photos/seed/keyboard1/400/400",
+    "images": [
+      "https://picsum.photos/seed/keyboard1a/400/400",
+      "https://picsum.photos/seed/keyboard1b/400/400"
+    ],
+    "specifications": {
+      "tipo": "Mecánico",
+      "switches": "Cherry MX Brown",
+      "formato": "Completo (104 teclas)",
+      "retroiluminacion": "RGB personalizable",
+      "extras": "Reposamuñecas, teclas multimedia",
+      "conexion": "USB-C desmontable"
+    }
+  },
+  {
+    "id": 20,
+    "name": "Collar Piedra Lunar Plata 925",
+    "description": "Delicado collar con colgante de piedra lunar genuina engarzada en plata de ley 925.",
+    "longDescription": "Elegante collar artesanal que presenta un colgante con una auténtica piedra lunar de 8mm, conocida por su brillo azulado característico y sus propiedades vinculadas a la intuición y la feminidad. La piedra está engarzada en una delicada montura de plata esterlina 925 con acabado pulido que resalta su belleza natural. La cadena, también de plata 925, tiene un largo ajustable de 40-45cm con cierre de mosquetón seguro. Cada pieza es ligeramente única debido a las variaciones naturales de la piedra lunar. Presentado en una elegante caja de regalo con certificado de autenticidad. Ideal como regalo significativo para ocasiones especiales o para complementar tanto looks diarios como de noche.",
+    "price": 89.95,
+    "stock": 25,
+    "rating": 4.8,
+    "category": "joyeria",
+    "featured": true,
+    "tags": ["collar", "plata", "piedra lunar", "mujer", "artesanal"],
+    "image": "https://picsum.photos/seed/necklace1/400/400",
+    "images": [
+      "https://picsum.photos/seed/necklace1a/400/400",
+      "https://picsum.photos/seed/necklace1b/400/400"
+    ],
+    "specifications": {
+      "material": "Plata de ley 925",
+      "piedra": "Piedra lunar genuina 8mm",
+      "cadena": "Ajustable 40-45cm",
+      "cierre": "Mosquetón",
+      "peso": "4.5g",
+      "origen": "Artesanía local certificada"
+    }
+  }
+]

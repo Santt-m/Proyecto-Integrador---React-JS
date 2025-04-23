@@ -1,0 +1,234 @@
+/* src/components/Header/Header.module.css */
+
+.header {
+  background-color: var(--color-header-footer-bg-light);
+  color: var(--color-text-secondary-light);
+  padding: 0 var(--spacing-md); /* Adjust padding */
+  position: sticky; /* Make header sticky */
+  top: 0;
+  z-index: 100; /* Ensure header is above other content */
+  box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Optional shadow */
+  transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+}
+
+.darkHeader {
+  background-color: var(--color-header-footer-bg-dark);
+  color: var(--color-text-secondary-dark);
+}
+
+.darkHeader .headerLogo,
+.darkHeader .mainNav a,
+.darkHeader .headerActions a,
+.darkHeader .headerActions button,
+.darkHeader .mobileMenuToggle {
+  color: var(--color-text-secondary-dark);
+}
+
+/* Specific override for mobile menu close button if needed */
+.darkHeader .mobileMenuClose {
+  color: var(--color-text-secondary-dark); /* Or a contrast color if needed */
+}
+
+.headerContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: var(--container-max-width);
+  margin: 0 auto;
+  height: 60px; /* Fixed height for header */
+}
+
+.headerLogo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: var(--color-text-secondary-light); /* Ensure logo color */
+  text-decoration: none; /* Remove underline from Link */
+}
+
+.mainNav {
+  display: flex; /* Default for desktop */
+  gap: var(--spacing-md); /* Space between links */
+}
+
+.mainNav a {
+  color: var(--color-text-secondary-light);
+  padding: var(--spacing-sm) 0;
+  position: relative;
+  transition: color 0.2s ease;
+  text-decoration: none;
+}
+
+.mainNav a:hover {
+  color: var(--color-primary); /* Highlight on hover */
+}
+
+/* Estilo para el enlace activo */
+.activeLink {
+  color: var(--color-primary) !important;
+  font-weight: 500;
+}
+
+/* Underline siempre visible para el enlace activo */
+.activeLink::after {
+  content: '';
+  position: absolute;
+  width: 100% !important; /* Ancho completo para el enlace activo */
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: var(--color-primary);
+}
+
+/* Underline effect on hover/active */
+.mainNav a::after {
+    content: '';
+    position: absolute;
+    width: 0;
+    height: 2px;
+    bottom: 0;
+    left: 0;
+    background-color: var(--color-primary);
+    transition: width 0.3s ease;
+}
+
+.mainNav a:hover::after {
+    width: 100%;
+}
+
+/* Asegurarse de que los enlaces activos en modo oscuro también se vean correctamente */
+.darkHeader .mainNav a.activeLink {
+  color: var(--color-primary-dark) !important;
+}
+
+.darkHeader .mainNav a.activeLink::after {
+  background-color: var(--color-primary-dark);
+}
+
+.headerActions {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md); /* Space between action items */
+}
+
+.headerActions a,
+.headerActions button {
+  color: var(--color-text-secondary-light);
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2rem; /* Slightly larger icons/buttons */
+  position: relative; /* For positioning the count */
+  transition: color var(--transition-duration) ease; /* Añadir transición suave */
+}
+
+.cartIconLink {
+  position: relative;
+  text-decoration: none; /* Remove underline from Link */
+}
+
+.cartItemCount {
+  position: absolute;
+  top: -5px;
+  right: -10px;
+  background-color: var(--color-primary);
+  color: var(--color-text-secondary-light); /* Ensure text color contrasts with primary */
+  border-radius: 50%;
+  padding: 0.1em 0.4em;
+  font-size: 0.7rem;
+  font-weight: bold;
+  min-width: 16px; /* Ensure circle shape even for single digit */
+  text-align: center;
+  line-height: 1; /* Adjust line height */
+}
+
+.themeToggleButton {
+    font-size: 1.4rem; /* Make theme toggle slightly larger */
+    transition: transform var(--transition-duration) ease; /* Añadir transición para el botón */
+}
+
+.themeToggleButton:hover {
+    transform: scale(1.1); /* Efecto de crecimiento sutil al pasar el mouse */
+}
+
+/* Mobile Menu Styles */
+.mobileMenuToggle {
+  display: none; /* Hidden by default */
+  font-size: 1.8rem;
+  background: none;
+  border: none;
+  color: var(--color-text-secondary-light);
+  cursor: pointer;
+}
+
+.mobileMenuClose {
+    display: none; /* Hidden by default, shown inside mobile menu */
+    position: absolute;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    font-size: 1.5rem;
+    background: none;
+    border: none;
+    color: var(--color-text-primary-light); /* Adjust color for visibility */
+    cursor: pointer;
+    z-index: 1101; /* Above menu content */
+}
+
+/* --- Responsive Header (Mobile) --- */
+@media (max-width: 768px) {
+  .mobileMenuToggle {
+    display: block; /* Show hamburger */
+  }
+
+  .mainNav {
+    display: none; /* Hide desktop nav */
+    position: fixed; /* Take full screen */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background-color: var(--color-surface-light); /* Use surface color for menu background */
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding-top: 60px; /* Space for header */
+    z-index: 1100; /* Above content, below close button */
+    gap: var(--spacing-lg); /* Larger gap for mobile menu items */
+    transition: transform 0.3s ease-in-out;
+    transform: translateX(-100%); /* Hide off-screen */
+  }
+
+  .mainNav.open {
+    display: flex; /* Show when open */
+    transform: translateX(0); /* Slide in */
+  }
+
+  .mainNav a {
+    color: var(--color-text-primary-light); /* Use primary text color inside mobile menu */
+    font-size: 1.5rem; /* Larger text for mobile menu */
+  }
+   .mainNav a::after {
+       display: none; /* Hide underline effect in mobile menu */
+   }
+
+  /* Show close button when menu is open */
+  .mainNav.open .mobileMenuClose {
+      display: block;
+      color: var(--color-text-primary-light); /* Ensure visibility on light background */
+  }
+
+  .darkHeader .mainNav {
+      background-color: var(--color-surface-dark); /* Dark background for mobile menu */
+  }
+  .darkHeader .mainNav a {
+      color: var(--color-text-primary-dark); /* Dark theme text color */
+  }
+
+  .darkHeader .mainNav.open .mobileMenuClose {
+      color: var(--color-text-primary-dark); /* Ensure visibility on dark background */
+  }
+
+  .headerActions {
+      /* Ensure actions are still visible */
+      gap: var(--spacing-sm); /* Slightly reduce gap */
+  }
+}

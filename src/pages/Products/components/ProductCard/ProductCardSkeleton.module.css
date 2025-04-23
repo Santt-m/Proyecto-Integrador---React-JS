@@ -1,0 +1,88 @@
+/* src/components/ProductCard/ProductCardSkeleton.module.css */
+.skeleton {
+  position: relative;
+  overflow: hidden;
+  background-color: var(--skeleton-bg-light);
+  border-radius: var(--border-radius-md);
+}
+
+.skeleton::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--skeleton-highlight-light) 50%,
+    transparent 100%
+  );
+  animation: shimmer 1.5s infinite;
+  transform: translateX(-100%);
+}
+
+.skeletonCard {
+  height: 100%;
+  background-color: var(--color-surface-light);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.skeletonImage {
+  width: 100%;
+  padding-top: 75%; /* 4:3 aspect ratio */
+}
+
+.skeletonInfo {
+  padding: var(--spacing-md);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+}
+
+.skeletonTitle {
+  height: 1.4rem;
+  width: 85%;
+  margin-bottom: var(--spacing-sm);
+}
+
+.skeletonPrice {
+  height: 1.6rem;
+  width: 40%;
+  margin-bottom: var(--spacing-md);
+}
+
+.skeletonButton {
+  height: 2.5rem;
+  width: 100%;
+  margin-top: auto;
+}
+
+@keyframes shimmer {
+  100% {
+    transform: translateX(100%);
+  }
+}
+
+/* Estilos para modo oscuro */
+:global(body.dark) .skeleton {
+  background-color: var(--skeleton-bg-dark);
+}
+
+:global(body.dark) .skeleton::after {
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--skeleton-highlight-dark) 50%,
+    transparent 100%
+  );
+}
+
+:global(body.dark) .skeletonCard {
+  background-color: var(--color-surface-dark);
+}

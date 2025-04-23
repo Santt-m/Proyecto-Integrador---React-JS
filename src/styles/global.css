@@ -1,0 +1,65 @@
+/* src/styles/global.css */
+@import url('./variables.css');
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: var(--font-family-base);
+  line-height: var(--line-height-base);
+  background-color: var(--color-background-light);
+  color: var(--color-text-primary-light);
+  transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+}
+
+body.dark {
+  background-color: var(--color-background-dark);
+  color: var(--color-text-primary-dark);
+}
+
+body.dark footer {
+  background-color: var(--color-header-footer-bg-dark);
+  color: var(--color-text-secondary-dark);
+}
+
+body.dark footer a {
+    color: var(--color-text-secondary-dark);
+}
+
+body.dark main {
+  background-color: var(--color-surface-dark);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+footer {
+  background-color: var(--color-header-footer-bg-light);
+  color: var(--color-text-secondary-light);
+  text-align: center;
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-xl);
+  transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+}
+
+footer a {
+  color: var(--color-text-secondary-light);
+  margin: 0 var(--spacing-sm);
+}
+
+main {
+  max-width: var(--container-max-width);
+  margin: var(--spacing-md) auto;
+  padding: var(--spacing-md);
+  background-color: var(--color-surface-light);
+  border-radius: var(--border-radius-md);
+  min-height: calc(100vh - 120px - var(--spacing-xl));
+  transition: background-color var(--transition-duration) ease;
+}

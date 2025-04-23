@@ -1,0 +1,52 @@
+/* src/pages/About/components/OurHistory/OurHistory.module.css */
+.historySection {
+  margin-bottom: var(--spacing-xl);
+}
+
+.sectionTitle {
+  margin-bottom: var(--spacing-md);
+  color: var(--color-primary);
+}
+
+.contentContainer {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-xl);
+  align-items: center;
+}
+
+.textContent {
+  flex: 1 1 400px;
+}
+
+.paragraph {
+  margin-bottom: var(--spacing-md);
+  line-height: var(--line-height-base);
+}
+
+.paragraph:last-child {
+  margin-bottom: 0;
+}
+
+.imageContainer {
+  flex: 1 1 400px;
+  background-color: var(--color-surface-light);
+  height: 300px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-md);
+  color: var(--color-text-secondary-light);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .contentContainer {
+    flex-direction: column-reverse;
+  }
+  
+  .imageContainer {
+    width: 100%;
+    margin-bottom: var(--spacing-md);
+  }
+}
