@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import ProductCard from '../../components/ProductCard/ProductCard';
+import ProductCard from './components/ProductCard/ProductCard';
 import ProductsListSkeleton from './ProductsListSkeleton';
 import { getAllProducts, getAllCategories, getAllTags } from '../../services/api';
 import styles from './Products.module.css';

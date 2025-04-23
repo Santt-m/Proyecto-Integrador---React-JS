@@ -1,32 +1,17 @@
 import React from 'react';
-import ProductCardSkeleton from '../../components/ProductCard/ProductCardSkeleton';
-import styles from './ProductsListSkeleton.module.css';
+import ProductCardSkeleton from './components/ProductCard/ProductCardSkeleton';
+import styles from './Products.module.css';
 
-function ProductsListSkeleton({ count = 8 }) {
+function ProductsListSkeleton() {
   return (
-    <div className={styles.productsSkeleton}>
-      {/* Título */}
-      <div className={`${styles.titleSkeleton} ${styles.skeleton}`}></div>
-      
-      {/* Sección de filtros */}
-      <div className={styles.filtersContainerSkeleton}>
-        {/* Buscador */}
-        <div className={`${styles.filterGroupSkeleton} ${styles.skeleton}`}></div>
-        
-        {/* Categorías */}
-        <div className={`${styles.filterGroupSkeleton} ${styles.skeleton}`}></div>
-        
-        {/* Etiquetas */}
-        <div className={`${styles.filterGroupSkeleton} ${styles.skeleton}`}></div>
-        
-        {/* Ordenamiento */}
-        <div className={`${styles.filterGroupSkeleton} ${styles.skeleton}`}></div>
+    <div className={styles.productsPage}>
+      <h1 className={styles.pageTitle}>Nuestros Productos</h1>
+      <div className={styles.filtersContainer}>
+        {/* Puedes poner placeholders para los filtros si lo deseas */}
       </div>
-      
-      {/* Grilla de productos */}
-      <div className={styles.productsGridSkeleton}>
-        {Array(count).fill(0).map((_, index) => (
-          <div key={index}>
+      <div className={styles.productsGrid}>
+        {Array(8).fill(0).map((_, index) => (
+          <div key={index} className={styles.productItem}>
             <ProductCardSkeleton />
           </div>
         ))}

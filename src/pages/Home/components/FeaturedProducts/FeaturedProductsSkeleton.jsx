@@ -1,5 +1,5 @@
 import React from 'react';
-import ProductCardSkeleton from '../../../../pages/products/components/ProductCard/ProductCardSkeleton';
+import ProductCardSkeleton from '../../../../pages/Products/components/ProductCard/ProductCardSkeleton';
 import styles from './FeaturedProducts.module.css';
 
 function FeaturedProductsSkeleton() {
