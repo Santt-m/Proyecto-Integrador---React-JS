@@ -120,7 +120,7 @@ function ProductDetail() {
       <div className={styles.productContainer}>
         <div className={styles.productImageSection}>
           <div className={styles.productImageContainer}>
-            <img src={mainImage} alt={product.name} className={styles.productImage} />
+            <img loading="lazy" src={mainImage} alt={product.name} className={styles.productImage} />
             {product.discount && (
               <div className={styles.discountBadge}>-{product.discount}%</div>
             )}
@@ -134,7 +134,7 @@ function ProductDetail() {
                   className={`${styles.thumbnail} ${activeImage === index ? styles.activeThumbnail : ''}`}
                   onClick={() => handleImageChange(index)}
                 >
-                  <img src={img} alt={`${product.name} - vista ${index + 1}`} />
+                  <img loading="lazy" src={img} alt={`${product.name} - vista ${index + 1}`} />
                 </div>
               ))}
             </div>
@@ -250,7 +250,7 @@ function ProductDetail() {
                 }}
               >
                 <div className={styles.relatedProductImage}>
-                  <img src={relatedProduct.image} alt={relatedProduct.name} />
+                  <img loading="lazy" src={relatedProduct.image} alt={relatedProduct.name} />
                   {relatedProduct.discount && (
                     <div className={styles.relatedDiscountBadge}>-{relatedProduct.discount}%</div>
                   )}

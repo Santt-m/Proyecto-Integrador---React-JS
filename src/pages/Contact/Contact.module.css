@@ -1,0 +1,89 @@
+.contactContainer {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem 1rem;
+  font-family: var(--font-primary);
+}
+
+.pageTitle {
+  font-size: 2.5rem;
+  color: var(--color-primary);
+  text-align: center;
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.pageTitle::after {
+  content: "";
+  display: block;
+  width: 80px;
+  height: 4px;
+  background-color: var(--color-accent);
+  margin: 0.5rem auto;
+}
+
+.contactHeader {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.contactIntro {
+  font-size: 1.2rem;
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+  color: var(--color-text);
+}
+
+.contactMainContent {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.formSection {
+  flex: 1 1 550px;
+  min-width: 0;
+}
+
+.infoSection {
+  flex: 1 1 350px;
+  min-width: 0;
+}
+
+.mapSection {
+  margin-bottom: 3rem;
+}
+
+.faqSection, .socialSection {
+  margin-bottom: 3rem;
+}
+
+/* Tema oscuro */
+.dark .contactContainer {
+  background-color: transparent;
+}
+
+.dark .pageTitle {
+  color: var(--color-text-dark-mode);
+}
+
+.dark .contactIntro {
+  color: var(--color-text-secondary-dark-mode);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .contactMainContent {
+    flex-direction: column;
+  }
+  
+  .pageTitle {
+    font-size: 2rem;
+  }
+  
+  .contactIntro {
+    font-size: 1rem;
+  }
+}

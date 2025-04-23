@@ -63,3 +63,15 @@ main {
   min-height: calc(100vh - 120px - var(--spacing-xl));
   transition: background-color var(--transition-duration) ease;
 }
+
+/* Estilos para componentes dependientes del tema */
+.theme-dependent {
+  background-color: var(--color-surface-light);
+  color: var(--color-text-primary-light);
+  transition: background-color var(--transition-duration) ease, color var(--transition-duration) ease;
+}
+
+body.dark .theme-dependent {
+  background-color: var(--color-surface-dark);
+  color: var(--color-text-primary-dark);
+}

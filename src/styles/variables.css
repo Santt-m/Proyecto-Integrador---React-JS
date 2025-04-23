@@ -1,20 +1,24 @@
 /* src/styles/variables.css */
 :root {
   /* Paleta de Colores - Claro */
-  --color-background-light: #f4f4f4;
-  --color-surface-light: #ffffff;
+  --color-background-light: #fdf6e3; /* Crema claro */
+  --color-surface-light: #fffaf0;
   --color-text-primary-light: #333333;
-  --color-text-secondary-light: #333333;
+  --color-text-secondary-light: #555555;
   --color-primary: #007bff;
-  --color-header-footer-bg-light: #ffffff;
+  --color-header-footer-bg-light: #fffaf0;
 
   /* Paleta de Colores - Oscuro */
-  --color-background-dark: #1a1a1a;
-  --color-surface-dark: #2a2a2a;
-  --color-text-primary-dark: #f0f0f0;
-  --color-text-secondary-dark: #f0f0f0;
+  --color-background-dark: #013440; /* Azul petróleo */
+  --color-surface-dark: #024959;
+  --color-text-primary-dark: #e0f7fa;
+  --color-text-secondary-dark: #b2ebf2;
   --color-primary-dark: #64b5f6;
-  --color-header-footer-bg-dark: #222222;
+  --color-header-footer-bg-dark: #024959;
+
+  /* Colores para las letras */
+  --color-text-accent-light: #00796b; /* Verde oscuro */
+  --color-text-accent-dark: #80cbc4; /* Verde claro */
 
   /* Skeleton Colors */
   --skeleton-bg-light: #e0e0e0;

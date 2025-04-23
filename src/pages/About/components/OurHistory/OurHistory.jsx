@@ -1,9 +1,33 @@
-import React from 'react';
+import React, { useRef, useEffect } from 'react';
 import styles from './OurHistory.module.css';
 
 function OurHistory() {
+  const sectionRef = useRef(null);
+
+  useEffect(() => {
+    // Configurar la detección de visibilidad para animación
+    const observer = new IntersectionObserver(
+      (entries) => {
+        if (entries[0].isIntersecting) {
+          sectionRef.current.classList.add(styles.visible);
+        }
+      },
+      { threshold: 0.2 }
+    );
+
+    if (sectionRef.current) {
+      observer.observe(sectionRef.current);
+    }
+
+    return () => {
+      if (sectionRef.current) {
+        observer.unobserve(sectionRef.current);
+      }
+    };
+  }, []);
+
   return (
-    <section className={styles.historySection}>
+    <section ref={sectionRef} className={styles.historySection}>
       <h2 className={styles.sectionTitle}>Nuestra Historia</h2>
       <div className={styles.contentContainer}>
         <div className={styles.textContent}>
@@ -21,7 +45,11 @@ function OurHistory() {
           </p>
         </div>
         <div className={styles.imageContainer}>
-          [Imagen de la tienda o fundadores]
+          <img 
+            src="https://picsum.photos/id/452/600/400" 
+            alt="Nuestra historia" 
+            className={styles.historyImage}
+          />
         </div>
       </div>
     </section>

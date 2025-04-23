@@ -1,0 +1,180 @@
+.formContainer {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.formContainer.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.formTitle {
+  font-size: 1.8rem;
+  color: var(--color-primary);
+  margin-bottom: 1.5rem;
+  position: relative;
+}
+
+.formTitle::after {
+  content: "";
+  display: block;
+  width: 50px;
+  height: 3px;
+  background-color: var(--color-accent);
+  margin-top: 0.5rem;
+}
+
+.contactForm {
+  width: 100%;
+}
+
+.formGroup {
+  margin-bottom: 1.5rem;
+}
+
+.formLabel {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--color-text-dark);
+}
+
+.required {
+  color: #e74c3c;
+}
+
+.formInput, .formTextarea, .formSelect {
+  width: 100%;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  transition: border-color 0.3s, box-shadow 0.3s;
+}
+
+.formInput:focus, .formTextarea:focus, .formSelect:focus {
+  outline: none;
+  border-color: var(--color-primary);
+  box-shadow: 0 0 0 2px rgba(var(--color-primary-rgb), 0.2);
+}
+
+.inputError {
+  border-color: #e74c3c;
+}
+
+.errorMessage {
+  display: block;
+  color: #e74c3c;
+  font-size: 0.85rem;
+  margin-top: 0.4rem;
+}
+
+.submitButton {
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  border-radius: 4px;
+  padding: 0.8rem 1.5rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  display: inline-block;
+  margin-top: 1rem;
+}
+
+.submitButton:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.submitButton:active {
+  transform: translateY(1px);
+}
+
+.formDisclaimer {
+  font-size: 0.8rem;
+  color: #777;
+  margin-top: 1.5rem;
+}
+
+.successMessage {
+  background-color: #d4edda;
+  color: #155724;
+  border-radius: 4px;
+  padding: 1rem;
+  margin-bottom: 1.5rem;
+  text-align: center;
+  animation: fadeIn 0.3s ease;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tema oscuro */
+:global(.dark) .formContainer {
+  background-color: var(--bg-card-dark-mode);
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+}
+
+:global(.dark) .formTitle {
+  color: var(--color-primary-dark-mode);
+}
+
+:global(.dark) .formLabel {
+  color: var(--color-text-dark-mode);
+}
+
+:global(.dark) .formInput, 
+:global(.dark) .formTextarea, 
+:global(.dark) .formSelect {
+  background-color: var(--bg-input-dark-mode);
+  border-color: var(--border-color-dark-mode);
+  color: var(--color-text-dark-mode);
+}
+
+:global(.dark) .formInput:focus, 
+:global(.dark) .formTextarea:focus, 
+:global(.dark) .formSelect:focus {
+  border-color: var(--color-primary-dark-mode);
+}
+
+:global(.dark) .submitButton {
+  background-color: var(--color-primary-dark-mode);
+}
+
+:global(.dark) .submitButton:hover {
+  background-color: var(--color-primary-dark-mode-hover);
+}
+
+:global(.dark) .formDisclaimer {
+  color: var(--color-text-secondary-dark-mode);
+}
+
+:global(.dark) .successMessage {
+  background-color: rgba(212, 237, 218, 0.2);
+  color: #98c9a3;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .formContainer {
+    padding: 1.5rem;
+  }
+  
+  .formTitle {
+    font-size: 1.5rem;
+  }
+}

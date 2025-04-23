@@ -18,7 +18,7 @@ function ProductCard({ product }) {
     <div className={styles.productCard}>
       <Link to={`/products/${product.id}`} className={styles.productLink}>
         <div className={styles.imageContainer}>
-          <img src={product.image} alt={product.name} className={styles.productImage} />
+          <img loading="lazy" src={product.image} alt={product.name} className={styles.productImage} />
         </div>
         <div className={styles.productInfo}>
           <h3 className={styles.productName}>{product.name}</h3>
