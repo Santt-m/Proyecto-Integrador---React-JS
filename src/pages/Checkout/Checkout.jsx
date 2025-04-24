@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import { useTheme } from '../../context/ThemeContext';
+import SEOHead from '../../components/SEOHead/SEOHead';
 import CartSummary from './components/CartSummary/CartSummary';
 import ShippingForm from './components/ShippingForm/ShippingForm';
 import PaymentMethod from './components/PaymentMethod/PaymentMethod';
@@ -96,49 +97,57 @@ function Checkout() {
   };
 
   return (
-    <div className={`${styles.checkoutContainer} ${theme}`}>
-      <h1 className={styles.pageTitle}>Finalizar Compra</h1>
+    <>
+      <SEOHead
+        title="Finalizar Compra"
+        description="Completa tu pedido con nuestro proceso de pago seguro. Completa los datos de envío y elige tu método de pago preferido."
+        keywords="checkout, pago, finalizar compra, envío, pedido, compra segura"
+        canonical="https://proyecto-integrador-react-js-beta.vercel.app/checkout"
+      />
+      <div className={`${styles.checkoutContainer} ${theme}`}>
+        <h1 className={styles.pageTitle}>Finalizar Compra</h1>
 
-      {/* Indicador de pasos del checkout */}
-      {step !== 'confirmation' && renderStepIndicator()}
+        {/* Indicador de pasos del checkout */}
+        {step !== 'confirmation' && renderStepIndicator()}
 
-      {/* Pantalla de carga durante el procesamiento del pago */}
-      {isLoading && (
-        <div className={styles.loadingOverlay}>
-          <div className={styles.spinner}></div>
-          <p>Procesando tu pago...</p>
+        {/* Pantalla de carga durante el procesamiento del pago */}
+        {isLoading && (
+          <div className={styles.loadingOverlay}>
+            <div className={styles.spinner}></div>
+            <p>Procesando tu pago...</p>
+          </div>
+        )}
+
+        <div className={styles.checkoutContent}>
+          {step === 'shipping' && (
+            <div className={styles.shippingSection}>
+              <ShippingForm onContinue={handleShippingSubmit} />
+              <div className={styles.cartSummaryMini}>
+                <CartSummary />
+              </div>
+            </div>
+          )}
+
+          {step === 'payment' && (
+            <div className={styles.paymentSection}>
+              <PaymentMethod 
+                onComplete={handlePaymentSubmit} 
+                onBack={handleBackToShipping} 
+              />
+              <div className={styles.cartSummaryMini}>
+                <CartSummary />
+              </div>
+            </div>
+          )}
+
+          {step === 'confirmation' && (
+            <div className={styles.confirmationSection}>
+              <OrderConfirmation orderDetails={orderDetails} />
+            </div>
+          )}
         </div>
-      )}
-
-      <div className={styles.checkoutContent}>
-        {step === 'shipping' && (
-          <div className={styles.shippingSection}>
-            <ShippingForm onContinue={handleShippingSubmit} />
-            <div className={styles.cartSummaryMini}>
-              <CartSummary />
-            </div>
-          </div>
-        )}
-
-        {step === 'payment' && (
-          <div className={styles.paymentSection}>
-            <PaymentMethod 
-              onComplete={handlePaymentSubmit} 
-              onBack={handleBackToShipping} 
-            />
-            <div className={styles.cartSummaryMini}>
-              <CartSummary />
-            </div>
-          </div>
-        )}
-
-        {step === 'confirmation' && (
-          <div className={styles.confirmationSection}>
-            <OrderConfirmation orderDetails={orderDetails} />
-          </div>
-        )}
       </div>
-    </div>
+    </>
   );
 }
 

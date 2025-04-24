@@ -10,7 +10,7 @@ function OrderConfirmation({ orderDetails }) {
   // Limpiar el carrito automáticamente cuando se confirma la orden
   useEffect(() => {
     clearCart();
-  }, [clearCart]);
+  }, []);
   
   const handleContinueShopping = () => {
     // Usamos navigate con { replace: true } para asegurarnos de reemplazar

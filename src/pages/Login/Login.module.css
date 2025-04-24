@@ -4,21 +4,25 @@
   align-items: center;
   min-height: 70vh;
   padding: 2rem;
+  background-color: var(--background);
+  color: var(--text-primary);
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .loginCard {
-  background-color: white;
+  background-color: var(--background-card);
   border-radius: 10px;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  box-shadow: var(--box-shadow);
   width: 100%;
   max-width: 450px;
   padding: 2rem;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
 }
 
 .loginTitle {
   text-align: center;
   margin-bottom: 1.5rem;
-  color: var(--color-primary);
+  color: var(--primary);
   font-size: 1.8rem;
 }
 
@@ -37,26 +41,28 @@
 .formGroup label {
   font-weight: 500;
   font-size: 0.9rem;
-  color: var(--color-text-dark);
+  color: var(--text-primary);
 }
 
 .input {
   width: 100%;
   padding: 0.8rem;
-  border: 1px solid var(--color-border);
+  border: 1px solid var(--border-color);
   border-radius: 5px;
   font-size: 1rem;
-  transition: border-color 0.2s;
+  background-color: var(--input-background);
+  color: var(--text-primary);
+  transition: border-color 0.2s, background-color 0.2s;
 }
 
 .input:focus {
-  border-color: var(--color-primary);
+  border-color: var(--primary);
   outline: none;
 }
 
 .loginButton {
-  background-color: var(--color-primary);
-  color: white;
+  background-color: var(--primary);
+  color: var(--text-on-primary);
   border: none;
   padding: 12px;
   border-radius: 5px;
@@ -68,17 +74,17 @@
 }
 
 .loginButton:hover {
-  background-color: var(--color-primary-dark);
+  background-color: var(--primary-dark);
 }
 
 .loginButton:disabled {
-  background-color: var(--color-disabled);
+  opacity: 0.7;
   cursor: not-allowed;
 }
 
 .errorMessage {
-  background-color: #ffebee;
-  color: #c62828;
+  background-color: rgba(220, 53, 69, 0.1);
+  color: var(--error);
   padding: 0.8rem;
   border-radius: 5px;
   margin-bottom: 1rem;
@@ -89,10 +95,11 @@
   text-align: center;
   margin-top: 1.5rem;
   font-size: 0.9rem;
+  color: var(--text-primary);
 }
 
 .registerLink a {
-  color: var(--color-primary);
+  color: var(--primary);
   font-weight: 500;
   text-decoration: none;
 }

@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from './components/ProductCard/ProductCard';
 import ProductsListSkeleton from './ProductsListSkeleton';
+import SEOHead from '../../components/SEOHead/SEOHead';
 import { getAllProducts, getAllCategories, getAllTags } from '../../services/api';
 import styles from './Products.module.css';
 
@@ -116,106 +117,124 @@ function Products() {
 
   // Mostrar skeleton durante la carga
   if (loading) {
-    return <ProductsListSkeleton />;
+    return (
+      <>
+        <SEOHead
+          title="Productos"
+          description="Explora nuestra amplia selección de productos de alta calidad. Filtros por categoría, precio y más."
+          keywords="catálogo productos, ofertas, comprar online, mejores precios"
+          canonical="https://mitiendareact.com/products"
+        />
+        <ProductsListSkeleton />
+      </>
+    );
   }
 
   return (
-    <div className={styles.productsPage}>
-      <h1 className={styles.pageTitle}>Nuestros Productos</h1>
-      
-      <div className={styles.filtersContainer}>
-        <div className={styles.filterGroup}>
-          <input
-            type="text"
-            placeholder="Buscar productos..."
-            value={searchTerm}
-            onChange={handleSearchChange}
-            className={styles.searchInput}
-          />
+    <>
+      <SEOHead
+        title="Productos"
+        description="Explora nuestra amplia selección de productos de alta calidad. Filtros por categoría, precio y más."
+        keywords="catálogo productos, ofertas, comprar online, mejores precios"
+        canonical="https://mitiendareact.com/products"
+      />
+      <div className={styles.productsPage}>
+        <h1 className={styles.pageTitle}>Nuestros Productos</h1>
+        
+        <div className={styles.filtersContainer}>
+          <div className={styles.filterGroup}>
+            <input
+              type="text"
+              placeholder="Buscar productos..."
+              value={searchTerm}
+              onChange={handleSearchChange}
+              className={styles.searchInput}
+            />
+          </div>
+          
+          <div className={styles.filterGroup}>
+            <label htmlFor="category">Categoría:</label>
+            <select 
+              id="category" 
+              value={selectedCategory} 
+              onChange={handleCategoryChange}
+              className={styles.filterSelect}
+            >
+              {categories.map(category => (
+                <option key={category} value={category}>
+                  {category === 'all' ? 'Todas las categorías' : category}
+                </option>
+              ))}
+            </select>
+          </div>
+          
+          <div className={styles.filterGroup}>
+            <label htmlFor="tag">Etiqueta:</label>
+            <select 
+              id="tag" 
+              value={selectedTag} 
+              onChange={handleTagChange}
+              className={styles.filterSelect}
+            >
+              {tags.map(tag => (
+                <option key={tag} value={tag}>
+                  {tag === 'all' ? 'Todas las etiquetas' : tag}
+                </option>
+              ))}
+            </select>
+          </div>
+          
+          <div className={styles.filterGroup}>
+            <label htmlFor="sort">Ordenar por:</label>
+            <select 
+              id="sort" 
+              value={sortBy} 
+              onChange={handleSortChange}
+              className={styles.filterSelect}
+            >
+              <option value="default">Por defecto</option>
+              <option value="price-asc">Precio: Menor a Mayor</option>
+              <option value="price-desc">Precio: Mayor a Menor</option>
+              <option value="name-asc">Nombre: A-Z</option>
+              <option value="name-desc">Nombre: Z-A</option>
+              <option value="rating-desc">Mejor valorados</option>
+            </select>
+          </div>
         </div>
         
-        <div className={styles.filterGroup}>
-          <label htmlFor="category">Categoría:</label>
-          <select 
-            id="category" 
-            value={selectedCategory} 
-            onChange={handleCategoryChange}
-            className={styles.filterSelect}
-          >
-            {categories.map(category => (
-              <option key={category} value={category}>
-                {category === 'all' ? 'Todas las categorías' : category}
-              </option>
-            ))}
-          </select>
-        </div>
-        
-        <div className={styles.filterGroup}>
-          <label htmlFor="tag">Etiqueta:</label>
-          <select 
-            id="tag" 
-            value={selectedTag} 
-            onChange={handleTagChange}
-            className={styles.filterSelect}
-          >
-            {tags.map(tag => (
-              <option key={tag} value={tag}>
-                {tag === 'all' ? 'Todas las etiquetas' : tag}
-              </option>
-            ))}
-          </select>
-        </div>
-        
-        <div className={styles.filterGroup}>
-          <label htmlFor="sort">Ordenar por:</label>
-          <select 
-            id="sort" 
-            value={sortBy} 
-            onChange={handleSortChange}
-            className={styles.filterSelect}
-          >
-            <option value="default">Por defecto</option>
-            <option value="price-asc">Precio: Menor a Mayor</option>
-            <option value="price-desc">Precio: Mayor a Menor</option>
-            <option value="name-asc">Nombre: A-Z</option>
-            <option value="name-desc">Nombre: Z-A</option>
-            <option value="rating-desc">Mejor valorados</option>
-          </select>
-        </div>
-      </div>
-      
-      {filteredProducts.length === 0 ? (
-        <div className={styles.noResults}>
-          <p>No se encontraron productos que coincidan con tu búsqueda.</p>
-          <button 
-            onClick={resetFilters}
-            className={styles.resetButton}
-          >
-            Restablecer filtros
-          </button>
-        </div>
-      ) : (
-        <div className={styles.resultsInfo}>
-          <p>Mostrando {filteredProducts.length} {filteredProducts.length === 1 ? 'producto' : 'productos'}</p>
-          {(selectedCategory !== 'all' || selectedTag !== 'all' || searchTerm !== '') && (
+        {filteredProducts.length === 0 ? (
+          <div className={styles.noResults}>
+            <p>No se encontraron productos que coincidan con tu búsqueda.</p>
             <button 
               onClick={resetFilters}
-              className={styles.smallResetButton}
+              className={styles.resetButton}
             >
               Restablecer filtros
             </button>
-          )}
-        </div>
-      )}
-      
-      <div className={styles.productsGrid}>
-        {filteredProducts.map(product => (
-          <div key={product.id} className={styles.productItem}>
-            <ProductCard product={product} />
           </div>
-        ))}
+        ) : (
+          <div className={styles.resultsInfo}>
+            <p>Mostrando {filteredProducts.length} {filteredProducts.length === 1 ? 'producto' : 'productos'}</p>
+            {(selectedCategory !== 'all' || selectedTag !== 'all' || searchTerm !== '') && (
+              <button 
+                onClick={resetFilters}
+                className={styles.smallResetButton}
+              >
+                Restablecer filtros
+              </button>
+            )}
+          </div>
+        )}
+        
+        <div className={styles.productsGrid}>
+          {filteredProducts.map(product => (
+            <div key={product.id} className={styles.productItem}>
+              <ProductCard product={product} />
+            </div>
+          ))}
+        </div>
       </div>
-    </div>
+    </>
   );
 }
 
