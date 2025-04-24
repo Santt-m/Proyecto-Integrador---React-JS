@@ -1,33 +1,30 @@
-.socialSection {
+.socialContainer {
   background-color: #fff;
   border-radius: 10px;
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
   padding: 2rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.socialSection.visible {
   opacity: 1;
-  transform: translateY(0);
+  animation: fadeIn 0.8s ease;
 }
 
 .socialTitle {
-  font-size: 1.8rem;
-  color: var(--color-primary);
-  margin-bottom: 1.2rem;
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-md);
+  color: var(--color-text-primary-light);
+  font-family: var(--font-family-heading);
+  font-weight: 600;
   position: relative;
-  text-align: center;
+  padding-bottom: var(--spacing-xs);
 }
 
 .socialTitle::after {
-  content: "";
-  display: block;
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
   width: 50px;
-  height: 3px;
-  background-color: var(--color-accent);
-  margin: 0.5rem auto;
+  height: 2px;
+  background-color: var(--color-primary);
 }
 
 .socialText {
@@ -40,12 +37,26 @@
   margin-right: auto;
 }
 
+.socialDescription {
+  color: var(--color-text-secondary-light);
+  margin-bottom: var(--spacing-md);
+  font-family: var(--font-family-base);
+  line-height: 1.6;
+}
+
 .socialLinks {
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
   gap: 1rem;
   margin-bottom: 3rem;
+}
+
+.socialGrid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-lg);
 }
 
 .socialLink {
@@ -59,18 +70,43 @@
   transition: transform 0.3s, box-shadow 0.3s;
 }
 
+.socialCard {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
 .socialLink:hover {
   transform: translateY(-3px);
   box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
+.socialCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
 .socialIcon {
-  font-size: 1.5rem;
-  margin-right: 0.5rem;
+  font-size: 2.5rem;
+  margin-bottom: var(--spacing-sm);
 }
 
 .socialName {
+  font-size: 1.1rem;
   font-weight: 600;
+  margin-bottom: var(--spacing-xs);
+  font-family: var(--font-family-heading);
+}
+
+.socialHandle {
+  font-size: 0.9rem;
+  opacity: 0.8;
+  font-family: var(--font-family-base);
 }
 
 .newsletterContainer {
@@ -136,18 +172,130 @@
   transform: translateY(1px);
 }
 
+/* Colores específicos de redes sociales */
+.facebook {
+  color: #1877f2;
+  background-color: rgba(24, 119, 242, 0.1);
+}
+
+.twitter {
+  color: #1da1f2;
+  background-color: rgba(29, 161, 242, 0.1);
+}
+
+.instagram {
+  color: #c13584;
+  background-color: rgba(193, 53, 132, 0.1);
+}
+
+.linkedin {
+  color: #0077b5;
+  background-color: rgba(0, 119, 181, 0.1);
+}
+
+.youtube {
+  color: #ff0000;
+  background-color: rgba(255, 0, 0, 0.1);
+}
+
+.pinterest {
+  color: #e60023;
+  background-color: rgba(230, 0, 35, 0.1);
+}
+
+.whatsappBanner {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: rgba(37, 211, 102, 0.1);
+  border-radius: var(--border-radius-sm);
+  padding: var(--spacing-md);
+  margin-top: var(--spacing-md);
+  border: 1px solid rgba(37, 211, 102, 0.2);
+}
+
+.whatsappContent {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+}
+
+.whatsappIcon {
+  font-size: 2.5rem;
+  color: #25d366;
+}
+
+.whatsappText h3 {
+  font-size: 1.1rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-text-primary-light);
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+}
+
+.whatsappText p {
+  color: var(--color-text-secondary-light);
+  font-size: 0.9rem;
+  max-width: 400px;
+  font-family: var(--font-family-base);
+}
+
+.whatsappButton {
+  background-color: #25d366;
+  color: white;
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  font-weight: 500;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+  font-family: var(--font-family-base);
+  white-space: nowrap;
+}
+
+.whatsappButton:hover {
+  background-color: #20ba5a;
+  transform: translateY(-2px);
+}
+
+.whatsappButton:active {
+  transform: translateY(0);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
 /* Tema oscuro */
-:global(.dark) .socialSection {
-  background-color: var(--bg-card-dark-mode);
+:global(body.dark) .socialContainer {
+  background-color: var(--color-surface-dark);
   box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-:global(.dark) .socialTitle {
-  color: var(--color-primary-dark-mode);
+:global(body.dark) .socialTitle {
+  color: var(--color-text-primary-dark);
+}
+
+:global(body.dark) .socialTitle::after {
+  background-color: var(--color-primary-dark);
 }
 
 :global(.dark) .socialText {
   color: var(--color-text-secondary-dark-mode);
+}
+
+:global(body.dark) .socialDescription {
+  color: var(--color-text-secondary-dark);
+}
+
+:global(body.dark) .socialCard {
+  background-color: rgba(255, 255, 255, 0.05);
 }
 
 /* Los enlaces sociales ya tienen sus propios colores, no necesitan cambios para el tema oscuro */
@@ -183,14 +331,33 @@
   background-color: var(--color-primary-dark-mode-hover);
 }
 
+:global(body.dark) .whatsappBanner {
+  background-color: rgba(37, 211, 102, 0.05);
+  border-color: rgba(37, 211, 102, 0.1);
+}
+
+:global(body.dark) .whatsappText h3 {
+  color: var(--color-text-primary-dark);
+}
+
+:global(body.dark) .whatsappText p {
+  color: var(--color-text-secondary-dark);
+}
+
 /* Responsive */
+@media (max-width: 992px) {
+  .socialGrid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
 @media (max-width: 768px) {
-  .socialSection {
+  .socialContainer {
     padding: 1.5rem;
   }
   
   .socialTitle {
-    font-size: 1.5rem;
+    font-size: 1.3rem;
   }
   
   .socialLinks {
@@ -202,7 +369,75 @@
     padding: 1.5rem;
   }
   
+  .newsletterTitle {
+    font-size: 1.2rem;
+  }
+  
+  .newsletterText {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+  
   .newsletterForm {
     flex-direction: column;
+    width: 100%;
+  }
+  
+  .newsletterInput {
+    width: 100%;
+    min-width: unset;
+    margin-bottom: 0.5rem;
+  }
+  
+  .newsletterButton {
+    width: 100%;
+    padding: 0.7rem 1rem;
+  }
+  
+  .whatsappBanner {
+    flex-direction: column;
+    gap: var(--spacing-md);
+    text-align: center;
+  }
+  
+  .whatsappContent {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 480px) {
+  .socialContainer {
+    padding: 1.2rem;
+  }
+  
+  .socialGrid {
+    grid-template-columns: 1fr;
+  }
+  
+  .socialIcon {
+    font-size: 2rem;
+  }
+  
+  .newsletterContainer {
+    padding: 1.2rem;
+  }
+  
+  .newsletterTitle {
+    font-size: 1.1rem;
+  }
+  
+  .newsletterText {
+    font-size: 0.9rem;
+    margin-bottom: 1rem;
+  }
+  
+  .newsletterInput {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.9rem;
+  }
+  
+  .newsletterButton {
+    padding: 0.7rem 0.8rem;
+    font-size: 0.9rem;
   }
 }

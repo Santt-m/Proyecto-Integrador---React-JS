@@ -1,0 +1,60 @@
+{
+  "title": "Conéctate con nosotros",
+  "description": "Síguenos en redes sociales para estar al día con nuestras novedades, promociones y contenido exclusivo.",
+  "socialNetworks": [
+    {
+      "name": "Facebook",
+      "url": "https://facebook.com/nuestra-tienda",
+      "handle": "@nuestratienda",
+      "className": "facebook",
+      "ariaLabel": "Visita nuestra página de Facebook"
+    },
+    {
+      "name": "Twitter",
+      "url": "https://twitter.com/nuestra-tienda",
+      "handle": "@nuestratienda",
+      "className": "twitter",
+      "ariaLabel": "Síguenos en Twitter"
+    },
+    {
+      "name": "Instagram",
+      "url": "https://instagram.com/nuestra-tienda",
+      "handle": "@nuestratienda",
+      "className": "instagram",
+      "ariaLabel": "Síguenos en Instagram"
+    },
+    {
+      "name": "LinkedIn",
+      "url": "https://linkedin.com/company/nuestra-tienda",
+      "handle": "Nuestra Tienda",
+      "className": "linkedin",
+      "ariaLabel": "Conéctate con nosotros en LinkedIn"
+    },
+    {
+      "name": "YouTube",
+      "url": "https://youtube.com/c/nuestra-tienda",
+      "handle": "Nuestra Tienda",
+      "className": "youtube",
+      "ariaLabel": "Suscríbete a nuestro canal de YouTube"
+    },
+    {
+      "name": "Pinterest",
+      "url": "https://pinterest.com/nuestra-tienda",
+      "handle": "@nuestratienda",
+      "className": "pinterest",
+      "ariaLabel": "Síguenos en Pinterest"
+    }
+  ],
+  "newsletter": {
+    "title": "Suscríbete a nuestro newsletter",
+    "description": "Recibe las últimas novedades, ofertas exclusivas y noticias directamente en tu correo electrónico.",
+    "placeholder": "Ingresa tu correo electrónico",
+    "successMessage": "¡Gracias por suscribirte! Hemos enviado un correo de confirmación a"
+  },
+  "whatsapp": {
+    "title": "Atención al cliente por WhatsApp",
+    "description": "Conéctate con nosotros para resolver tus dudas, consultar stock o solicitar asistencia.",
+    "phoneNumber": "5491123456789",
+    "buttonText": "Chatea con nosotros"
+  }
+}

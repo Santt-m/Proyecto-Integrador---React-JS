@@ -3,12 +3,13 @@ import ProductCard from '../../../../pages/Products/components/ProductCard/Produ
 import FeaturedProductsSkeleton from './FeaturedProductsSkeleton';
 import { getFeaturedProducts } from '../../../../services/api';
 import styles from './FeaturedProducts.module.css';
+import config from '../../config.json';
 
 function FeaturedProducts() {
   const [featuredProducts, setFeaturedProducts] = useState([]);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [isVisible, setIsVisible] = useState(true); // Iniciar visible directamente
+  const [isVisible, setIsVisible] = useState(true);
   const sectionRef = useRef(null);
 
   useEffect(() => {
@@ -65,7 +66,7 @@ function FeaturedProducts() {
         ref={sectionRef} 
         className={`${styles.featuredSection} ${styles.visible}`}
       >
-        <h2 className={styles.sectionTitle}>Productos Destacados</h2>
+        <h2 className={styles.sectionTitle}>{config.featuredProducts.title}</h2>
         <p className={styles.errorMessage}>{error}</p>
       </section>
     );
@@ -81,7 +82,7 @@ function FeaturedProducts() {
       ref={sectionRef} 
       className={`${styles.featuredSection} ${styles.visible}`}
     >
-      <h2 className={styles.sectionTitle}>Productos Destacados</h2>
+      <h2 className={styles.sectionTitle}>{config.featuredProducts.title}</h2>
       <p className={styles.sectionSubtitle}>
         Descubre nuestra selección de productos más populares y de alta calidad
       </p>
@@ -96,7 +97,7 @@ function FeaturedProducts() {
       
       <div className={styles.seeAllContainer}>
         <a href="/products" className={styles.seeAllLink}>
-          Ver todos los productos
+          {config.featuredProducts.buttonText}
         </a>
       </div>
     </section>

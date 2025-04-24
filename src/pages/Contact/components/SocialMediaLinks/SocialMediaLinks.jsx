@@ -1,105 +1,97 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useState } from 'react';
 import styles from './SocialMediaLinks.module.css';
+import { 
+  FaFacebookF, 
+  FaTwitter, 
+  FaInstagram, 
+  FaLinkedinIn, 
+  FaYoutube, 
+  FaPinterestP, 
+  FaWhatsapp,
+  FaPaperPlane
+} from 'react-icons/fa';
+import config from './config.json';
+
+// Mapa de los iconos para cada red social
+const socialIcons = {
+  'Facebook': FaFacebookF,
+  'Twitter': FaTwitter,
+  'Instagram': FaInstagram,
+  'LinkedIn': FaLinkedinIn,
+  'YouTube': FaYoutube,
+  'Pinterest': FaPinterestP
+};
 
 function SocialMediaLinks() {
-  const socialRef = useRef(null);
+  const [email, setEmail] = useState('');
 
-  useEffect(() => {
-    // Configurar la detección de visibilidad para animación
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          socialRef.current.classList.add(styles.visible);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (socialRef.current) {
-      observer.observe(socialRef.current);
-    }
-
-    return () => {
-      if (socialRef.current) {
-        observer.unobserve(socialRef.current);
-      }
-    };
-  }, []);
-
-  const socialNetworks = [
-    {
-      name: 'Facebook',
-      icon: '📘',
-      url: 'https://facebook.com/mitienda',
-      color: '#3b5998'
-    },
-    {
-      name: 'Instagram',
-      icon: '📸',
-      url: 'https://instagram.com/mitienda',
-      color: '#c13584'
-    },
-    {
-      name: 'Twitter',
-      icon: '🐦',
-      url: 'https://twitter.com/mitienda',
-      color: '#1da1f2'
-    },
-    {
-      name: 'YouTube',
-      icon: '🎬',
-      url: 'https://youtube.com/mitienda',
-      color: '#ff0000'
-    },
-    {
-      name: 'LinkedIn',
-      icon: '💼',
-      url: 'https://linkedin.com/company/mitienda',
-      color: '#0077b5'
-    }
-  ];
+  const handleSubscribe = (e) => {
+    e.preventDefault();
+    // Aquí iría la lógica para suscribir al newsletter
+    alert(`${config.newsletter.successMessage} ${email}`);
+    setEmail('');
+  };
 
   return (
-    <div ref={socialRef} className={styles.socialSection}>
-      <h2 className={styles.socialTitle}>Síguenos en Redes Sociales</h2>
+    <div className={styles.socialContainer}>
+      <h2 className={styles.socialTitle}>{config.title}</h2>
       
-      <p className={styles.socialText}>
-        Mantente al día con nuestras últimas novedades, promociones y contenido exclusivo.
-      </p>
+      <p className={styles.socialDescription}>{config.description}</p>
       
-      <div className={styles.socialLinks}>
-        {socialNetworks.map((network, index) => (
-          <a 
-            key={index} 
-            href={network.url} 
-            target="_blank" 
-            rel="noopener noreferrer"
-            className={styles.socialLink}
-            style={{'--social-color': network.color}}
-          >
-            <span className={styles.socialIcon}>{network.icon}</span>
-            <span className={styles.socialName}>{network.name}</span>
-          </a>
-        ))}
+      <div className={styles.socialGrid}>
+        {config.socialNetworks.map((network) => {
+          const IconComponent = socialIcons[network.name];
+          return (
+            <a 
+              key={network.name}
+              href={network.url} 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={`${styles.socialCard} ${styles[network.className]}`}
+              aria-label={network.ariaLabel}
+            >
+              <IconComponent className={styles.socialIcon} />
+              <span className={styles.socialName}>{network.name}</span>
+              <span className={styles.socialHandle}>{network.handle}</span>
+            </a>
+          );
+        })}
       </div>
       
       <div className={styles.newsletterContainer}>
-        <h3 className={styles.newsletterTitle}>Suscríbete a nuestro Newsletter</h3>
-        <p className={styles.newsletterText}>
-          Recibe las últimas novedades y ofertas exclusivas directamente en tu correo.
-        </p>
-        
-        <form className={styles.newsletterForm}>
-          <input 
-            type="email" 
-            placeholder="Tu correo electrónico" 
-            className={styles.newsletterInput} 
+        <h3 className={styles.newsletterTitle}>{config.newsletter.title}</h3>
+        <p className={styles.newsletterText}>{config.newsletter.description}</p>
+        <form onSubmit={handleSubscribe} className={styles.newsletterForm}>
+          <input
+            type="email"
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            placeholder={config.newsletter.placeholder}
             required
+            className={styles.newsletterInput}
           />
           <button type="submit" className={styles.newsletterButton}>
-            Suscribirse
+            <FaPaperPlane />
           </button>
         </form>
+      </div>
+      
+      <div className={styles.whatsappBanner}>
+        <div className={styles.whatsappContent}>
+          <FaWhatsapp className={styles.whatsappIcon} />
+          <div className={styles.whatsappText}>
+            <h3>{config.whatsapp.title}</h3>
+            <p>{config.whatsapp.description}</p>
+          </div>
+        </div>
+        <a 
+          href={`https://wa.me/${config.whatsapp.phoneNumber}`} 
+          target="_blank" 
+          rel="noopener noreferrer"
+          className={styles.whatsappButton}
+        >
+          {config.whatsapp.buttonText}
+        </a>
       </div>
     </div>
   );

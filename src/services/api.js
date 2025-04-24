@@ -56,7 +56,10 @@ const preloadImages = (products) => {
   
   // Usar setTimeout para no bloquear el hilo principal
   setTimeout(() => {
-    products.forEach(product => {
+    // Precargar solo las primeras 6 imágenes inicialmente para mejorar el rendimiento
+    const initialImagesToPreload = products.slice(0, 6);
+    
+    initialImagesToPreload.forEach(product => {
       // Precargar imagen principal
       if (product.image && !cache.images.has(product.image)) {
         const img = new Image();
@@ -66,20 +69,53 @@ const preloadImages = (products) => {
         };
       }
       
-      // Precargar imágenes adicionales si existen
-      if (product.images && Array.isArray(product.images)) {
-        product.images.forEach(imgSrc => {
-          if (!cache.images.has(imgSrc)) {
-            const img = new Image();
-            img.src = imgSrc;
-            img.onload = () => {
-              saveToCache(imgSrc, img.src, 'images');
-            };
-          }
-        });
+      // Precargar solo la primera imagen adicional por producto para reducir la carga inicial
+      if (product.images && Array.isArray(product.images) && product.images.length > 0) {
+        const firstImage = product.images[0];
+        if (!cache.images.has(firstImage)) {
+          const img = new Image();
+          img.src = firstImage;
+          img.onload = () => {
+            saveToCache(firstImage, img.src, 'images');
+          };
+        }
       }
     });
-    console.log(`🖼️ Precargando ${products.length} imágenes en segundo plano`);
+    
+    // Precargar el resto de imágenes después de un retraso para priorizar el contenido visible
+    setTimeout(() => {
+      products.forEach(product => {
+        // Omitir las primeras 6 productos ya procesados
+        if (initialImagesToPreload.includes(product)) return;
+        
+        if (product.image && !cache.images.has(product.image)) {
+          const img = new Image();
+          img.src = product.image;
+          img.onload = () => {
+            saveToCache(product.image, img.src, 'images');
+          };
+        }
+        
+        // Precargar imágenes adicionales de todos los productos
+        if (product.images && Array.isArray(product.images)) {
+          product.images.forEach((imgSrc, index) => {
+            // Para los primeros 6 productos, saltamos la primera imagen que ya hemos precargado
+            if (initialImagesToPreload.includes(product) && index === 0) return;
+            
+            if (!cache.images.has(imgSrc)) {
+              const img = new Image();
+              img.src = imgSrc;
+              img.onload = () => {
+                saveToCache(imgSrc, img.src, 'images');
+              };
+            }
+          });
+        }
+      });
+      console.log(`🖼️ Precargando todas las imágenes restantes en segundo plano`);
+    }, 2000); // Retraso de 2 segundos para el resto de imágenes
+    
+    console.log(`🖼️ Precargando ${initialImagesToPreload.length} imágenes prioritarias en segundo plano`);
   }, 300);
 };
 

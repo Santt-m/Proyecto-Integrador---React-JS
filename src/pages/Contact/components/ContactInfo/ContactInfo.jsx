@@ -1,92 +1,102 @@
-import React, { useRef, useEffect } from 'react';
+import React, { useEffect, useRef } from 'react';
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaClock } from 'react-icons/fa';
+import { ThemeContext } from '../../../../context/ThemeContext';
+import { useContext } from 'react';
 import styles from './ContactInfo.module.css';
 
-function ContactInfo() {
-  const infoRef = useRef(null);
+const ContactInfo = () => {
+  const { darkMode } = useContext(ThemeContext);
+  const contactInfoRef = useRef(null);
+  
+  const contactDetails = [
+    {
+      icon: <FaMapMarkerAlt />,
+      title: 'Dirección',
+      details: 'Av. Corrientes 1234, CABA, Argentina',
+      action: 'Ver en mapa'
+    },
+    {
+      icon: <FaPhone />,
+      title: 'Teléfono',
+      details: '+54 11 5555-5555',
+      action: 'Llamar ahora'
+    },
+    {
+      icon: <FaEnvelope />,
+      title: 'Correo electrónico',
+      details: 'info@techmundo.com.ar',
+      action: 'Enviar correo'
+    },
+    {
+      icon: <FaClock />,
+      title: 'Horarios',
+      details: 'Lunes a Viernes: 9am - 6pm | Sábados: 10am - 2pm',
+      action: null
+    }
+  ];
 
   useEffect(() => {
-    // Configurar la detección de visibilidad para animación
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          infoRef.current.classList.add(styles.visible);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (infoRef.current) {
-      observer.observe(infoRef.current);
+    // Animar la entrada de los elementos
+    if (contactInfoRef.current) {
+      const items = contactInfoRef.current.querySelectorAll(`.${styles.contactDetailItem}`);
+      items.forEach((item, index) => {
+        setTimeout(() => {
+          item.style.opacity = '1';
+          item.style.transform = 'translateY(0)';
+        }, 100 * index);
+      });
     }
-
-    return () => {
-      if (infoRef.current) {
-        observer.unobserve(infoRef.current);
-      }
-    };
   }, []);
 
+  const getActionUrl = (contactType, details) => {
+    switch(contactType) {
+      case 'Dirección':
+        return `https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(details)}`;
+      case 'Teléfono':
+        return `tel:${details.replace(/[^0-9+]/g, '')}`;
+      case 'Correo electrónico':
+        return `mailto:${details}`;
+      default:
+        return null;
+    }
+  };
+
   return (
-    <div ref={infoRef} className={styles.infoContainer}>
-      <h2 className={styles.infoTitle}>Información de Contacto</h2>
+    <div className={`${styles.contactInfoContainer} ${darkMode ? styles.dark : ''}`} ref={contactInfoRef}>
+      <h2 className={styles.contactInfoTitle}>Información de Contacto</h2>
+      <p className={styles.contactInfoDescription}>
+        Estamos aquí para ayudarte. No dudes en ponerte en contacto con nosotros si tienes alguna pregunta o necesitas asistencia.
+      </p>
       
-      <div className={styles.infoContent}>
-        <div className={styles.infoItem}>
-          <div className={styles.iconContainer}>
-            <i className={styles.icon}>📍</i>
+      <div className={styles.contactDetailsList}>
+        {contactDetails.map((contact, index) => (
+          <div 
+            key={index} 
+            className={styles.contactDetailItem}
+            style={{ opacity: 0, transform: 'translateY(20px)', transition: 'opacity 0.5s ease, transform 0.5s ease' }}
+          >
+            <div className={styles.contactIcon}>
+              {contact.icon}
+            </div>
+            <div className={styles.contactContent}>
+              <h3 className={styles.contactTitle}>{contact.title}</h3>
+              <p className={styles.contactDetail}>{contact.details}</p>
+              {contact.action && (
+                <a 
+                  href={getActionUrl(contact.title, contact.details)}
+                  className={styles.contactAction}
+                  target={contact.title === 'Dirección' ? '_blank' : '_self'}
+                  rel={contact.title === 'Dirección' ? 'noopener noreferrer' : ''}
+                >
+                  {contact.action}
+                </a>
+              )}
+            </div>
           </div>
-          <div className={styles.infoDetails}>
-            <h3 className={styles.infoSubtitle}>Dirección</h3>
-            <p className={styles.infoText}>
-              Av. Libertador 1234<br />
-              Piso 5, Oficina 501<br />
-              Buenos Aires, Argentina
-            </p>
-          </div>
-        </div>
-        
-        <div className={styles.infoItem}>
-          <div className={styles.iconContainer}>
-            <i className={styles.icon}>📞</i>
-          </div>
-          <div className={styles.infoDetails}>
-            <h3 className={styles.infoSubtitle}>Teléfono</h3>
-            <p className={styles.infoText}>
-              +54 11 4567-8900<br />
-              +54 11 4567-8901
-            </p>
-          </div>
-        </div>
-        
-        <div className={styles.infoItem}>
-          <div className={styles.iconContainer}>
-            <i className={styles.icon}>✉️</i>
-          </div>
-          <div className={styles.infoDetails}>
-            <h3 className={styles.infoSubtitle}>Email</h3>
-            <p className={styles.infoText}>
-              info@mitienda.com<br />
-              soporte@mitienda.com
-            </p>
-          </div>
-        </div>
-        
-        <div className={styles.infoItem}>
-          <div className={styles.iconContainer}>
-            <i className={styles.icon}>🕒</i>
-          </div>
-          <div className={styles.infoDetails}>
-            <h3 className={styles.infoSubtitle}>Horario de Atención</h3>
-            <p className={styles.infoText}>
-              Lunes a Viernes: 9:00 - 18:00<br />
-              Sábados: 10:00 - 14:00<br />
-              Domingos y Feriados: Cerrado
-            </p>
-          </div>
-        </div>
+        ))}
       </div>
     </div>
   );
-}
+};
 
 export default ContactInfo;

@@ -1,116 +1,324 @@
-.infoContainer {
-  background-color: #fff;
-  border-radius: 10px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+.contactInfoContainer {
+  background-color: var(--background-card);
+  border-radius: var(--border-radius-md);
   padding: 2rem;
-  opacity: 0;
-  transform: translateY(20px);
-  transition: opacity 0.5s ease, transform 0.5s ease;
-}
-
-.infoContainer.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
-
-.infoTitle {
-  font-size: 1.8rem;
-  color: var(--color-primary);
-  margin-bottom: 1.5rem;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
   position: relative;
+  overflow: hidden;
 }
 
-.infoTitle::after {
-  content: "";
-  display: block;
-  width: 50px;
+.contactInfoContainer::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 5px;
+  height: 100%;
+  background: linear-gradient(to bottom, var(--color-primary), rgba(var(--color-primary-rgb), 0.5));
+}
+
+.contactInfoTitle {
+  font-size: 1.6rem;
+  margin-bottom: 1.2rem;
+  color: var(--color-text-primary-light);
+  font-family: var(--font-family-heading);
+  font-weight: 700;
+  position: relative;
+  padding-bottom: 0.75rem;
+}
+
+.contactInfoTitle::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 60px;
   height: 3px;
-  background-color: var(--color-accent);
-  margin-top: 0.5rem;
+  background-color: var(--color-primary);
 }
 
-.infoContent {
+.contactInfoDescription {
+  color: var(--color-text-secondary-light);
+  margin-bottom: 2rem;
+  font-family: var(--font-family-base);
+  line-height: 1.6;
+  font-size: 1.05rem;
+}
+
+.contactDetailsList {
   display: flex;
   flex-direction: column;
   gap: 1.5rem;
+  margin-bottom: 2rem;
 }
 
-.infoItem {
+.contactDetailItem {
   display: flex;
   align-items: flex-start;
-  gap: 15px;
+  gap: 1rem;
+  background-color: rgba(var(--color-primary-rgb), 0.03);
+  border-radius: var(--border-radius-sm);
+  padding: 1.2rem;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
-.iconContainer {
-  flex-shrink: 0;
-  width: 40px;
-  height: 40px;
+.contactDetailItem:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+}
+
+.contactIcon {
+  width: 50px;
+  height: 50px;
   background-color: rgba(var(--color-primary-rgb), 0.1);
   border-radius: 50%;
   display: flex;
   align-items: center;
   justify-content: center;
-}
-
-.icon {
-  font-size: 1.2rem;
+  flex-shrink: 0;
   color: var(--color-primary);
+  font-size: 1.3rem;
+  box-shadow: 0 4px 8px rgba(var(--color-primary-rgb), 0.2);
+  transition: all 0.3s ease;
 }
 
-.infoDetails {
-  flex-grow: 1;
+.contactDetailItem:hover .contactIcon {
+  background-color: var(--color-primary);
+  color: white;
+  transform: scale(1.1);
 }
 
-.infoSubtitle {
+.contactContent {
+  flex: 1;
+}
+
+.contactTitle {
   font-size: 1.1rem;
-  color: var(--color-text-dark);
-  margin-bottom: 0.5rem;
+  margin-bottom: 0.35rem;
+  color: var(--color-text-primary-light);
+  font-family: var(--font-family-heading);
   font-weight: 600;
 }
 
-.infoText {
-  color: var(--color-text);
-  line-height: 1.5;
+.contactDetail {
+  color: var(--color-text-secondary-light);
+  margin-bottom: 0.5rem;
+  font-family: var(--font-family-base);
+  line-height: 1.4;
+}
+
+.contactAction {
+  display: inline-block;
+  color: var(--color-primary);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.9rem;
+  transition: all 0.3s ease;
+  border-bottom: 1px dashed transparent;
+}
+
+.contactAction:hover {
+  border-bottom-color: var(--color-primary);
+}
+
+.emergencyContact {
+  background: linear-gradient(135deg, rgba(var(--color-primary-rgb), 0.1), rgba(var(--color-primary-rgb), 0.2));
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  margin-top: auto;
+  border-left: 3px solid var(--color-primary);
+}
+
+.emergencyContact h3 {
+  font-size: 1.15rem;
+  margin-bottom: 0.5rem;
+  color: var(--color-text-primary-light);
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+}
+
+.emergencyContact p {
+  color: var(--color-text-secondary-light);
+  margin-bottom: 1rem;
+  font-family: var(--font-family-base);
+  line-height: 1.4;
+  font-size: 0.95rem;
+}
+
+.emergencyButton {
+  display: inline-block;
+  background-color: var(--color-primary);
+  color: white;
+  padding: 0.8rem 1.2rem;
+  border-radius: var(--border-radius-sm);
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(var(--color-primary-rgb), 0.25);
+  width: 100%;
+  text-align: center;
+}
+
+.emergencyButton:hover {
+  background-color: var(--color-primary-dark);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 12px rgba(var(--color-primary-rgb), 0.3);
+}
+
+.emergencyButton:active {
+  transform: translateY(0);
 }
 
 /* Tema oscuro */
-:global(.dark) .infoContainer {
-  background-color: var(--bg-card-dark-mode);
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+:global(body.dark) .contactInfoContainer {
+  background-color: var(--color-surface-dark);
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
 }
 
-:global(.dark) .infoTitle {
-  color: var(--color-primary-dark-mode);
+:global(body.dark) .contactInfoTitle {
+  color: var(--color-text-primary-dark);
 }
 
-:global(.dark) .iconContainer {
-  background-color: rgba(var(--color-primary-dark-mode-rgb), 0.2);
+:global(body.dark) .contactInfoTitle::after {
+  background-color: var(--color-primary-dark);
 }
 
-:global(.dark) .icon {
-  color: var(--color-primary-dark-mode);
+:global(body.dark) .contactInfoDescription {
+  color: var(--color-text-secondary-dark);
 }
 
-:global(.dark) .infoSubtitle {
-  color: var(--color-text-dark-mode);
+:global(body.dark) .contactDetailItem {
+  background-color: rgba(var(--color-primary-dark-rgb), 0.07);
 }
 
-:global(.dark) .infoText {
-  color: var(--color-text-secondary-dark-mode);
+:global(body.dark) .contactIcon {
+  background-color: rgba(var(--color-primary-dark-rgb), 0.2);
+  color: var(--color-primary-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.25);
+}
+
+:global(body.dark) .contactDetailItem:hover .contactIcon {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-primary-light);
+}
+
+:global(body.dark) .contactTitle {
+  color: var(--color-text-primary-dark);
+}
+
+:global(body.dark) .contactDetail {
+  color: var(--color-text-secondary-dark);
+}
+
+:global(body.dark) .contactAction {
+  color: var(--color-primary-dark);
+}
+
+:global(body.dark) .contactAction:hover {
+  border-bottom-color: var(--color-primary-dark);
+}
+
+:global(body.dark) .emergencyContact {
+  background: linear-gradient(135deg, rgba(var(--color-primary-dark-rgb), 0.15), rgba(var(--color-primary-dark-rgb), 0.25));
+  border-left-color: var(--color-primary-dark);
+}
+
+:global(body.dark) .emergencyContact h3 {
+  color: var(--color-text-primary-dark);
+}
+
+:global(body.dark) .emergencyContact p {
+  color: var(--color-text-secondary-dark);
+}
+
+:global(body.dark) .emergencyButton {
+  background-color: var(--color-primary-dark);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+:global(body.dark) .emergencyButton:hover {
+  background-color: rgba(var(--color-primary-dark-rgb), 0.85);
 }
 
 /* Responsive */
-@media (max-width: 768px) {
-  .infoContainer {
+@media (max-width: 992px) {
+  .contactInfoContainer {
     padding: 1.5rem;
   }
-  
-  .infoTitle {
-    font-size: 1.5rem;
+}
+
+@media (max-width: 768px) {
+  .contactInfoTitle {
+    font-size: 1.4rem;
   }
   
-  .iconContainer {
-    width: 35px;
-    height: 35px;
+  .contactInfoDescription {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .contactDetailItem {
+    padding: 1rem;
+  }
+  
+  .contactIcon {
+    width: 45px;
+    height: 45px;
+    font-size: 1.2rem;
+  }
+  
+  .emergencyContact {
+    padding: 1.2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactInfoContainer {
+    padding: 1.2rem;
+  }
+  
+  .contactInfoTitle {
+    font-size: 1.3rem;
+    margin-bottom: 1rem;
+  }
+  
+  .contactInfoDescription {
+    font-size: 0.95rem;
+    margin-bottom: 1.2rem;
+  }
+  
+  .contactDetailsList {
+    gap: 1rem;
+  }
+  
+  .contactIcon {
+    width: 40px;
+    height: 40px;
+    font-size: 1.1rem;
+  }
+  
+  .contactTitle {
+    font-size: 1rem;
+  }
+  
+  .contactDetail {
+    font-size: 0.9rem;
+  }
+  
+  .emergencyContact h3 {
+    font-size: 1.05rem;
+  }
+  
+  .emergencyContact p {
+    font-size: 0.9rem;
+  }
+  
+  .emergencyButton {
+    padding: 0.7rem 1rem;
+    font-size: 0.9rem;
   }
 }

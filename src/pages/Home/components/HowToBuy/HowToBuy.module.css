@@ -54,13 +54,33 @@
 
 .progressLine {
   position: absolute;
-  top: 40px;
-  left: 50%;
-  transform: translateX(-50%);
+  left: 40px; /* Alineado con los íconos en lugar de centrado */
+  top: 50px;
+  height: calc(100% - 100px);
   width: 3px;
-  height: calc(100% - 80px);
   background-color: var(--color-primary-light);
   z-index: 0;
+}
+
+/* Agregar círculos conectores para mejorar la apariencia */
+.progressLine::before,
+.progressLine::after {
+  content: '';
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+}
+
+.progressLine::before {
+  top: -15px;
+}
+
+.progressLine::after {
+  bottom: -15px;
 }
 
 .steps {
@@ -239,7 +259,7 @@
   }
   
   .progressLine {
-    left: 40px;
+    left: 30px;
   }
   
   .stepIconContainer {

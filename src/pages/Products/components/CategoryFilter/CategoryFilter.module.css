@@ -1,0 +1,120 @@
+/* src/pages/Products/components/CategoryFilter/CategoryFilter.module.css */
+.categoryFilter {
+  margin-bottom: var(--spacing-md);
+}
+
+.filterTitle {
+  font-size: 1.2rem;
+  margin-bottom: var(--spacing-sm);
+  color: var(--color-text-primary-light);
+  font-family: var(--font-family-heading);
+  font-weight: 600;
+}
+
+.categoryButtons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--spacing-sm);
+}
+
+.categoryButton {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-sm);
+  background-color: var(--background-card);
+  border: 1px solid var(--border-color);
+  border-radius: var(--border-radius-md);
+  cursor: pointer;
+  transition: all 0.3s ease;
+  min-width: 100px;
+  text-align: center;
+  font-family: var(--font-family-base);
+}
+
+.categoryButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-color: var(--color-primary);
+}
+
+.categoryButton.active {
+  background-color: var(--background-selected);
+  border-color: var(--color-primary);
+}
+
+.categoryIcon {
+  font-size: 1.5rem;
+  margin-bottom: var(--spacing-xs);
+  color: var(--color-primary);
+}
+
+.active .categoryIcon {
+  color: var(--color-primary-dark);
+}
+
+.categoryName {
+  font-size: 0.9rem;
+  color: var(--color-text-secondary-light);
+}
+
+.active .categoryName {
+  color: var(--color-text-primary-light);
+  font-weight: 500;
+}
+
+/* Tema oscuro */
+:global(body.dark) .filterTitle {
+  color: var(--color-text-primary-dark);
+}
+
+:global(body.dark) .categoryButton {
+  background-color: var(--background-card);
+  border-color: var(--color-border-dark);
+}
+
+:global(body.dark) .categoryButton:hover {
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+  border-color: var(--color-primary-dark);
+}
+
+:global(body.dark) .categoryButton.active {
+  background-color: var(--background-selected);
+  border-color: var(--color-primary-dark);
+}
+
+:global(body.dark) .categoryName {
+  color: var(--color-text-secondary-dark);
+}
+
+:global(body.dark) .active .categoryName {
+  color: var(--color-text-primary-dark);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .categoryButtons {
+    gap: var(--spacing-xs);
+  }
+  
+  .categoryButton {
+    min-width: 80px;
+    padding: var(--spacing-xs);
+  }
+  
+  .categoryIcon {
+    font-size: 1.3rem;
+  }
+  
+  .categoryName {
+    font-size: 0.8rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .categoryButtons {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}

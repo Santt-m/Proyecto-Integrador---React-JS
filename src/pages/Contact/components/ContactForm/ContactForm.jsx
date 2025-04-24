@@ -1,5 +1,7 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState } from 'react';
+import { sendContactForm } from '../../../../services/api';
 import styles from './ContactForm.module.css';
+import { FaUser, FaEnvelope, FaPhone, FaComment, FaPaperPlane } from 'react-icons/fa';
 
 function ContactForm() {
   const [formData, setFormData] = useState({
@@ -11,60 +13,36 @@ function ContactForm() {
   });
   
   const [errors, setErrors] = useState({});
-  const [submitted, setSubmitted] = useState(false);
-  const formRef = useRef(null);
-  
-  useEffect(() => {
-    // Configurar la detección de visibilidad para animación
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          formRef.current.classList.add(styles.visible);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (formRef.current) {
-      observer.observe(formRef.current);
-    }
-
-    return () => {
-      if (formRef.current) {
-        observer.unobserve(formRef.current);
-      }
-    };
-  }, []);
-
-  const handleChange = (e) => {
-    const { name, value } = e.target;
-    setFormData(prev => ({
-      ...prev,
-      [name]: value
-    }));
-    
-    // Limpiar error al editar
-    if (errors[name]) {
-      setErrors(prev => ({
-        ...prev,
-        [name]: null
-      }));
-    }
-  };
+  const [submitting, setSubmitting] = useState(false);
+  const [submitSuccess, setSubmitSuccess] = useState(false);
+  const [submitError, setSubmitError] = useState('');
 
   const validateForm = () => {
     const newErrors = {};
     
+    // Validar nombre
     if (!formData.name.trim()) {
       newErrors.name = 'El nombre es obligatorio';
     }
     
+    // Validar email
     if (!formData.email.trim()) {
       newErrors.email = 'El email es obligatorio';
-    } else if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(formData.email)) {
-      newErrors.email = 'Email inválido';
+    } else if (!/^[A-Z0-9._%+-]+@[A-Z0-9.-]+\.[A-Z]{2,}$/i.test(formData.email)) {
+      newErrors.email = 'Dirección de email inválida';
     }
     
+    // Validar teléfono (opcional pero si se proporciona debe ser válido)
+    if (formData.phone && !/^[0-9+\- ]{8,15}$/.test(formData.phone)) {
+      newErrors.phone = 'Número de teléfono inválido';
+    }
+    
+    // Validar asunto
+    if (!formData.subject.trim()) {
+      newErrors.subject = 'El asunto es obligatorio';
+    }
+    
+    // Validar mensaje
     if (!formData.message.trim()) {
       newErrors.message = 'El mensaje es obligatorio';
     } else if (formData.message.trim().length < 20) {
@@ -75,127 +53,168 @@ function ContactForm() {
     return Object.keys(newErrors).length === 0;
   };
 
-  const handleSubmit = (e) => {
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData(prev => ({
+      ...prev,
+      [name]: value
+    }));
+    
+    // Limpiar error al cambiar el valor
+    if (errors[name]) {
+      setErrors(prev => ({
+        ...prev,
+        [name]: ''
+      }));
+    }
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
     
-    if (validateForm()) {
-      // Aquí se enviaría el formulario a un backend
-      console.log('Formulario enviado:', formData);
-      setSubmitted(true);
-      
-      // Resetear el formulario
-      setFormData({
-        name: '',
-        email: '',
-        phone: '',
-        subject: '',
-        message: ''
-      });
-      
-      // Mostrar el mensaje de éxito por 5 segundos
-      setTimeout(() => {
-        setSubmitted(false);
-      }, 5000);
+    if (!validateForm()) {
+      return;
+    }
+    
+    setSubmitting(true);
+    setSubmitError('');
+    
+    try {
+      const result = await sendContactForm(formData);
+      if (result.success) {
+        setSubmitSuccess(true);
+        setFormData({
+          name: '',
+          email: '',
+          phone: '',
+          subject: '',
+          message: ''
+        });
+        
+        // Restablecer el éxito después de 5 segundos
+        setTimeout(() => {
+          setSubmitSuccess(false);
+        }, 5000);
+      } else {
+        setSubmitError('Ha ocurrido un error al enviar el formulario. Inténtalo de nuevo.');
+      }
+    } catch (error) {
+      setSubmitError('Ha ocurrido un error al enviar el formulario. Inténtalo de nuevo.');
+    } finally {
+      setSubmitting(false);
     }
   };
 
   return (
-    <div ref={formRef} className={styles.formContainer}>
-      <h2 className={styles.formTitle}>Envíanos un mensaje</h2>
+    <div className={styles.contactFormContainer}>
+      <h2 className={styles.formTitle}>Escríbenos</h2>
       
-      {submitted && (
+      {submitSuccess && (
         <div className={styles.successMessage}>
-          <p>¡Gracias por contactarnos! Te responderemos a la brevedad.</p>
+          <p>¡Gracias por contactarnos! Tu mensaje ha sido enviado con éxito. Nos pondremos en contacto contigo pronto.</p>
+        </div>
+      )}
+      
+      {submitError && (
+        <div className={styles.errorMessage}>
+          <p>{submitError}</p>
         </div>
       )}
       
       <form onSubmit={handleSubmit} className={styles.contactForm}>
         <div className={styles.formGroup}>
-          <label htmlFor="name" className={styles.formLabel}>
-            Nombre <span className={styles.required}>*</span>
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            className={`${styles.formInput} ${errors.name ? styles.inputError : ''}`}
-            placeholder="Tu nombre"
-          />
-          {errors.name && <span className={styles.errorMessage}>{errors.name}</span>}
+          <div className={styles.inputWithIcon}>
+            <FaUser className={styles.inputIcon} />
+            <input
+              type="text"
+              name="name"
+              placeholder="Nombre completo"
+              value={formData.name}
+              onChange={handleChange}
+              className={`${styles.formInput} ${errors.name ? styles.inputError : ''}`}
+              disabled={submitting}
+            />
+          </div>
+          {errors.name && <p className={styles.errorText}>{errors.name}</p>}
+        </div>
+        
+        <div className={styles.formRow}>
+          <div className={styles.formGroup}>
+            <div className={styles.inputWithIcon}>
+              <FaEnvelope className={styles.inputIcon} />
+              <input
+                type="email"
+                name="email"
+                placeholder="Correo electrónico"
+                value={formData.email}
+                onChange={handleChange}
+                className={`${styles.formInput} ${errors.email ? styles.inputError : ''}`}
+                disabled={submitting}
+              />
+            </div>
+            {errors.email && <p className={styles.errorText}>{errors.email}</p>}
+          </div>
+          
+          <div className={styles.formGroup}>
+            <div className={styles.inputWithIcon}>
+              <FaPhone className={styles.inputIcon} />
+              <input
+                type="tel"
+                name="phone"
+                placeholder="Teléfono (opcional)"
+                value={formData.phone}
+                onChange={handleChange}
+                className={`${styles.formInput} ${errors.phone ? styles.inputError : ''}`}
+                disabled={submitting}
+              />
+            </div>
+            {errors.phone && <p className={styles.errorText}>{errors.phone}</p>}
+          </div>
         </div>
         
         <div className={styles.formGroup}>
-          <label htmlFor="email" className={styles.formLabel}>
-            Email <span className={styles.required}>*</span>
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            className={`${styles.formInput} ${errors.email ? styles.inputError : ''}`}
-            placeholder="tu.email@ejemplo.com"
-          />
-          {errors.email && <span className={styles.errorMessage}>{errors.email}</span>}
+          <div className={styles.inputWithIcon}>
+            <FaComment className={styles.inputIcon} />
+            <input
+              type="text"
+              name="subject"
+              placeholder="Asunto"
+              value={formData.subject}
+              onChange={handleChange}
+              className={`${styles.formInput} ${errors.subject ? styles.inputError : ''}`}
+              disabled={submitting}
+            />
+          </div>
+          {errors.subject && <p className={styles.errorText}>{errors.subject}</p>}
         </div>
         
         <div className={styles.formGroup}>
-          <label htmlFor="phone" className={styles.formLabel}>Teléfono</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            value={formData.phone}
-            onChange={handleChange}
-            className={styles.formInput}
-            placeholder="(Opcional) Tu número de teléfono"
-          />
-        </div>
-        
-        <div className={styles.formGroup}>
-          <label htmlFor="subject" className={styles.formLabel}>Asunto</label>
-          <select
-            id="subject"
-            name="subject"
-            value={formData.subject}
-            onChange={handleChange}
-            className={styles.formSelect}
-          >
-            <option value="">Selecciona un asunto</option>
-            <option value="consulta">Consulta general</option>
-            <option value="producto">Información de producto</option>
-            <option value="soporte">Soporte técnico</option>
-            <option value="reclamo">Reclamo</option>
-            <option value="otro">Otro</option>
-          </select>
-        </div>
-        
-        <div className={styles.formGroup}>
-          <label htmlFor="message" className={styles.formLabel}>
-            Mensaje <span className={styles.required}>*</span>
-          </label>
           <textarea
-            id="message"
             name="message"
+            placeholder="Tu mensaje (mínimo 20 caracteres)"
             value={formData.message}
             onChange={handleChange}
             className={`${styles.formTextarea} ${errors.message ? styles.inputError : ''}`}
-            placeholder="Escribe tu mensaje aquí..."
             rows="6"
-          ></textarea>
-          {errors.message && <span className={styles.errorMessage}>{errors.message}</span>}
+            disabled={submitting}
+          />
+          {errors.message && <p className={styles.errorText}>{errors.message}</p>}
         </div>
         
-        <button type="submit" className={styles.submitButton}>
-          Enviar mensaje
+        <button 
+          type="submit" 
+          className={styles.submitButton}
+          disabled={submitting}
+        >
+          {submitting ? (
+            <span className={styles.loadingSpinner}></span>
+          ) : (
+            <>
+              <FaPaperPlane className={styles.submitIcon} />
+              <span>Enviar mensaje</span>
+            </>
+          )}
         </button>
-        
-        <p className={styles.formDisclaimer}>
-          Al enviar este formulario, aceptas nuestra política de privacidad y el tratamiento de tus datos.
-        </p>
       </form>
     </div>
   );

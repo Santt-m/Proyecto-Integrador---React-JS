@@ -62,8 +62,8 @@
   --color-error-dark: #f44336;
   
   /* Variables específicas del tema */
-  --box-shadow-light: 0 2px 8px rgba(0, 0, 0, 0.1);
-  --box-shadow-dark: 0 2px 8px rgba(0, 0, 0, 0.3);
+  --box-shadow-light: 0 4px 8px rgba(0, 0, 0, 0.1);
+  --box-shadow-dark: 0 4px 12px rgba(0, 0, 0, 0.3);
   
   --border-color-light: #e0e0e0;
   --border-color-dark: #455a64;
@@ -88,6 +88,20 @@
   
   --input-background-light: #ffffff;
   --input-background-dark: #01212A;
+
+  /* Valores RGB para efectos de transparencia */
+  --color-primary-rgb: 0, 123, 255;
+  --color-primary-dark-rgb: 100, 181, 246;
+  --color-text-primary-light-rgb: 51, 51, 51;
+  --color-text-primary-dark-rgb: 224, 247, 250;
+
+  /* Mejores contrastes para elementos interactivos */
+  --border-radius-lg: 8px;
+  --border-radius-xl: 12px;
+
+  /* Mejora de colores para focus */
+  --focus-outline-light: rgba(0, 123, 255, 0.5);
+  --focus-outline-dark: rgba(100, 181, 246, 0.5);
 }
 
 /* Tema claro (por defecto) */

@@ -1,52 +1,47 @@
 import React from 'react';
-import styles from './Contact.module.css';
 import SEOHead from '../../components/SEOHead/SEOHead';
 import ContactForm from './components/ContactForm/ContactForm';
 import ContactInfo from './components/ContactInfo/ContactInfo';
 import Map from './components/Map/Map';
-import FAQ from './components/FAQ/FAQ';
 import SocialMediaLinks from './components/SocialMediaLinks/SocialMediaLinks';
+import FAQ from './components/FAQ/FAQ';
+import styles from './Contact.module.css';
 
 function Contact() {
   return (
     <>
       <SEOHead
-        title="Contacto"
-        description="Contáctanos para más información sobre nuestros productos. Atención al cliente disponible por teléfono, correo electrónico o formulario de contacto."
-        keywords="contacto, atención al cliente, servicio al cliente, ubicación tienda"
-        canonical="https://proyecto-integrador-react-js-beta.vercel.app/contact"
+        title="Contacto | MiTienda"
+        description="Contáctanos para más información sobre nuestros productos y servicios. Estamos disponibles para ayudarte en lo que necesites."
+        keywords="contacto, atención al cliente, ayuda, soporte, formulario de contacto"
       />
+      
       <div className={styles.contactContainer}>
         <h1 className={styles.pageTitle}>Contacto</h1>
         
-        <div className={styles.contactHeader}>
-          <p className={styles.contactIntro}>
-            Estamos aquí para ayudarte. No dudes en ponerte en contacto con nosotros 
-            utilizando cualquiera de los métodos a continuación.
-          </p>
-        </div>
-        
-        <div className={styles.contactMainContent}>
-          <div className={styles.formSection}>
-            <ContactForm />
+        <section className={styles.contactSection}>
+          <div className={styles.contactGrid}>
+            <div className={styles.contactInfoWrapper}>
+              <ContactInfo />
+            </div>
+            
+            <div className={styles.contactFormWrapper}>
+              <ContactForm />
+            </div>
           </div>
-          
-          <div className={styles.infoSection}>
-            <ContactInfo />
-          </div>
-        </div>
+        </section>
         
-        <div className={styles.mapSection}>
+        <section className={styles.mapSection}>
           <Map />
-        </div>
+        </section>
         
-        <div className={styles.faqSection}>
+        <section className={styles.faqSection}>
           <FAQ />
-        </div>
+        </section>
         
-        <div className={styles.socialSection}>
+        <section className={styles.socialSection}>
           <SocialMediaLinks />
-        </div>
+        </section>
       </div>
     </>
   );

@@ -2,6 +2,7 @@ import React from 'react';
 import { useAuth } from '../../context/AuthContext';
 import SEOHead from '../../components/SEOHead/SEOHead';
 import styles from './Dashboard.module.css';
+import config from './config.json';
 
 function Dashboard() {
   const { currentUser } = useAuth();
@@ -10,14 +11,14 @@ function Dashboard() {
     return (
       <>
         <SEOHead
-          title="Acceso Restringido"
-          description="Acceso al área de usuario. Inicia sesión para continuar."
+          title={config.seo.accessDenied.title}
+          description={config.seo.accessDenied.description}
           canonical="https://proyecto-integrador-react-js-beta.vercel.app/dashboard"
-          robots="noindex, nofollow"
+          robots={config.seo.accessDenied.robots}
         />
         <div className={styles.dashboardError}>
-          <h2>Acceso Denegado</h2>
-          <p>Necesitas iniciar sesión para acceder a esta página.</p>
+          <h2>{config.accessDenied.title}</h2>
+          <p>{config.accessDenied.message}</p>
         </div>
       </>
     );
@@ -26,39 +27,39 @@ function Dashboard() {
   return (
     <>
       <SEOHead
-        title="Mi Cuenta"
-        description="Gestiona tu cuenta, revisa tu actividad reciente y actualiza tus datos personales."
-        keywords="dashboard, cuenta de usuario, panel de usuario, área personal"
+        title={config.seo.dashboard.title}
+        description={config.seo.dashboard.description}
+        keywords={config.seo.dashboard.keywords}
         canonical="https://proyecto-integrador-react-js-beta.vercel.app/dashboard"
-        robots="noindex, nofollow"
+        robots={config.seo.dashboard.robots}
       />
       <div className={styles.dashboardContainer}>
         <div className={styles.dashboardHeader}>
-          <h1 className={styles.dashboardTitle}>Dashboard</h1>
-          <p className={styles.welcomeMessage}>Bienvenido, {currentUser.name}</p>
+          <h1 className={styles.dashboardTitle}>{config.dashboard.title}</h1>
+          <p className={styles.welcomeMessage}>{config.dashboard.welcome}, {currentUser.name}</p>
         </div>
 
         <div className={styles.dashboardContent}>
           <div className={styles.dashboardCard}>
-            <h2>Información Personal</h2>
+            <h2>{config.dashboard.personalInfo.title}</h2>
             <div className={styles.userInfoContainer}>
               <div className={styles.userInfoItem}>
-                <span className={styles.userInfoLabel}>Nombre:</span>
+                <span className={styles.userInfoLabel}>{config.dashboard.personalInfo.name}</span>
                 <span className={styles.userInfoValue}>{currentUser.name}</span>
               </div>
               <div className={styles.userInfoItem}>
-                <span className={styles.userInfoLabel}>Email:</span>
+                <span className={styles.userInfoLabel}>{config.dashboard.personalInfo.email}</span>
                 <span className={styles.userInfoValue}>{currentUser.email}</span>
               </div>
             </div>
           </div>
 
           <div className={styles.dashboardCard}>
-            <h2>Actividad Reciente</h2>
+            <h2>{config.dashboard.recentActivity.title}</h2>
             <div className={styles.activityList}>
               <div className={styles.activityItem}>
-                <span className={styles.activityDate}>Ahora</span>
-                <span className={styles.activityDescription}>Has iniciado sesión en tu cuenta</span>
+                <span className={styles.activityDate}>{config.dashboard.recentActivity.loginActivity.time}</span>
+                <span className={styles.activityDescription}>{config.dashboard.recentActivity.loginActivity.description}</span>
               </div>
             </div>
           </div>

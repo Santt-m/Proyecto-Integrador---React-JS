@@ -1,6 +1,7 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef, useCallback } from 'react';
 import { Link } from 'react-router-dom';
 import ProductCard from './components/ProductCard/ProductCard';
+import CategoryFilter from './components/CategoryFilter/CategoryFilter';
 import ProductsListSkeleton from './ProductsListSkeleton';
 import SEOHead from '../../components/SEOHead/SEOHead';
 import { getAllProducts, getAllCategories, getAllTags } from '../../services/api';
@@ -9,6 +10,7 @@ import styles from './Products.module.css';
 function Products() {
   const [products, setProducts] = useState([]);
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const [displayedProducts, setDisplayedProducts] = useState([]);
   const [selectedCategory, setSelectedCategory] = useState('all');
   const [selectedTag, setSelectedTag] = useState('all');
   const [sortBy, setSortBy] = useState('default');
@@ -16,6 +18,11 @@ function Products() {
   const [categories, setCategories] = useState(['all']);
   const [tags, setTags] = useState(['all']);
   const [loading, setLoading] = useState(true);
+  const [productsPerPage, setProductsPerPage] = useState(6);
+  const [hasMore, setHasMore] = useState(true);
+  const [loadingMore, setLoadingMore] = useState(false);
+  const observer = useRef();
+  const lastProductRef = useRef();
 
   useEffect(() => {
     // Cargar productos, categorías y tags iniciales
@@ -90,10 +97,46 @@ function Products() {
     }
 
     setFilteredProducts(result);
+    // Reiniciar la paginación cuando cambian los filtros
+    setProductsPerPage(6);
+    setHasMore(result.length > 6);
   }, [selectedCategory, selectedTag, sortBy, searchTerm, products, loading]);
 
-  const handleCategoryChange = (e) => {
-    setSelectedCategory(e.target.value);
+  // Actualizar productos mostrados cuando cambia la lista filtrada o la cantidad a mostrar
+  useEffect(() => {
+    const productsToShow = filteredProducts.slice(0, productsPerPage);
+    setDisplayedProducts(productsToShow);
+    setHasMore(productsPerPage < filteredProducts.length);
+  }, [filteredProducts, productsPerPage]);
+
+  // Configurar el observador de scroll
+  const lastProductElementRef = useCallback(node => {
+    if (loadingMore) return;
+    if (observer.current) observer.current.disconnect();
+    
+    observer.current = new IntersectionObserver(entries => {
+      if (entries[0].isIntersecting && hasMore) {
+        loadMoreProducts();
+      }
+    }, { threshold: 0.5 });
+    
+    if (node) observer.current.observe(node);
+  }, [hasMore, loadingMore]);
+
+  // Función para cargar más productos
+  const loadMoreProducts = () => {
+    if (!hasMore || loadingMore) return;
+    
+    setLoadingMore(true);
+    // Simular retraso para mostrar el efecto de carga
+    setTimeout(() => {
+      setProductsPerPage(prev => prev + 6);
+      setLoadingMore(false);
+    }, 500);
+  };
+
+  const handleCategoryChange = (category) => {
+    setSelectedCategory(category);
   };
 
   const handleTagChange = (e) => {
@@ -141,6 +184,13 @@ function Products() {
       <div className={styles.productsPage}>
         <h1 className={styles.pageTitle}>Nuestros Productos</h1>
         
+        {/* Componente de filtro de categorías visual */}
+        <CategoryFilter 
+          categories={categories} 
+          selectedCategory={selectedCategory} 
+          onSelectCategory={handleCategoryChange} 
+        />
+        
         <div className={styles.filtersContainer}>
           <div className={styles.filterGroup}>
             <input
@@ -150,22 +200,6 @@ function Products() {
               onChange={handleSearchChange}
               className={styles.searchInput}
             />
-          </div>
-          
-          <div className={styles.filterGroup}>
-            <label htmlFor="category">Categoría:</label>
-            <select 
-              id="category" 
-              value={selectedCategory} 
-              onChange={handleCategoryChange}
-              className={styles.filterSelect}
-            >
-              {categories.map(category => (
-                <option key={category} value={category}>
-                  {category === 'all' ? 'Todas las categorías' : category}
-                </option>
-              ))}
-            </select>
           </div>
           
           <div className={styles.filterGroup}>
@@ -214,7 +248,7 @@ function Products() {
           </div>
         ) : (
           <div className={styles.resultsInfo}>
-            <p>Mostrando {filteredProducts.length} {filteredProducts.length === 1 ? 'producto' : 'productos'}</p>
+            <p>Mostrando {displayedProducts.length} de {filteredProducts.length} {filteredProducts.length === 1 ? 'producto' : 'productos'}</p>
             {(selectedCategory !== 'all' || selectedTag !== 'all' || searchTerm !== '') && (
               <button 
                 onClick={resetFilters}
@@ -227,12 +261,29 @@ function Products() {
         )}
         
         <div className={styles.productsGrid}>
-          {filteredProducts.map(product => (
-            <div key={product.id} className={styles.productItem}>
+          {displayedProducts.map((product, index) => (
+            <div 
+              key={product.id} 
+              className={styles.productItem}
+              ref={index === displayedProducts.length - 1 ? lastProductElementRef : null}
+            >
               <ProductCard product={product} />
             </div>
           ))}
         </div>
+        
+        {loadingMore && (
+          <div className={styles.loadingMoreContainer}>
+            <div className={styles.loadingSpinner}></div>
+            <p>Cargando más productos...</p>
+          </div>
+        )}
+        
+        {!hasMore && filteredProducts.length > 6 && (
+          <div className={styles.endOfResults}>
+            <p>Has llegado al final de los resultados</p>
+          </div>
+        )}
       </div>
     </>
   );

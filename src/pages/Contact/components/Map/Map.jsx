@@ -1,59 +1,40 @@
-import React, { useRef, useEffect } from 'react';
+import React from 'react';
 import styles from './Map.module.css';
+import { FaMapMarkerAlt, FaDirections } from 'react-icons/fa';
 
 function Map() {
-  const mapRef = useRef(null);
-
-  useEffect(() => {
-    // Configurar la detección de visibilidad para animación
-    const observer = new IntersectionObserver(
-      (entries) => {
-        if (entries[0].isIntersecting) {
-          mapRef.current.classList.add(styles.visible);
-        }
-      },
-      { threshold: 0.2 }
-    );
-
-    if (mapRef.current) {
-      observer.observe(mapRef.current);
-    }
-
-    return () => {
-      if (mapRef.current) {
-        observer.unobserve(mapRef.current);
-      }
-    };
-  }, []);
-
   return (
-    <div ref={mapRef} className={styles.mapSection}>
+    <div className={styles.mapContainer}>
       <h2 className={styles.mapTitle}>Nuestra Ubicación</h2>
       
-      <div className={styles.mapContainer}>
-        {/* En un caso real, aquí iría un mapa de Google Maps o similar */}
-        {/* Pero para esta demostración, usamos una imagen estática */}
-        <div className={styles.mockMap}>
-          <img 
-            src="https://maps.googleapis.com/maps/api/staticmap?center=Buenos+Aires,Argentina&zoom=14&size=800x400&key=YOUR_API_KEY" 
-            alt="Ubicación de nuestra tienda" 
-            className={styles.mapImage}
-          />
-          <div className={styles.mapMarker}>
-            <span className={styles.markerPin}>📍</span>
-            <span className={styles.markerLabel}>Nuestra Tienda</span>
+      <div className={styles.mapWrapper}>
+        <div className={styles.mapOverlay}>
+          <div className={styles.locationCard}>
+            <h3>Tienda Principal</h3>
+            <p>Av. Corrientes 1234</p>
+            <p>CABA, Argentina</p>
+            <a 
+              href="https://www.google.com/maps?q=Av.+Corrientes+1234,+CABA,+Argentina" 
+              target="_blank" 
+              rel="noopener noreferrer"
+              className={styles.directionLink}
+            >
+              <FaDirections /> Cómo llegar
+            </a>
           </div>
         </div>
         
-        <div className={styles.mapInfo}>
-          <p className={styles.mapText}>
-            Estamos ubicados en una zona céntrica y de fácil acceso, 
-            con múltiples opciones de transporte público y estacionamiento cercano.
-          </p>
-          <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" className={styles.directionButton}>
-            Cómo llegar
-          </a>
-        </div>
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3283.984369270803!2d-58.38669082424979!3d-34.60406657295666!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac630121623%3A0x53386f2ac88991a9!2sAv.+Corrientes+1200%2C+C1043AAZ+CABA!5e0!3m2!1ses!2sar!4v1566568155542!5m2!1ses!2sar"
+          width="100%"
+          height="100%"
+          style={{ border: 0 }}
+          allowFullScreen=""
+          loading="lazy"
+          referrerPolicy="no-referrer-when-downgrade"
+          title="Ubicación de nuestra tienda"
+          className={styles.mapIframe}
+        ></iframe>
       </div>
     </div>
   );
