@@ -1,3 +1,21 @@
+/* Estilos para estados de carga de imágenes */
+.loading {
+  opacity: 0;
+}
+
+.loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
+.thumbnail {
+  position: relative;
+}
+
+.relatedProductImage {
+  position: relative;
+}
+
 /* src/pages/ProductDetail/ProductDetail.module.css */
 .productDetailPage {
   padding: var(--spacing-md);

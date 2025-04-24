@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import { useToast } from '../../components/Toast/Toast';
+import ImageSkeleton from '../../components/ImageSkeleton/ImageSkeleton';
 import ProductDetailSkeleton from './ProductDetailSkeleton';
 import { getProductById, getRelatedProducts } from '../../services/api';
 import styles from './ProductDetail.module.css';
@@ -18,12 +19,18 @@ function ProductDetail() {
   const [loading, setLoading] = useState(true);
   const [relatedProducts, setRelatedProducts] = useState([]);
   const [activeImage, setActiveImage] = useState(0);
+  const [mainImageLoaded, setMainImageLoaded] = useState(false);
+  const [thumbnailsLoaded, setThumbnailsLoaded] = useState({});
+  const [relatedImagesLoaded, setRelatedImagesLoaded] = useState({});
 
   useEffect(() => {
     // Reiniciar el estado cuando cambia el ID
     setLoading(true);
     setQuantity(1);
     setActiveImage(0);
+    setMainImageLoaded(false);
+    setThumbnailsLoaded({});
+    setRelatedImagesLoaded({});
     
     const fetchProductData = async () => {
       try {
@@ -84,11 +91,24 @@ function ProductDetail() {
 
   const handleImageChange = (index) => {
     setActiveImage(index);
+    setMainImageLoaded(false);
   };
 
   const calculateDiscountedPrice = (product) => {
     if (!product.discount) return product.price;
     return product.price * (1 - product.discount / 100);
+  };
+
+  const handleMainImageLoad = () => {
+    setMainImageLoaded(true);
+  };
+
+  const handleThumbnailLoad = (index) => {
+    setThumbnailsLoaded(prev => ({ ...prev, [index]: true }));
+  };
+
+  const handleRelatedImageLoad = (id) => {
+    setRelatedImagesLoaded(prev => ({ ...prev, [id]: true }));
   };
 
   if (!product) {
@@ -120,7 +140,16 @@ function ProductDetail() {
       <div className={styles.productContainer}>
         <div className={styles.productImageSection}>
           <div className={styles.productImageContainer}>
-            <img loading="lazy" src={mainImage} alt={product.name} className={styles.productImage} />
+            {!mainImageLoaded && (
+              <ImageSkeleton height="400px" borderRadius="8px" />
+            )}
+            <img 
+              loading="lazy" 
+              src={mainImage} 
+              alt={product.name} 
+              className={`${styles.productImage} ${mainImageLoaded ? styles.loaded : styles.loading}`} 
+              onLoad={handleMainImageLoad}
+            />
             {product.discount && (
               <div className={styles.discountBadge}>-{product.discount}%</div>
             )}
@@ -134,7 +163,16 @@ function ProductDetail() {
                   className={`${styles.thumbnail} ${activeImage === index ? styles.activeThumbnail : ''}`}
                   onClick={() => handleImageChange(index)}
                 >
-                  <img loading="lazy" src={img} alt={`${product.name} - vista ${index + 1}`} />
+                  {!thumbnailsLoaded[index] && (
+                    <ImageSkeleton height="80px" width="80px" borderRadius="4px" />
+                  )}
+                  <img 
+                    loading="lazy" 
+                    src={img} 
+                    alt={`${product.name} - vista ${index + 1}`} 
+                    className={thumbnailsLoaded[index] ? styles.loaded : styles.loading}
+                    onLoad={() => handleThumbnailLoad(index)}
+                  />
                 </div>
               ))}
             </div>
@@ -250,7 +288,16 @@ function ProductDetail() {
                 }}
               >
                 <div className={styles.relatedProductImage}>
-                  <img loading="lazy" src={relatedProduct.image} alt={relatedProduct.name} />
+                  {!relatedImagesLoaded[relatedProduct.id] && (
+                    <ImageSkeleton height="180px" borderRadius="8px" />
+                  )}
+                  <img 
+                    loading="lazy" 
+                    src={relatedProduct.image} 
+                    alt={relatedProduct.name} 
+                    className={relatedImagesLoaded[relatedProduct.id] ? styles.loaded : styles.loading}
+                    onLoad={() => handleRelatedImageLoad(relatedProduct.id)}
+                  />
                   {relatedProduct.discount && (
                     <div className={styles.relatedDiscountBadge}>-{relatedProduct.discount}%</div>
                   )}

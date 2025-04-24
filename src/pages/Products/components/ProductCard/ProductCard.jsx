@@ -1,12 +1,14 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useCart } from '../../../../context/CartContext';
 import { useToast } from '../../../../components/Toast/Toast';
+import ImageSkeleton from '../../../../components/ImageSkeleton/ImageSkeleton';
 import styles from './ProductCard.module.css';
 
 function ProductCard({ product }) {
   const { addItem } = useCart();
-  const { showToast } = useToast(); // Usar el hook de toast
+  const { showToast } = useToast();
+  const [imageLoaded, setImageLoaded] = useState(false);
 
   const handleAddToCart = (e) => {
     e.preventDefault(); // Prevenir navegación al hacer click en el botón
@@ -14,11 +16,22 @@ function ProductCard({ product }) {
     showToast(`${product.name} agregado al carrito`, 'success'); // Mostrar notificación
   };
 
+  const handleImageLoad = () => {
+    setImageLoaded(true);
+  };
+
   return (
     <div className={styles.productCard}>
       <Link to={`/products/${product.id}`} className={styles.productLink}>
         <div className={styles.imageContainer}>
-          <img loading="lazy" src={product.image} alt={product.name} className={styles.productImage} />
+          {!imageLoaded && <ImageSkeleton height="200px" borderRadius="8px" />}
+          <img 
+            loading="lazy" 
+            src={product.image} 
+            alt={product.name} 
+            className={`${styles.productImage} ${imageLoaded ? styles.loaded : styles.loading}`} 
+            onLoad={handleImageLoad}
+          />
         </div>
         <div className={styles.productInfo}>
           <h3 className={styles.productName}>{product.name}</h3>

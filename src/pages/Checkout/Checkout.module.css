@@ -165,22 +165,80 @@
 }
 
 @media (max-width: 768px) {
+  .checkoutContainer {
+    padding: 20px 15px;
+  }
+  
+  .pageTitle {
+    font-size: 1.6rem;
+    margin-bottom: 20px;
+  }
+  
   .shippingSection, 
   .paymentSection {
     grid-template-columns: 1fr;
+    gap: 15px;
   }
   
   .cartSummaryMini {
     position: static;
     order: -1;
+    margin-bottom: 15px;
   }
   
   .stepIndicator {
     flex-wrap: wrap;
-    gap: 10px;
+    gap: 5px;
+    margin-bottom: 25px;
   }
   
   .stepConnector {
-    max-width: 50px;
+    max-width: 40px;
+    margin: 0 8px;
+    margin-top: -20px;
+  }
+  
+  .stepNumber {
+    width: 30px;
+    height: 30px;
+    font-size: 0.9rem;
+  }
+  
+  .stepLabel {
+    font-size: 0.8rem;
+  }
+  
+  .actionButtons {
+    flex-direction: column-reverse;
+    gap: 10px;
+  }
+  
+  .continueButton, .backButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .checkoutContainer {
+    padding: 15px 10px;
+  }
+  
+  .pageTitle {
+    font-size: 1.4rem;
+  }
+  
+  .stepIndicator {
+    margin-bottom: 20px;
+  }
+  
+  .step {
+    width: 80px;
+  }
+  
+  .stepConnector {
+    max-width: 25px;
+    margin: 0 5px;
   }
 }

@@ -102,18 +102,101 @@
 }
 
 @media (max-width: 768px) {
+  .shippingForm {
+    padding: 18px 15px;
+    margin-bottom: 15px;
+  }
+  
+  .shippingForm h2 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+  
   .formRow {
     flex-direction: column;
+    margin: 0;
+    gap: 8px;
   }
   
   .formGroup {
-    margin-bottom: 20px;
+    margin: 0 0 12px;
+  }
+  
+  .formGroup label {
+    margin-bottom: 3px;
+    font-size: 0.85rem;
+  }
+  
+  .formGroup input[type="text"],
+  .formGroup input[type="email"],
+  .formGroup input[type="tel"] {
+    padding: 7px 10px;
+    font-size: 0.95rem;
+    height: 36px;
   }
   
   .error {
     position: relative;
     bottom: auto;
     left: auto;
-    margin-top: 5px;
+    margin-top: 2px;
+    margin-bottom: -4px;
+    font-size: 0.75rem;
+    line-height: 1.1;
+  }
+  
+  .formActions {
+    margin-top: 10px;
+  }
+  
+  .continueButton {
+    width: 100%;
+    padding: 10px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .shippingForm {
+    padding: 12px 10px;
+    border-radius: 6px;
+  }
+  
+  .shippingForm h2 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+  }
+  
+  .formGroup {
+    margin-bottom: 10px;
+  }
+  
+  .formGroup input[type="text"],
+  .formGroup input[type="email"],
+  .formGroup input[type="tel"] {
+    padding: 6px 8px;
+    font-size: 0.9rem;
+    height: 34px;
+  }
+  
+  .checkboxContainer {
+    font-size: 0.8rem;
+    margin-top: 2px;
+  }
+  
+  .checkboxContainer input[type="checkbox"] {
+    margin-right: 6px;
+    transform: scale(0.9);
+  }
+  
+  .formActions {
+    margin-top: 8px;
+  }
+  
+  .continueButton {
+    padding: 8px;
+    font-size: 0.9rem;
   }
 }

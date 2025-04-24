@@ -1,4 +1,5 @@
 import React, { Suspense } from 'react';
+import HomeSkeleton from './components/HomeSkeleton/HomeSkeleton';
 
 const Hero = React.lazy(() => import('./components/Hero/Hero'));
 const FeaturedProducts = React.lazy(() => import('./components/FeaturedProducts/FeaturedProducts'));
@@ -9,7 +10,7 @@ const CallToAction = React.lazy(() => import('./components/CallToAction/CallToAc
 
 function Home() {
   return (
-    <Suspense fallback={<div>Loading...</div>}>
+    <Suspense fallback={<HomeSkeleton />}>
       <div>
         {/* Banner principal */}
         <Hero />

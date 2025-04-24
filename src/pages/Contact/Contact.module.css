@@ -75,15 +75,53 @@
 
 /* Responsive */
 @media (max-width: 768px) {
+  .contactContainer {
+    padding: 1.5rem 1rem;
+  }
+  
   .contactMainContent {
     flex-direction: column;
+    gap: 1.5rem;
   }
   
   .pageTitle {
     font-size: 2rem;
+    margin-bottom: 1rem;
+  }
+  
+  .pageTitle::after {
+    width: 60px;
+    height: 3px;
+    margin: 0.4rem auto;
   }
   
   .contactIntro {
     font-size: 1rem;
+    line-height: 1.5;
+    padding: 0 0.5rem;
+  }
+  
+  .contactHeader {
+    margin-bottom: 2rem;
+  }
+  
+  .mapSection,
+  .faqSection,
+  .socialSection {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .contactContainer {
+    padding: 1rem 0.75rem;
+  }
+  
+  .pageTitle {
+    font-size: 1.8rem;
+  }
+  
+  .contactMainContent {
+    gap: 1rem;
   }
 }

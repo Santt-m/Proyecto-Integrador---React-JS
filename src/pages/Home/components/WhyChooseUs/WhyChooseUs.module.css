@@ -167,24 +167,91 @@
   .container {
     grid-template-columns: repeat(2, 1fr);
   }
+  
+  .section {
+    padding: var(--spacing-lg) 0;
+    margin: var(--spacing-lg) 0;
+  }
 }
 
 @media (max-width: 768px) {
   .title {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .title::after {
+    width: 50px;
+    height: 2px;
   }
   
   .subtitle {
-    font-size: 1rem;
+    font-size: 0.95rem;
+    margin-bottom: var(--spacing-sm);
+  }
+  
+  .sectionHeader {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .card {
+    padding: var(--spacing-md);
+    min-height: 220px;
+  }
+  
+  .iconWrapper {
+    width: 60px;
+    height: 60px;
+  }
+  
+  .icon {
+    font-size: 1.7rem;
+  }
+  
+  .card h3 {
+    margin: var(--spacing-sm) 0;
+    font-size: 1.1rem;
+  }
+  
+  .card p {
+    font-size: 0.9rem;
   }
 }
 
 @media (max-width: 576px) {
   .container {
     grid-template-columns: 1fr;
+    gap: var(--spacing-md);
   }
   
   .card {
     max-width: 100%;
+    margin: 0 var(--spacing-sm);
+  }
+  
+  .section {
+    padding: var(--spacing-md) 0;
+    margin: var(--spacing-md) 0;
+    border-radius: var(--border-radius-md);
+  }
+  
+  .title {
+    font-size: 1.6rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .title {
+    font-size: 1.4rem;
+  }
+  
+  .subtitle {
+    font-size: 0.9rem;
+    padding: 0 var(--spacing-xs);
+  }
+  
+  .card {
+    margin: 0;
+    padding: var(--spacing-sm);
   }
 }

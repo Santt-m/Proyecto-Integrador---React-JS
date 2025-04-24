@@ -143,3 +143,105 @@
   padding-top: 10px;
   margin-top: 10px;
 }
+
+@media (max-width: 768px) {
+  .cartSummary {
+    padding: 15px;
+    margin-bottom: 15px;
+  }
+  
+  .cartSummary h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    padding-bottom: 8px;
+  }
+  
+  .productItem {
+    padding: 12px 0;
+  }
+  
+  .productImage {
+    flex: 0 0 70px;
+    margin-right: 10px;
+  }
+  
+  .productInfo h3 {
+    font-size: 0.95rem;
+  }
+  
+  .productPrice {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
+  .quantityControls {
+    margin-top: 8px;
+  }
+  
+  .quantityBtn {
+    width: 22px;
+    height: 22px;
+    font-size: 0.9rem;
+  }
+  
+  .productActions {
+    margin-left: 5px;
+  }
+  
+  .summaryDetails {
+    padding: 12px;
+    margin-top: 15px;
+  }
+  
+  .summaryRow {
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+  }
+  
+  .total {
+    font-size: 1rem;
+    padding-top: 8px;
+    margin-top: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  .cartSummary {
+    padding: 12px;
+    border-radius: 6px;
+  }
+  
+  .cartSummary h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .productItem {
+    position: relative;
+    padding-bottom: 15px;
+  }
+  
+  .productImage {
+    flex: 0 0 60px;
+  }
+  
+  .productInfo h3 {
+    font-size: 0.9rem;
+    margin-right: 20px; /* Espacio para el botón de eliminar */
+  }
+  
+  .removeBtn {
+    position: absolute;
+    top: 10px;
+    right: 0;
+    font-size: 1rem;
+  }
+  
+  .subtotal {
+    font-size: 0.9rem;
+  }
+  
+  .summaryDetails {
+    padding: 10px;
+  }
+}

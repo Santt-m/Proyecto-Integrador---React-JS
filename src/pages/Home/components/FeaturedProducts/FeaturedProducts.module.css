@@ -244,15 +244,54 @@
   .carouselContainer {
     padding: 0 30px;
   }
+  
+  .featuredSection {
+    padding: var(--spacing-lg) 0;
+  }
 }
 
 @media (max-width: 768px) {
   .sectionTitle {
-    font-size: 2rem;
+    font-size: 1.8rem;
+    padding-bottom: 0.5rem;
+  }
+  
+  .sectionTitle::after {
+    width: 50px;
+    height: 2px;
   }
   
   .sectionSubtitle {
+    font-size: 0.95rem;
+    padding: 0 var(--spacing-md);
+  }
+  
+  .sectionHeader {
+    margin-bottom: var(--spacing-lg);
+  }
+  
+  .featuredSection {
+    margin-bottom: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+  }
+  
+  .carouselButton {
+    width: 35px;
+    height: 35px;
     font-size: 1rem;
+  }
+  
+  .dots {
+    margin-top: var(--spacing-md);
+  }
+  
+  .dot {
+    width: 10px;
+    height: 10px;
+  }
+  
+  .seeAllContainer {
+    margin-top: var(--spacing-lg);
   }
 }
 
@@ -262,10 +301,43 @@
   }
   
   .carouselContainer {
-    padding: 0 20px;
+    padding: 0 15px;
   }
   
   .sectionTitle {
-    font-size: 1.8rem;
+    font-size: 1.6rem;
+  }
+  
+  .featuredSection {
+    padding: var(--spacing-md) 0;
+  }
+  
+  .carouselButton {
+    width: 30px;
+    height: 30px;
+  }
+  
+  .prevButton {
+    left: -10px;
+  }
+  
+  .nextButton {
+    right: -10px;
+  }
+  
+  .seeAllLink {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: 0.9rem;
+  }
+}
+
+@media (max-width: 380px) {
+  .sectionTitle {
+    font-size: 1.4rem;
+  }
+  
+  .sectionSubtitle {
+    font-size: 0.9rem;
+    padding: 0 var(--spacing-sm);
   }
 }

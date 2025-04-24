@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState, useEffect, useRef } from 'react';
 import styles from './ShippingForm.module.css';
 
 function ShippingForm({ onContinue }) {
@@ -35,6 +35,18 @@ function ShippingForm({ onContinue }) {
 
   const [formData, setFormData] = useState(loadSavedData);
   const [errors, setErrors] = useState({});
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 480);
+  const formRef = useRef(null);
+
+  // Detectar si es dispositivo móvil para optimizar el diseño
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 480);
+    };
+
+    window.addEventListener('resize', handleResize);
+    return () => window.removeEventListener('resize', handleResize);
+  }, []);
 
   const handleChange = (e) => {
     const { name, value, type, checked } = e.target;
@@ -99,7 +111,7 @@ function ShippingForm({ onContinue }) {
   };
 
   return (
-    <div className={styles.shippingForm}>
+    <div className={styles.shippingForm} ref={formRef}>
       <h2>Información de Envío</h2>
       <form onSubmit={handleSubmit}>
         <div className={styles.formRow}>
@@ -112,6 +124,8 @@ function ShippingForm({ onContinue }) {
               value={formData.firstName}
               onChange={handleChange}
               className={errors.firstName ? styles.inputError : ''}
+              placeholder={isMobile ? "Nombre" : ""}
+              autoComplete="given-name"
             />
             {errors.firstName && <span className={styles.error}>{errors.firstName}</span>}
           </div>
@@ -125,6 +139,8 @@ function ShippingForm({ onContinue }) {
               value={formData.lastName}
               onChange={handleChange}
               className={errors.lastName ? styles.inputError : ''}
+              placeholder={isMobile ? "Apellido" : ""}
+              autoComplete="family-name"
             />
             {errors.lastName && <span className={styles.error}>{errors.lastName}</span>}
           </div>
@@ -140,6 +156,8 @@ function ShippingForm({ onContinue }) {
               value={formData.email}
               onChange={handleChange}
               className={errors.email ? styles.inputError : ''}
+              placeholder={isMobile ? "correo@ejemplo.com" : ""}
+              autoComplete="email"
             />
             {errors.email && <span className={styles.error}>{errors.email}</span>}
           </div>
@@ -153,6 +171,8 @@ function ShippingForm({ onContinue }) {
               value={formData.phone}
               onChange={handleChange}
               className={errors.phone ? styles.inputError : ''}
+              placeholder={isMobile ? "Tu teléfono" : ""}
+              autoComplete="tel"
             />
             {errors.phone && <span className={styles.error}>{errors.phone}</span>}
           </div>
@@ -167,6 +187,8 @@ function ShippingForm({ onContinue }) {
             value={formData.address}
             onChange={handleChange}
             className={errors.address ? styles.inputError : ''}
+            placeholder={isMobile ? "Calle, número, piso, etc." : ""}
+            autoComplete="street-address"
           />
           {errors.address && <span className={styles.error}>{errors.address}</span>}
         </div>
@@ -181,12 +203,14 @@ function ShippingForm({ onContinue }) {
               value={formData.city}
               onChange={handleChange}
               className={errors.city ? styles.inputError : ''}
+              placeholder={isMobile ? "Ciudad" : ""}
+              autoComplete="address-level2"
             />
             {errors.city && <span className={styles.error}>{errors.city}</span>}
           </div>
           
           <div className={styles.formGroup}>
-            <label htmlFor="state">Provincia/Estado</label>
+            <label htmlFor="state">Provincia</label>
             <input
               type="text"
               id="state"
@@ -194,12 +218,14 @@ function ShippingForm({ onContinue }) {
               value={formData.state}
               onChange={handleChange}
               className={errors.state ? styles.inputError : ''}
+              placeholder={isMobile ? "Provincia" : ""}
+              autoComplete="address-level1"
             />
             {errors.state && <span className={styles.error}>{errors.state}</span>}
           </div>
           
           <div className={styles.formGroup}>
-            <label htmlFor="zipCode">Código Postal</label>
+            <label htmlFor="zipCode">C.P.</label>
             <input
               type="text"
               id="zipCode"
@@ -207,6 +233,8 @@ function ShippingForm({ onContinue }) {
               value={formData.zipCode}
               onChange={handleChange}
               className={errors.zipCode ? styles.inputError : ''}
+              placeholder={isMobile ? "Código postal" : ""}
+              autoComplete="postal-code"
             />
             {errors.zipCode && <span className={styles.error}>{errors.zipCode}</span>}
           </div>
@@ -222,7 +250,7 @@ function ShippingForm({ onContinue }) {
               onChange={handleChange}
             />
             <label htmlFor="saveInfo">
-              Guardar esta información para la próxima compra
+              Guardar esta información
             </label>
           </div>
         </div>

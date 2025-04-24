@@ -38,6 +38,13 @@
   height: 60px; /* Fixed height for header */
 }
 
+/* Nueva estructura para el lado derecho del header */
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
 .headerLogo {
   font-size: 1.5rem;
   font-weight: bold;
@@ -45,9 +52,12 @@
   text-decoration: none; /* Remove underline from Link */
 }
 
+/* Estilos para el nav que ahora está a la derecha */
 .mainNav {
   display: flex; /* Default for desktop */
   gap: var(--spacing-md); /* Space between links */
+  margin-right: var(--spacing-md);
+  order: 1;
 }
 
 .mainNav a {
@@ -107,7 +117,8 @@
 .headerActions {
   display: flex;
   align-items: center;
-  gap: var(--spacing-md); /* Space between action items */
+  gap: var(--spacing-sm); /* Space between action items */
+  order: 2;
 }
 
 .headerActions a,
@@ -169,14 +180,213 @@
     transform: scale(1.1); /* Efecto de crecimiento sutil al pasar el mouse */
 }
 
+/* Estilos para autenticación */
+.authLinks {
+  display: flex;
+  gap: var(--spacing-sm);
+}
+
+.loginLink, .registerLink {
+  color: var(--color-text-secondary-light);
+  text-decoration: none;
+  font-size: 0.9rem;
+  padding: 0.4rem 0.8rem;
+  border-radius: 5px;
+  transition: all 0.2s ease;
+}
+
+.loginLink {
+  background-color: transparent;
+  border: 1px solid var(--color-primary);
+}
+
+.registerLink {
+  background-color: var(--color-primary);
+  color: white;
+}
+
+.loginLink:hover {
+  background-color: rgba(var(--color-primary-rgb), 0.1);
+}
+
+.registerLink:hover {
+  background-color: var(--color-primary-dark);
+}
+
+.darkHeader .loginLink {
+  color: var(--color-text-secondary-dark);
+  border-color: var(--color-primary-dark);
+}
+
+.darkHeader .registerLink {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-primary-dark);
+}
+
+.darkHeader .loginLink:hover {
+  background-color: rgba(var(--color-primary-dark-rgb), 0.1);
+}
+
+.darkHeader .registerLink:hover {
+  filter: brightness(1.1);
+}
+
+/* Iconos de autenticación */
+.authIcons {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+}
+
+.iconButton {
+  color: var(--color-text-secondary-light);
+  font-size: 1.5rem;
+  padding: 0.3rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: color 0.2s ease, transform 0.2s ease;
+  border-radius: 50%;
+}
+
+.iconButton:hover {
+  color: var(--color-primary);
+  transform: scale(1.1);
+}
+
+.darkHeader .iconButton {
+  color: var(--color-text-secondary-dark);
+}
+
+.darkHeader .iconButton:hover {
+  color: var(--color-primary-dark);
+}
+
+/* Estilos para usuario autenticado */
+.userContainer {
+  position: relative;
+}
+
+.userButton {
+  width: 35px;
+  height: 35px;
+  border-radius: 50%;
+  background-color: var(--color-primary);
+  color: white;
+  border: none;
+  font-weight: bold;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease;
+}
+
+.userButton:hover {
+  transform: scale(1.1);
+}
+
+.darkHeader .userButton {
+  background-color: var(--color-primary-dark);
+  color: var(--color-text-primary-dark);
+}
+
+.userMenu {
+  position: absolute;
+  top: 45px;
+  right: 0;
+  min-width: 200px;
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  padding: 1rem;
+  z-index: 100;
+}
+
+.darkHeader .userMenu {
+  background-color: var(--color-surface-dark);
+}
+
+.userName {
+  font-weight: 500;
+  padding-bottom: 0.5rem;
+  margin-bottom: 0.5rem;
+  border-bottom: 1px solid var(--color-border);
+  color: var(--color-text-primary-light);
+}
+
+.darkHeader .userName {
+  color: var(--color-text-primary-dark);
+  border-bottom-color: var(--color-border-dark);
+}
+
+.logoutButton {
+  width: 100%;
+  text-align: left;
+  padding: 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-primary-light);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+}
+
+.logoutButton:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.darkHeader .logoutButton {
+  color: var(--color-text-primary-dark);
+}
+
+.darkHeader .logoutButton:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+/* Estilos para el menú de usuario */
+.menuOption {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  text-align: left;
+  padding: 0.7rem 0.5rem;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: var(--color-text-primary-light);
+  border-radius: 4px;
+  transition: background-color 0.2s ease;
+  font-size: 0.9rem;
+}
+
+.menuOption:hover {
+  background-color: rgba(0, 0, 0, 0.05);
+}
+
+.darkHeader .menuOption {
+  color: var(--color-text-primary-dark);
+}
+
+.darkHeader .menuOption:hover {
+  background-color: rgba(255, 255, 255, 0.05);
+}
+
+.menuIcon {
+  margin-right: 8px;
+  font-size: 1rem;
+}
+
 /* Mobile Menu Styles */
 .mobileMenuToggle {
   display: none; /* Hidden by default */
-  font-size: 1.8rem;
+  font-size: 1.5rem;
   background: none;
   border: none;
   color: var(--color-text-secondary-light);
   cursor: pointer;
+  margin-left: var(--spacing-xs);
+  padding: 0.4rem;
 }
 
 .mobileMenuClose {
@@ -196,9 +406,11 @@
 @media (max-width: 768px) {
   .mobileMenuToggle {
     display: block; /* Show hamburger */
+    order: 3; /* Mover el botón de hamburguesa al final */
   }
 
   .mainNav {
+    margin-right: 0;
     display: none; /* Hide desktop nav */
     position: fixed; /* Take full screen */
     top: 0;
@@ -214,6 +426,7 @@
     gap: var(--spacing-lg); /* Larger gap for mobile menu items */
     transition: transform 0.3s ease-in-out;
     transform: translateX(-100%); /* Hide off-screen */
+    order: unset;
   }
 
   .mainNav.open {
@@ -248,6 +461,27 @@
 
   .headerActions {
       /* Ensure actions are still visible */
+      order: 2;
+      margin-right: var(--spacing-xs);
       gap: var(--spacing-sm); /* Slightly reduce gap */
+  }
+
+  .authLinks {
+    margin-left: var(--spacing-sm);
+  }
+  
+  .loginLink, .registerLink {
+    padding: 0.3rem 0.6rem;
+    font-size: 0.8rem;
+  }
+
+  /* Ajustar la versión móvil */
+  .headerRight {
+    gap: 0;
+  }
+
+  /* Añadir iconos de autenticación al menú móvil */
+  .authIcons {
+    margin-right: var(--spacing-sm);
   }
 }

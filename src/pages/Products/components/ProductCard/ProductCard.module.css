@@ -38,6 +38,16 @@
   transition: transform var(--transition-duration) ease;
 }
 
+/* Estilos para estados de carga de imágenes */
+.loading {
+  opacity: 0;
+}
+
+.loaded {
+  opacity: 1;
+  transition: opacity 0.3s ease;
+}
+
 .productCard:hover .productImage {
   transform: scale(1.05);
 }

@@ -187,25 +187,153 @@
 
 @media (max-width: 768px) {
   .orderConfirmation {
-    padding: 20px;
+    padding: 20px 15px;
+    border-radius: 6px;
+  }
+  
+  .successIcon {
+    width: 60px;
+    height: 60px;
+    font-size: 2rem;
+    margin-bottom: 15px;
+  }
+  
+  .orderConfirmation h2 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+  }
+  
+  .confirmationMessage {
+    font-size: 1rem;
+    margin-bottom: 20px;
   }
   
   .orderDetails {
     flex-direction: column;
+    gap: 15px;
+    margin-bottom: 20px;
+    padding-bottom: 15px;
+  }
+  
+  .orderInfo, .shippingInfo {
+    padding: 15px;
+  }
+  
+  .orderInfo h3, .shippingInfo h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+  }
+  
+  .orderSummary {
+    margin-top: 20px;
+  }
+  
+  .orderSummary h3 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+  }
+  
+  .itemsList {
+    margin-bottom: 20px;
   }
   
   .orderItem {
+    padding: 12px 0;
     flex-wrap: wrap;
+    position: relative;
+  }
+  
+  .itemImage {
+    width: 50px;
+    height: 50px;
+    margin-right: 12px;
   }
   
   .itemDetails {
-    margin: 10px 0;
-    width: 100%;
+    margin: 0;
+    width: calc(100% - 65px);
   }
   
   .itemPrice {
     width: 100%;
     text-align: right;
-    margin-top: 10px;
+    margin-top: 8px;
+    padding-left: 65px;
+  }
+  
+  .orderTotals {
+    padding: 15px;
+  }
+  
+  .confirmationActions {
+    margin-top: 25px;
+    gap: 10px;
+  }
+}
+
+@media (max-width: 480px) {
+  .orderConfirmation {
+    padding: 15px 10px;
+  }
+  
+  .successIcon {
+    width: 50px;
+    height: 50px;
+    font-size: 1.7rem;
+  }
+  
+  .orderConfirmation h2 {
+    font-size: 1.3rem;
+  }
+  
+  .confirmationMessage {
+    font-size: 0.9rem;
+  }
+  
+  .orderInfo, .shippingInfo {
+    padding: 12px;
+  }
+  
+  .orderInfo h3, .shippingInfo h3,
+  .orderSummary h3 {
+    font-size: 1.1rem;
+    margin-bottom: 10px;
+    padding-bottom: 6px;
+  }
+  
+  .orderInfo p, .shippingInfo p {
+    font-size: 0.9rem;
+    margin-bottom: 6px;
+  }
+  
+  .itemName {
+    font-size: 0.95rem;
+  }
+  
+  .itemQuantity {
+    font-size: 0.85rem;
+  }
+  
+  .itemPrice {
+    font-size: 0.95rem;
+  }
+  
+  .orderTotals {
+    padding: 12px;
+  }
+  
+  .totalRow {
+    font-size: 0.9rem;
+    padding: 6px 0;
+  }
+  
+  .grandTotal {
+    font-size: 1rem;
+  }
+  
+  .continueButton {
+    padding: 10px 20px;
+    font-size: 0.95rem;
   }
 }

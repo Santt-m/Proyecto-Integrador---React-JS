@@ -249,12 +249,105 @@
     max-width: 100%;
   }
   
+  .cartHeader {
+    padding: 15px;
+  }
+  
+  .cartHeader h2 {
+    font-size: 1.3rem;
+  }
+  
+  .cartItemList {
+    padding: 5px 15px;
+  }
+  
+  .cartItem {
+    padding: 12px 0;
+    flex-wrap: wrap;
+  }
+  
+  .itemImage {
+    width: 70px;
+    height: 70px;
+    margin-right: 10px;
+  }
+  
+  .itemDetails {
+    flex: 1;
+    min-width: 0;
+    margin-right: 0;
+  }
+  
+  .itemName {
+    font-size: 0.95rem;
+    max-width: 100%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+  
+  .itemPrice {
+    font-size: 0.9rem;
+    margin-bottom: 5px;
+  }
+  
   .itemControls {
-    flex-direction: column;
-    align-items: flex-start;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    margin-top: 10px;
   }
   
   .removeBtn {
-    margin-top: 8px;
+    margin-top: 0;
+    padding: 3px 8px;
+    font-size: 0.8rem;
+  }
+  
+  .quantityBtn {
+    width: 28px;
+    height: 28px;
+  }
+  
+  .quantity {
+    font-size: 0.9rem;
+  }
+  
+  .itemTotal {
+    position: absolute;
+    top: 12px;
+    right: 0;
+    font-size: 1rem;
+  }
+  
+  .cartFooter {
+    padding: 15px;
+  }
+  
+  .totalPrice {
+    font-size: 1.1rem;
+    margin-bottom: 15px;
+  }
+  
+  .checkoutButton, .continueShopping {
+    padding: 12px;
+    font-size: 0.95rem;
+  }
+}
+
+@media (max-width: 400px) {
+  .cartItem {
+    position: relative;
+    padding-top: 35px;
+  }
+  
+  .itemTotal {
+    top: 8px;
+  }
+  
+  .itemImage {
+    width: 60px;
+    height: 60px;
   }
 }
