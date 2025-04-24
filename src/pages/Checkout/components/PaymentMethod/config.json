@@ -1,0 +1,38 @@
+{
+  "title": "Método de Pago",
+  "paymentOptions": {
+    "creditCard": "Tarjeta de Crédito/Débito",
+    "paypal": "PayPal",
+    "mercadoPago": "Mercado Pago"
+  },
+  "cardForm": {
+    "cardNumber": {
+      "label": "Número de Tarjeta",
+      "placeholder": "1234 5678 9012 3456",
+      "error": "Número de tarjeta inválido"
+    },
+    "cardName": {
+      "label": "Nombre en la Tarjeta",
+      "placeholder": "Como aparece en la tarjeta",
+      "error": "El nombre es requerido"
+    },
+    "expiryDate": {
+      "label": "Fecha de Vencimiento",
+      "placeholder": "MM/AA",
+      "error": "Fecha inválida"
+    },
+    "cvv": {
+      "label": "Código de Seguridad (CVV)",
+      "placeholder": "123",
+      "error": "CVV inválido"
+    }
+  },
+  "alternativePayment": {
+    "paypal": "Serás redirigido a PayPal para completar el pago",
+    "mercadoPago": "Serás redirigido a Mercado Pago para completar el pago"
+  },
+  "buttons": {
+    "back": "Volver",
+    "pay": "Pagar Ahora"
+  }
+}

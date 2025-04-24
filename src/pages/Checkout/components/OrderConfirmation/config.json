@@ -1,0 +1,40 @@
+{
+  "thanksMessage": "¡Gracias por tu compra!",
+  "confirmationMessage": "Tu pedido ha sido procesado correctamente.",
+  "orderDetails": {
+    "title": "Detalles del Pedido",
+    "orderNumber": "Número de Pedido",
+    "date": "Fecha",
+    "paymentMethod": {
+      "label": "Método de Pago",
+      "creditCard": "Tarjeta de Crédito/Débito",
+      "paypal": "PayPal",
+      "mercadoPago": "Mercado Pago"
+    },
+    "status": {
+      "label": "Estado",
+      "confirmed": "Confirmado"
+    },
+    "estimatedDelivery": "Entrega Estimada"
+  },
+  "shippingInfo": {
+    "title": "Información de Envío",
+    "recipient": "Destinatario",
+    "address": "Dirección",
+    "city": "Ciudad",
+    "zipCode": "Código Postal",
+    "phone": "Teléfono"
+  },
+  "orderSummary": {
+    "title": "Resumen de la Compra",
+    "quantity": "Cantidad",
+    "subtotal": "Subtotal",
+    "shipping": "Envío",
+    "tax": "Impuestos",
+    "total": "Total"
+  },
+  "actions": {
+    "continueShopping": "Seguir Comprando",
+    "backToHome": "Volver al inicio"
+  }
+}

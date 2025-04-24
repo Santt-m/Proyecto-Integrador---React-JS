@@ -1,0 +1,29 @@
+{
+  "seo": {
+    "title": "Iniciar Sesión",
+    "description": "Inicia sesión en tu cuenta para acceder a ofertas exclusivas, realizar compras y gestionar tus pedidos.",
+    "keywords": "login, iniciar sesión, acceso, cuenta usuario"
+  },
+  "title": "Iniciar Sesión",
+  "form": {
+    "email": {
+      "label": "Correo Electrónico",
+      "placeholder": "tucorreo@ejemplo.com"
+    },
+    "password": {
+      "label": "Contraseña",
+      "placeholder": "Tu contraseña"
+    },
+    "submitButton": {
+      "default": "Iniciar Sesión",
+      "loading": "Iniciando sesión..."
+    }
+  },
+  "registerLink": {
+    "text": "¿No tienes una cuenta?",
+    "linkText": "Regístrate aquí"
+  },
+  "toast": {
+    "welcome": "¡Bienvenido de nuevo!"
+  }
+}

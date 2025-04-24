@@ -24,6 +24,8 @@
   margin-bottom: 1.5rem;
   color: var(--primary);
   font-size: 1.8rem;
+  font-family: var(--font-family-heading);
+  font-weight: 600;
 }
 
 .loginForm {
@@ -42,6 +44,7 @@
   font-weight: 500;
   font-size: 0.9rem;
   color: var(--text-primary);
+  font-family: var(--font-family-base);
 }
 
 .input {
@@ -53,6 +56,7 @@
   background-color: var(--input-background);
   color: var(--text-primary);
   transition: border-color 0.2s, background-color 0.2s;
+  font-family: var(--font-family-base);
 }
 
 .input:focus {
@@ -70,6 +74,7 @@
   font-weight: 600;
   cursor: pointer;
   transition: background-color 0.2s;
+  font-family: var(--font-family-base);
   margin-top: 0.5rem;
 }
 

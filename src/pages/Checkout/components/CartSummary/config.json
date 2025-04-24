@@ -1,0 +1,12 @@
+{
+  "title": "Resumen del Carrito",
+  "emptyCart": "Tu carrito está vacío",
+  "quantity": "Cantidad",
+  "removeButton": "Eliminar",
+  "summary": {
+    "subtotal": "Subtotal",
+    "shipping": "Envío",
+    "tax": "Impuestos (21%)",
+    "total": "Total"
+  }
+}

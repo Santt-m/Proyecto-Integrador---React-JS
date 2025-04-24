@@ -42,6 +42,8 @@
   margin: 0;
   color: var(--text-primary);
   font-size: 1.5rem;
+  font-family: var(--font-family-heading);
+  font-weight: 600;
 }
 
 .closeButton {
@@ -72,6 +74,7 @@
   color: var(--text-secondary);
   font-size: 1.1rem;
   margin-bottom: 20px;
+  font-family: var(--font-family-base);
 }
 
 .continueShoppingButton {
@@ -84,6 +87,8 @@
   cursor: pointer;
   text-decoration: none;
   transition: background-color 0.3s;
+  font-family: var(--font-family-base);
+  font-weight: 500;
 }
 
 .continueShoppingButton:hover {
@@ -126,12 +131,15 @@
   font-size: 1rem;
   color: var(--text-primary);
   margin: 0 0 5px;
+  font-family: var(--font-family-base);
+  font-weight: 500;
 }
 
 .itemPrice {
   color: var(--text-secondary);
   margin: 0 0 10px;
   font-weight: 500;
+  font-family: var(--font-family-base);
 }
 
 .itemControls {
@@ -168,6 +176,7 @@
   font-size: 1rem;
   padding: 0 10px;
   color: var(--text-primary);
+  font-family: var(--font-family-base);
 }
 
 .removeBtn {
@@ -178,6 +187,7 @@
   font-size: 0.9rem;
   padding: 5px 10px;
   transition: color 0.3s;
+  font-family: var(--font-family-base);
 }
 
 .removeBtn:hover {
@@ -192,6 +202,7 @@
   min-width: 80px;
   text-align: right;
   padding-top: 5px;
+  font-family: var(--font-family-base);
 }
 
 .cartFooter {
@@ -208,6 +219,7 @@
   font-weight: bold;
   margin-bottom: 20px;
   color: var(--text-primary);
+  font-family: var(--font-family-base);
 }
 
 .checkoutButton {
@@ -223,6 +235,7 @@
   text-decoration: none;
   transition: background-color 0.3s;
   margin-bottom: 10px;
+  font-family: var(--font-family-base);
 }
 
 .checkoutButton:hover {
@@ -238,6 +251,7 @@
   font-size: 1rem;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-family: var(--font-family-base);
 }
 
 .continueShopping:hover {

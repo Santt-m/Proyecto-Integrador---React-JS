@@ -1,0 +1,24 @@
+{
+  "logo": "MiTienda",
+  "navigation": {
+    "home": "Inicio",
+    "products": "Productos",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "register": "Registro"
+  },
+  "userMenu": {
+    "greeting": "Hola",
+    "dashboard": "Dashboard",
+    "logout": "Cerrar sesión"
+  },
+  "accessibility": {
+    "darkMode": "Cambiar a modo oscuro",
+    "lightMode": "Cambiar a modo claro",
+    "userMenu": "Menú de usuario",
+    "cart": "Ver carrito",
+    "closeMenu": "Cerrar menú",
+    "openMenu": "Abrir menú",
+    "login": "Iniciar sesión"
+  }
+}

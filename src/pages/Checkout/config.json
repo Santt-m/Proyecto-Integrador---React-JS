@@ -1,0 +1,25 @@
+{
+  "seo": {
+    "title": "Finalizar Compra",
+    "description": "Completa tu pedido con nuestro proceso de pago seguro. Completa los datos de envío y elige tu método de pago preferido.",
+    "keywords": "checkout, pago, finalizar compra, envío, pedido, compra segura"
+  },
+  "pageTitle": "Finalizar Compra",
+  "steps": {
+    "shipping": {
+      "number": "1",
+      "label": "Envío"
+    },
+    "payment": {
+      "number": "2",
+      "label": "Pago"
+    },
+    "confirmation": {
+      "number": "3",
+      "label": "Confirmación"
+    }
+  },
+  "loading": {
+    "message": "Procesando tu pago..."
+  }
+}

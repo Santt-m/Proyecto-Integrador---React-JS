@@ -1,0 +1,35 @@
+{
+  "seo": {
+    "accessDenied": {
+      "title": "Acceso Restringido",
+      "description": "Acceso al área de usuario. Inicia sesión para continuar.",
+      "robots": "noindex, nofollow"
+    },
+    "dashboard": {
+      "title": "Mi Cuenta",
+      "description": "Gestiona tu cuenta, revisa tu actividad reciente y actualiza tus datos personales.",
+      "keywords": "dashboard, cuenta de usuario, panel de usuario, área personal",
+      "robots": "noindex, nofollow"
+    }
+  },
+  "accessDenied": {
+    "title": "Acceso Denegado",
+    "message": "Necesitas iniciar sesión para acceder a esta página."
+  },
+  "dashboard": {
+    "title": "Dashboard",
+    "welcome": "Bienvenido",
+    "personalInfo": {
+      "title": "Información Personal",
+      "name": "Nombre:",
+      "email": "Email:"
+    },
+    "recentActivity": {
+      "title": "Actividad Reciente",
+      "loginActivity": {
+        "time": "Ahora",
+        "description": "Has iniciado sesión en tu cuenta"
+      }
+    }
+  }
+}

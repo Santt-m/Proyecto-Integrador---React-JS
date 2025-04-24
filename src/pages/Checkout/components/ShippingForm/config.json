@@ -1,0 +1,52 @@
+{
+  "title": "Información de Envío",
+  "personalInfo": {
+    "title": "Datos Personales",
+    "firstName": {
+      "label": "Nombre",
+      "placeholder": "Tu nombre",
+      "error": "El nombre es requerido"
+    },
+    "lastName": {
+      "label": "Apellido",
+      "placeholder": "Tu apellido",
+      "error": "El apellido es requerido"
+    },
+    "email": {
+      "label": "Email",
+      "placeholder": "tucorreo@ejemplo.com",
+      "error": "Email inválido"
+    },
+    "phone": {
+      "label": "Teléfono",
+      "placeholder": "Tu número de teléfono",
+      "error": "Teléfono inválido"
+    }
+  },
+  "addressInfo": {
+    "title": "Dirección de Envío",
+    "address": {
+      "label": "Dirección",
+      "placeholder": "Calle y número",
+      "error": "La dirección es requerida"
+    },
+    "city": {
+      "label": "Ciudad",
+      "placeholder": "Tu ciudad",
+      "error": "La ciudad es requerida"
+    },
+    "state": {
+      "label": "Provincia/Estado",
+      "placeholder": "Tu provincia o estado",
+      "error": "La provincia es requerida"
+    },
+    "zipCode": {
+      "label": "Código Postal",
+      "placeholder": "Tu código postal",
+      "error": "Código postal inválido"
+    }
+  },
+  "buttons": {
+    "continue": "Continuar al Pago"
+  }
+}

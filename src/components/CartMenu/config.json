@@ -1,0 +1,17 @@
+{
+  "title": "Mi Carrito",
+  "emptyCart": {
+    "message": "Tu carrito está vacío",
+    "exploreButton": "Explorar Productos"
+  },
+  "itemControls": {
+    "decreaseQuantity": "Disminuir cantidad",
+    "increaseQuantity": "Aumentar cantidad",
+    "removeItem": "Eliminar"
+  },
+  "footer": {
+    "total": "Total:",
+    "checkoutButton": "Finalizar Compra",
+    "continueButton": "Seguir Comprando"
+  }
+}

@@ -8,6 +8,8 @@ import ShippingForm from './components/ShippingForm/ShippingForm';
 import PaymentMethod from './components/PaymentMethod/PaymentMethod';
 import OrderConfirmation from './components/OrderConfirmation/OrderConfirmation';
 import styles from './Checkout.module.css';
+// Importamos la configuración
+import config from './config.json';
 
 function Checkout() {
   const { cartItems, getTotalPrice, clearCart } = useCart();
@@ -79,18 +81,18 @@ function Checkout() {
     return (
       <div className={styles.stepIndicator}>
         <div className={`${styles.step} ${styles.active}`}>
-          <div className={styles.stepNumber}>1</div>
-          <div className={styles.stepLabel}>Envío</div>
+          <div className={styles.stepNumber}>{config.steps.shipping.number}</div>
+          <div className={styles.stepLabel}>{config.steps.shipping.label}</div>
         </div>
         <div className={styles.stepConnector}></div>
         <div className={`${styles.step} ${step === 'payment' || step === 'confirmation' ? styles.active : ''}`}>
-          <div className={styles.stepNumber}>2</div>
-          <div className={styles.stepLabel}>Pago</div>
+          <div className={styles.stepNumber}>{config.steps.payment.number}</div>
+          <div className={styles.stepLabel}>{config.steps.payment.label}</div>
         </div>
         <div className={styles.stepConnector}></div>
         <div className={`${styles.step} ${step === 'confirmation' ? styles.active : ''}`}>
-          <div className={styles.stepNumber}>3</div>
-          <div className={styles.stepLabel}>Confirmación</div>
+          <div className={styles.stepNumber}>{config.steps.confirmation.number}</div>
+          <div className={styles.stepLabel}>{config.steps.confirmation.label}</div>
         </div>
       </div>
     );
@@ -99,13 +101,13 @@ function Checkout() {
   return (
     <>
       <SEOHead
-        title="Finalizar Compra"
-        description="Completa tu pedido con nuestro proceso de pago seguro. Completa los datos de envío y elige tu método de pago preferido."
-        keywords="checkout, pago, finalizar compra, envío, pedido, compra segura"
+        title={config.seo.title}
+        description={config.seo.description}
+        keywords={config.seo.keywords}
         canonical="https://proyecto-integrador-react-js-beta.vercel.app/checkout"
       />
       <div className={`${styles.checkoutContainer} ${theme}`}>
-        <h1 className={styles.pageTitle}>Finalizar Compra</h1>
+        <h1 className={styles.pageTitle}>{config.pageTitle}</h1>
 
         {/* Indicador de pasos del checkout */}
         {step !== 'confirmation' && renderStepIndicator()}
@@ -114,7 +116,7 @@ function Checkout() {
         {isLoading && (
           <div className={styles.loadingOverlay}>
             <div className={styles.spinner}></div>
-            <p>Procesando tu pago...</p>
+            <p>{config.loading.message}</p>
           </div>
         )}
 

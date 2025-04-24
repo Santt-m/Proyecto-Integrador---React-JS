@@ -8,6 +8,8 @@ import CartMenu from '../CartMenu/CartMenu';
 import styles from './Header.module.css';
 // Importamos iconos
 import { FaUserCircle, FaSignInAlt, FaUserPlus, FaTachometerAlt, FaSignOutAlt } from 'react-icons/fa';
+// Importamos la configuración
+import config from './config.json';
 
 function Header() {
   const { getTotalItems } = useCart();
@@ -94,7 +96,7 @@ function Header() {
     <>
       <header className={`${styles.header} ${theme === 'dark' ? styles.darkHeader : ''}`}>
         <div className={styles.headerContainer}>
-          <Link to="/" className={styles.headerLogo}>MiTienda</Link>
+          <Link to="/" className={styles.headerLogo}>{config.logo}</Link>
 
           <div className={styles.headerRight}>
             {/* Navegación principal */}
@@ -109,28 +111,28 @@ function Header() {
                 className={isLinkActive('/') ? styles.activeLink : ''}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Inicio
+                {config.navigation.home}
               </Link>
               <Link 
                 to="/products" 
                 className={isLinkActive('/products') ? styles.activeLink : ''}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Productos
+                {config.navigation.products}
               </Link>
               <Link 
                 to="/about" 
                 className={isLinkActive('/about') ? styles.activeLink : ''}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Acerca de
+                {config.navigation.about}
               </Link>
               <Link 
                 to="/contact" 
                 className={isLinkActive('/contact') ? styles.activeLink : ''}
                 onClick={() => setIsMobileMenuOpen(false)}
               >
-                Contacto
+                {config.navigation.contact}
               </Link>
               {!currentUser && (
                 <Link 
@@ -138,7 +140,7 @@ function Header() {
                   className={isLinkActive('/register') ? styles.activeLink : ''}
                   onClick={() => setIsMobileMenuOpen(false)}
                 >
-                  Registro
+                  {config.navigation.register}
                 </Link>
               )}
             </nav>
@@ -148,7 +150,7 @@ function Header() {
               <button 
                 onClick={toggleTheme} 
                 className={styles.themeToggleButton}
-                aria-label={theme === 'light' ? 'Cambiar a modo oscuro' : 'Cambiar a modo claro'}
+                aria-label={theme === 'light' ? config.accessibility.darkMode : config.accessibility.lightMode}
               >
                 {theme === 'light' ? '🌙' : '☀️'}
               </button>
@@ -157,7 +159,7 @@ function Header() {
                 <button 
                   onClick={handleToggleCartMenu} 
                   className={styles.cartButton}
-                  aria-label="Ver carrito"
+                  aria-label={config.accessibility.cart}
                 >
                   🛒
                   {totalItems > 0 && (
@@ -172,7 +174,7 @@ function Header() {
                   <button 
                     onClick={handleToggleUserMenu} 
                     className={styles.userButton}
-                    aria-label="Menú de usuario"
+                    aria-label={config.accessibility.userMenu}
                   >
                     {currentUser.name.charAt(0).toUpperCase()}
                   </button>
@@ -180,26 +182,26 @@ function Header() {
                   {isUserMenuOpen && (
                     <div className={styles.userMenu}>
                       <div className={styles.userName}>
-                        Hola, {currentUser.name}
+                        {config.userMenu.greeting}, {currentUser.name}
                       </div>
                       <button 
                         onClick={goToDashboard}
                         className={styles.menuOption}
                       >
-                        <FaTachometerAlt className={styles.menuIcon} /> Dashboard
+                        <FaTachometerAlt className={styles.menuIcon} /> {config.userMenu.dashboard}
                       </button>
                       <button 
                         onClick={handleLogout}
                         className={styles.menuOption}
                       >
-                        <FaSignOutAlt className={styles.menuIcon} /> Cerrar sesión
+                        <FaSignOutAlt className={styles.menuIcon} /> {config.userMenu.logout}
                       </button>
                     </div>
                   )}
                 </div>
               ) : (
                 <div className={styles.authIcons}>
-                  <Link to="/login" className={styles.iconButton} title="Iniciar sesión">
+                  <Link to="/login" className={styles.iconButton} title={config.accessibility.login}>
                     <FaUserCircle />
                   </Link>
                 </div>
@@ -209,7 +211,7 @@ function Header() {
               <button 
                 className={styles.mobileMenuToggle} 
                 onClick={handleToggleMobileMenu}
-                aria-label={isMobileMenuOpen ? 'Cerrar menú' : 'Abrir menú'}
+                aria-label={isMobileMenuOpen ? config.accessibility.closeMenu : config.accessibility.openMenu}
               >
                 ☰
               </button>

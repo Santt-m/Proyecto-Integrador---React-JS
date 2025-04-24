@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import { useCart } from '../../context/CartContext';
 import { useTheme } from '../../context/ThemeContext';
 import styles from './CartMenu.module.css';
+// Importamos la configuración
+import config from './config.json';
 
 function CartMenu({ isOpen, onClose }) {
   const { cartItems, removeItem, updateQuantity, getTotalPrice } = useCart();
@@ -42,7 +44,7 @@ function CartMenu({ isOpen, onClose }) {
     <div className={`${styles.cartMenuOverlay} ${theme}`}>
       <div className={styles.cartMenu} ref={menuRef}>
         <div className={styles.cartHeader}>
-          <h2>Mi Carrito</h2>
+          <h2>{config.title}</h2>
           <button className={styles.closeButton} onClick={onClose}>
             ✕
           </button>
@@ -50,9 +52,9 @@ function CartMenu({ isOpen, onClose }) {
 
         {cartItems.length === 0 ? (
           <div className={styles.emptyCart}>
-            <p>Tu carrito está vacío</p>
+            <p>{config.emptyCart.message}</p>
             <Link to="/products" className={styles.continueShoppingButton} onClick={onClose}>
-              Explorar Productos
+              {config.emptyCart.exploreButton}
             </Link>
           </div>
         ) : (
@@ -71,7 +73,7 @@ function CartMenu({ isOpen, onClose }) {
                         <button 
                           onClick={() => updateQuantity(item.id, item.quantity - 1)}
                           className={styles.quantityBtn}
-                          aria-label="Disminuir cantidad"
+                          aria-label={config.itemControls.decreaseQuantity}
                         >
                           -
                         </button>
@@ -79,7 +81,7 @@ function CartMenu({ isOpen, onClose }) {
                         <button 
                           onClick={() => updateQuantity(item.id, item.quantity + 1)}
                           className={styles.quantityBtn}
-                          aria-label="Aumentar cantidad"
+                          aria-label={config.itemControls.increaseQuantity}
                         >
                           +
                         </button>
@@ -87,9 +89,9 @@ function CartMenu({ isOpen, onClose }) {
                       <button 
                         onClick={() => removeItem(item.id)}
                         className={styles.removeBtn}
-                        aria-label="Eliminar producto"
+                        aria-label={config.itemControls.removeItem}
                       >
-                        Eliminar
+                        {config.itemControls.removeItem}
                       </button>
                     </div>
                   </div>
@@ -102,7 +104,7 @@ function CartMenu({ isOpen, onClose }) {
 
             <div className={styles.cartFooter}>
               <div className={styles.totalPrice}>
-                <span>Total:</span>
+                <span>{config.footer.total}</span>
                 <span>${getTotalPrice().toFixed(2)}</span>
               </div>
               <Link 
@@ -110,13 +112,13 @@ function CartMenu({ isOpen, onClose }) {
                 className={styles.checkoutButton}
                 onClick={onClose}
               >
-                Finalizar Compra
+                {config.footer.checkoutButton}
               </Link>
               <button 
                 className={styles.continueShopping}
                 onClick={onClose}
               >
-                Seguir Comprando
+                {config.footer.continueButton}
               </button>
             </div>
           </>

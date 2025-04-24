@@ -7,6 +7,8 @@ import { FaMapMarkerAlt, FaPhoneAlt, FaEnvelope, FaClock,
          FaYoutube, FaPaperPlane, FaCcVisa, FaCcMastercard, FaCcAmex, FaCcPaypal } from 'react-icons/fa';
 import { SiMercadopago } from 'react-icons/si';
 import styles from './Footer.module.css';
+// Importamos la configuración
+import config from './config.json';
 
 function Footer() {
   const { theme } = useTheme();
@@ -16,7 +18,7 @@ function Footer() {
   const handleSubscribe = (e) => {
     e.preventDefault();
     // Aquí iría la lógica para suscribir al newsletter
-    alert(`Gracias por suscribirte con: ${email}`);
+    alert(`${config.newsletter.subscribeSuccess} ${email}`);
     setEmail('');
   };
 
@@ -26,63 +28,63 @@ function Footer() {
         <div className={styles.footerMain}>
           {/* Columna 1: Información de contacto */}
           <div className={styles.footerColumn}>
-            <h3>Contacto</h3>
+            <h3>{config.contact.title}</h3>
             <ul className={styles.contactInfo}>
               <li>
                 <span className={styles.contactIcon}><FaMapMarkerAlt /></span>
-                <span>Av. Libertador 1234, Buenos Aires, Argentina</span>
+                <span>{config.contact.address}</span>
               </li>
               <li>
                 <span className={styles.contactIcon}><FaPhoneAlt /></span>
-                <span>+54 11 5678-9012</span>
+                <span>{config.contact.phone}</span>
               </li>
               <li>
                 <span className={styles.contactIcon}><FaEnvelope /></span>
-                <span>info@mitiendareact.com</span>
+                <span>{config.contact.email}</span>
               </li>
               <li>
                 <span className={styles.contactIcon}><FaClock /></span>
-                <span>Lun - Vie: 9:00 AM - 6:00 PM</span>
+                <span>{config.contact.hours}</span>
               </li>
             </ul>
           </div>
 
           {/* Columna 2: Enlaces rápidos */}
           <div className={styles.footerColumn}>
-            <h3>Enlaces Rápidos</h3>
+            <h3>{config.quickLinks.title}</h3>
             <ul className={styles.footerLinks}>
-              <li><Link to="/">Inicio</Link></li>
-              <li><Link to="/products">Productos</Link></li>
-              <li><Link to="/about">Acerca de</Link></li>
-              <li><Link to="/contact">Contacto</Link></li>
-              <li><Link to="/login">Mi cuenta</Link></li>
-              <li><Link to="/dashboard">Panel de usuario</Link></li>
+              <li><Link to="/">{config.quickLinks.home}</Link></li>
+              <li><Link to="/products">{config.quickLinks.products}</Link></li>
+              <li><Link to="/about">{config.quickLinks.about}</Link></li>
+              <li><Link to="/contact">{config.quickLinks.contact}</Link></li>
+              <li><Link to="/login">{config.quickLinks.account}</Link></li>
+              <li><Link to="/dashboard">{config.quickLinks.dashboard}</Link></li>
             </ul>
           </div>
 
           {/* Columna 3: Categorías */}
           <div className={styles.footerColumn}>
-            <h3>Categorías</h3>
+            <h3>{config.categories.title}</h3>
             <ul className={styles.footerLinks}>
-              <li><Link to="/products?category=tecnologia">Tecnología</Link></li>
-              <li><Link to="/products?category=moda">Moda</Link></li>
-              <li><Link to="/products?category=hogar">Hogar</Link></li>
-              <li><Link to="/products?category=deportes">Deportes</Link></li>
-              <li><Link to="/products?category=belleza">Belleza</Link></li>
-              <li><Link to="/products?category=alimentos">Alimentos</Link></li>
+              <li><Link to="/products?category=tecnologia">{config.categories.technology}</Link></li>
+              <li><Link to="/products?category=moda">{config.categories.fashion}</Link></li>
+              <li><Link to="/products?category=hogar">{config.categories.home}</Link></li>
+              <li><Link to="/products?category=deportes">{config.categories.sports}</Link></li>
+              <li><Link to="/products?category=belleza">{config.categories.beauty}</Link></li>
+              <li><Link to="/products?category=alimentos">{config.categories.food}</Link></li>
             </ul>
           </div>
 
           {/* Columna 4: Newsletter */}
           <div className={styles.footerColumn}>
-            <h3>Newsletter</h3>
-            <p>Suscríbete para recibir nuestras últimas novedades y ofertas especiales.</p>
+            <h3>{config.newsletter.title}</h3>
+            <p>{config.newsletter.description}</p>
             <form onSubmit={handleSubscribe} className={styles.newsletterForm}>
               <input
                 type="email"
                 value={email}
                 onChange={(e) => setEmail(e.target.value)}
-                placeholder="Tu email"
+                placeholder={config.newsletter.placeholder}
                 required
                 className={styles.newsletterInput}
               />
@@ -113,14 +115,14 @@ function Footer() {
         {/* Footer Bottom */}
         <div className={styles.footerBottom}>
           <div className={styles.copyright}>
-            &copy; {currentYear} MiTienda React | Proyecto Integrador - Todos los derechos reservados
+            &copy; {currentYear} {config.copyright}
           </div>
           
           <div className={styles.legalLinks}>
-            <Link to="/terms">Términos y Condiciones</Link>
-            <Link to="/privacy">Política de Privacidad</Link>
-            <Link to="/shipping">Política de Envíos</Link>
-            <Link to="/returns">Devoluciones</Link>
+            <Link to="/terms">{config.legalLinks.terms}</Link>
+            <Link to="/privacy">{config.legalLinks.privacy}</Link>
+            <Link to="/shipping">{config.legalLinks.shipping}</Link>
+            <Link to="/returns">{config.legalLinks.returns}</Link>
           </div>
           
           <div className={styles.paymentMethods}>

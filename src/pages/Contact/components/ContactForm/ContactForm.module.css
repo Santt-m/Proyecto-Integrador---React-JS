@@ -18,6 +18,8 @@
   color: var(--color-primary);
   margin-bottom: 1.5rem;
   position: relative;
+  font-family: var(--font-family-heading);
+  font-weight: 600;
 }
 
 .formTitle::after {
@@ -42,6 +44,7 @@
   margin-bottom: 0.5rem;
   font-weight: 500;
   color: var(--color-text-dark);
+  font-family: var(--font-family-base);
 }
 
 .required {
@@ -55,6 +58,7 @@
   border: 1px solid #ddd;
   border-radius: 4px;
   transition: border-color 0.3s, box-shadow 0.3s;
+  font-family: var(--font-family-base);
 }
 
 .formInput:focus, .formTextarea:focus, .formSelect:focus {
@@ -72,6 +76,7 @@
   color: #e74c3c;
   font-size: 0.85rem;
   margin-top: 0.4rem;
+  font-family: var(--font-family-base);
 }
 
 .submitButton {
@@ -86,6 +91,7 @@
   transition: background-color 0.3s;
   display: inline-block;
   margin-top: 1rem;
+  font-family: var(--font-family-base);
 }
 
 .submitButton:hover {

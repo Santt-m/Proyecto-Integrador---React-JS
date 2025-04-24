@@ -1,0 +1,40 @@
+{
+  "contact": {
+    "title": "Contacto",
+    "address": "Av. Libertador 1234, Buenos Aires, Argentina",
+    "phone": "+54 11 5678-9012",
+    "email": "info@mitiendareact.com",
+    "hours": "Lun - Vie: 9:00 AM - 6:00 PM"
+  },
+  "quickLinks": {
+    "title": "Enlaces Rápidos",
+    "home": "Inicio",
+    "products": "Productos",
+    "about": "Acerca de",
+    "contact": "Contacto",
+    "account": "Mi cuenta",
+    "dashboard": "Panel de usuario"
+  },
+  "categories": {
+    "title": "Categorías",
+    "technology": "Tecnología",
+    "fashion": "Moda",
+    "home": "Hogar",
+    "sports": "Deportes",
+    "beauty": "Belleza",
+    "food": "Alimentos"
+  },
+  "newsletter": {
+    "title": "Newsletter",
+    "description": "Suscríbete para recibir nuestras últimas novedades y ofertas especiales.",
+    "placeholder": "Tu email",
+    "subscribeSuccess": "Gracias por suscribirte con:"
+  },
+  "legalLinks": {
+    "terms": "Términos y Condiciones",
+    "privacy": "Política de Privacidad",
+    "shipping": "Política de Envíos",
+    "returns": "Devoluciones"
+  },
+  "copyright": "MiTienda React | Proyecto Integrador - Todos los derechos reservados"
+}

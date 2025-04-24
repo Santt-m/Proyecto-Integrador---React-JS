@@ -1,0 +1,41 @@
+{
+  "seo": {
+    "title": "Crear Cuenta",
+    "description": "Regístrate para acceder a todas las funciones de nuestra tienda. Compra más rápido, accede a ofertas exclusivas y haz seguimiento de tus pedidos.",
+    "keywords": "registro, crear cuenta, cuenta nueva, sign up, cliente nuevo"
+  },
+  "title": "Crear Cuenta",
+  "form": {
+    "name": {
+      "label": "Nombre Completo",
+      "placeholder": "Tu nombre completo"
+    },
+    "email": {
+      "label": "Correo Electrónico",
+      "placeholder": "tucorreo@ejemplo.com"
+    },
+    "password": {
+      "label": "Contraseña",
+      "placeholder": "Mínimo 6 caracteres"
+    },
+    "confirmPassword": {
+      "label": "Confirmar Contraseña",
+      "placeholder": "Repetir contraseña"
+    },
+    "submitButton": {
+      "default": "Registrarse",
+      "loading": "Registrando..."
+    }
+  },
+  "validation": {
+    "passwordMismatch": "Las contraseñas no coinciden",
+    "passwordLength": "La contraseña debe tener al menos 6 caracteres"
+  },
+  "loginLink": {
+    "text": "¿Ya tienes una cuenta?",
+    "linkText": "Inicia sesión"
+  },
+  "toast": {
+    "success": "¡Registro exitoso! Bienvenido/a."
+  }
+}

@@ -1,0 +1,50 @@
+{
+  "seo": {
+    "title": "MiTienda - Tu mejor opción para compras online",
+    "description": "Descubre nuestra selección de productos de calidad a los mejores precios. Tecnología, moda, hogar y más con envío rápido y seguro.",
+    "keywords": "tienda online, ecommerce, comprar, productos, tecnología, moda, hogar, ofertas"
+  },
+  "hero": {
+    "title": "Encuentra todo lo que buscas",
+    "subtitle": "La mejor experiencia de compra online",
+    "buttonText": "Ver Productos"
+  },
+  "featuredProducts": {
+    "title": "Productos Destacados",
+    "buttonText": "Ver todos los productos"
+  },
+  "categories": {
+    "title": "Explora nuestras categorías",
+    "viewAll": "Ver todas"
+  },
+  "whyChooseUs": {
+    "title": "¿Por qué elegirnos?",
+    "features": {
+      "shipping": {
+        "title": "Envío Gratis",
+        "description": "En compras superiores a $10.000"
+      },
+      "support": {
+        "title": "Soporte 24/7",
+        "description": "Atención al cliente en todo momento"
+      },
+      "returns": {
+        "title": "Devoluciones Fáciles",
+        "description": "30 días para cambios y devoluciones"
+      },
+      "secure": {
+        "title": "Pago Seguro",
+        "description": "Tus datos siempre protegidos"
+      }
+    }
+  },
+  "testimonials": {
+    "title": "Lo que dicen nuestros clientes"
+  },
+  "callToAction": {
+    "title": "¿Listo para empezar a comprar?",
+    "description": "Únete a miles de clientes satisfechos y descubre por qué somos la mejor opción.",
+    "buttonText": "Explorar Productos"
+  },
+  "loading": "Cargando..."
+}

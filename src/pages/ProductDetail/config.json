@@ -1,0 +1,26 @@
+{
+  "seo": {
+    "description": "Detalles completos de {productName}. Características, especificaciones y opciones de compra disponibles.",
+    "keywords": "detalles producto, comprar, características, especificaciones"
+  },
+  "buttons": {
+    "addToCart": "Agregar al Carrito",
+    "outOfStock": "Agotado",
+    "backToProducts": "Volver a Productos"
+  },
+  "productInfo": {
+    "category": "Categoría",
+    "availability": {
+      "inStock": "En Stock",
+      "outOfStock": "Agotado"
+    },
+    "quantity": "Cantidad"
+  },
+  "tabs": {
+    "description": "Descripción",
+    "details": "Especificaciones",
+    "reviews": "Reseñas"
+  },
+  "relatedProducts": "Productos Relacionados",
+  "loading": "Cargando detalles del producto..."
+}

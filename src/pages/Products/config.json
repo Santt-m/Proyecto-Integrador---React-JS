@@ -1,0 +1,42 @@
+{
+  "seo": {
+    "title": "Productos - MiTienda",
+    "description": "Explora nuestra amplia selección de productos de calidad. Filtros inteligentes para encontrar exactamente lo que buscas.",
+    "keywords": "productos, catálogo, compras online, filtros, categorías, tecnología, moda, hogar"
+  },
+  "title": "Todos los Productos",
+  "filters": {
+    "title": "Filtros",
+    "categories": {
+      "title": "Categorías",
+      "all": "Todas",
+      "technology": "Tecnología",
+      "fashion": "Moda",
+      "home": "Hogar",
+      "sports": "Deportes",
+      "beauty": "Belleza",
+      "food": "Alimentos"
+    },
+    "price": {
+      "title": "Precio",
+      "min": "Mín",
+      "max": "Máx",
+      "apply": "Aplicar"
+    },
+    "sort": {
+      "title": "Ordenar por",
+      "default": "Destacados",
+      "priceLowHigh": "Precio: Menor a Mayor",
+      "priceHighLow": "Precio: Mayor a Menor",
+      "nameAZ": "Nombre: A-Z",
+      "nameZA": "Nombre: Z-A"
+    },
+    "reset": "Limpiar filtros"
+  },
+  "search": {
+    "placeholder": "Buscar productos...",
+    "button": "Buscar"
+  },
+  "noResults": "No se encontraron productos con esos criterios.",
+  "loading": "Cargando productos..."
+}

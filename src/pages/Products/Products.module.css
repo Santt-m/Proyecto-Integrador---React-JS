@@ -10,6 +10,8 @@
   color: var(--color-text-primary-light);
   position: relative;
   padding-bottom: var(--spacing-sm);
+  font-family: var(--font-family-heading);
+  font-weight: 700;
 }
 
 .pageTitle::after {
@@ -26,6 +28,7 @@
 .filtersContainer {
   display: flex;
   flex-wrap: wrap;
+  align-items: center;
   gap: var(--spacing-md);
   margin-bottom: var(--spacing-lg);
   padding: var(--spacing-md);
@@ -34,10 +37,16 @@
 }
 
 .filterGroup {
-  flex: 1 1 200px;
+  flex: 1;
   display: flex;
   flex-direction: column;
   gap: var(--spacing-xs);
+}
+
+.filterGroup label {
+  font-size: 0.9rem;
+  font-weight: 500;
+  font-family: var(--font-family-base);
 }
 
 .filterSelect,
@@ -47,6 +56,7 @@
   border-radius: var(--border-radius-sm);
   font-size: 1rem;
   background-color: white;
+  font-family: var(--font-family-base);
 }
 
 .searchInput {
@@ -69,6 +79,9 @@
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: var(--border-radius-md);
   margin-top: var(--spacing-lg);
+  font-family: var(--font-family-base);
+  font-size: 1.1rem;
+  color: var(--color-text-secondary-light);
 }
 
 .resetButton {
@@ -80,6 +93,8 @@
   border-radius: var(--border-radius-sm);
   cursor: pointer;
   transition: background-color var(--transition-duration) ease;
+  font-family: var(--font-family-base);
+  font-weight: 500;
 }
 
 .resetButton:hover {
@@ -95,6 +110,7 @@
   cursor: pointer;
   font-size: 0.9rem;
   transition: all var(--transition-duration) ease;
+  font-family: var(--font-family-base);
 }
 
 .smallResetButton:hover {
@@ -127,6 +143,13 @@
   justify-content: space-between;
   margin-bottom: var(--spacing-md);
   padding: 0 var(--spacing-sm);
+  font-family: var(--font-family-base);
+}
+
+.resultsCount {
+  color: var(--color-text-secondary-light);
+  font-size: 0.95rem;
+  font-family: var(--font-family-base);
 }
 
 /* Estilos para el modo oscuro */

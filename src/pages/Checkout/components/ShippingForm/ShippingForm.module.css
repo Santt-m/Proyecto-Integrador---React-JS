@@ -12,6 +12,8 @@
   color: var(--text-primary);
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 10px;
+  font-family: var(--font-family-heading);
+  font-weight: 600;
 }
 
 .formRow {
@@ -31,6 +33,8 @@
   margin-bottom: 6px;
   font-size: 0.9rem;
   color: var(--text-secondary);
+  font-family: var(--font-family-base);
+  font-weight: 500;
 }
 
 .formGroup input[type="text"],
@@ -44,6 +48,7 @@
   transition: border-color 0.3s;
   background-color: var(--input-background);
   color: var(--text-primary);
+  font-family: var(--font-family-base);
 }
 
 .formGroup input[type="text"]:focus,
@@ -63,6 +68,7 @@
   position: absolute;
   bottom: -18px;
   left: 0;
+  font-family: var(--font-family-base);
 }
 
 .checkboxContainer {
@@ -78,6 +84,7 @@
 
 .checkboxContainer label {
   color: var(--text-primary);
+  font-family: var(--font-family-base);
 }
 
 .formActions {
@@ -95,6 +102,8 @@
   border-radius: 4px;
   cursor: pointer;
   transition: background-color 0.3s;
+  font-family: var(--font-family-base);
+  font-weight: 500;
 }
 
 .continueButton:hover {

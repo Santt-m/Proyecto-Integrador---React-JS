@@ -5,6 +5,8 @@ import { useTheme } from '../../context/ThemeContext';
 import { useToast } from '../../components/Toast/Toast';
 import SEOHead from '../../components/SEOHead/SEOHead';
 import styles from './Register.module.css';
+// Importamos la configuración
+import config from './config.json';
 
 function Register() {
   const [name, setName] = useState('');
@@ -25,15 +27,15 @@ function Register() {
     
     // Validar que las contraseñas coincidan
     if (password !== confirmPassword) {
-      setError('Las contraseñas no coinciden');
-      showToast('Las contraseñas no coinciden', 'error');
+      setError(config.validation.passwordMismatch);
+      showToast(config.validation.passwordMismatch, 'error');
       return;
     }
     
     // Validar longitud de contraseña
     if (password.length < 6) {
-      setError('La contraseña debe tener al menos 6 caracteres');
-      showToast('La contraseña debe tener al menos 6 caracteres', 'error');
+      setError(config.validation.passwordLength);
+      showToast(config.validation.passwordLength, 'error');
       return;
     }
     
@@ -41,7 +43,7 @@ function Register() {
     
     try {
       await register(name, email, password);
-      showToast('¡Registro exitoso! Bienvenido/a.', 'success');
+      showToast(config.toast.success, 'success');
       navigate('/');
     } catch (error) {
       setError(error.message);
@@ -54,20 +56,20 @@ function Register() {
   return (
     <>
       <SEOHead
-        title="Crear Cuenta"
-        description="Regístrate para acceder a todas las funciones de nuestra tienda. Compra más rápido, accede a ofertas exclusivas y haz seguimiento de tus pedidos."
-        keywords="registro, crear cuenta, cuenta nueva, sign up, cliente nuevo"
+        title={config.seo.title}
+        description={config.seo.description}
+        keywords={config.seo.keywords}
         canonical="https://proyecto-integrador-react-js-beta.vercel.app/register"
       />
       <div className={`${styles.registerContainer} ${theme}`}>
         <div className={styles.registerCard}>
-          <h2 className={styles.registerTitle}>Crear Cuenta</h2>
+          <h2 className={styles.registerTitle}>{config.title}</h2>
           
           {error && <div className={styles.errorMessage}>{error}</div>}
           
           <form onSubmit={handleSubmit} className={styles.registerForm}>
             <div className={styles.formGroup}>
-              <label htmlFor="name">Nombre Completo</label>
+              <label htmlFor="name">{config.form.name.label}</label>
               <input
                 type="text"
                 id="name"
@@ -75,13 +77,13 @@ function Register() {
                 onChange={(e) => setName(e.target.value)}
                 required
                 className={styles.input}
-                placeholder="Tu nombre completo"
+                placeholder={config.form.name.placeholder}
                 autoComplete="name"
               />
             </div>
             
             <div className={styles.formGroup}>
-              <label htmlFor="email">Correo Electrónico</label>
+              <label htmlFor="email">{config.form.email.label}</label>
               <input
                 type="email"
                 id="email"
@@ -89,13 +91,13 @@ function Register() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className={styles.input}
-                placeholder="tucorreo@ejemplo.com"
+                placeholder={config.form.email.placeholder}
                 autoComplete="email"
               />
             </div>
             
             <div className={styles.formGroup}>
-              <label htmlFor="password">Contraseña</label>
+              <label htmlFor="password">{config.form.password.label}</label>
               <input
                 type="password"
                 id="password"
@@ -103,13 +105,13 @@ function Register() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 className={styles.input}
-                placeholder="Mínimo 6 caracteres"
+                placeholder={config.form.password.placeholder}
                 autoComplete="new-password"
               />
             </div>
             
             <div className={styles.formGroup}>
-              <label htmlFor="confirmPassword">Confirmar Contraseña</label>
+              <label htmlFor="confirmPassword">{config.form.confirmPassword.label}</label>
               <input
                 type="password"
                 id="confirmPassword"
@@ -117,7 +119,7 @@ function Register() {
                 onChange={(e) => setConfirmPassword(e.target.value)}
                 required
                 className={styles.input}
-                placeholder="Repetir contraseña"
+                placeholder={config.form.confirmPassword.placeholder}
                 autoComplete="new-password"
               />
             </div>
@@ -126,14 +128,14 @@ function Register() {
               type="submit" 
               className={styles.registerButton}
               disabled={loading}
-              aria-label="Crear cuenta"
+              aria-label={config.form.submitButton.default}
             >
-              {loading ? 'Registrando...' : 'Registrarse'}
+              {loading ? config.form.submitButton.loading : config.form.submitButton.default}
             </button>
           </form>
           
           <div className={styles.loginLink}>
-            ¿Ya tienes una cuenta? <Link to="/login">Inicia sesión</Link>
+            {config.loginLink.text} <Link to="/login">{config.loginLink.linkText}</Link>
           </div>
         </div>
       </div>

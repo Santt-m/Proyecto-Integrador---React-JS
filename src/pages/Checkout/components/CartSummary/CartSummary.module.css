@@ -12,6 +12,8 @@
   color: var(--text-primary);
   border-bottom: 1px solid var(--border-color);
   padding-bottom: 10px;
+  font-family: var(--font-family-heading);
+  font-weight: 600;
 }
 
 .emptyCart {
@@ -19,6 +21,7 @@
   color: var(--text-secondary);
   padding: 20px 0;
   font-style: italic;
+  font-family: var(--font-family-base);
 }
 
 .productList {
@@ -52,12 +55,15 @@
   font-size: 1rem;
   margin: 0 0 5px;
   color: var(--text-primary);
+  font-family: var(--font-family-base);
+  font-weight: 500;
 }
 
 .productPrice {
   font-weight: bold;
   color: var(--text-secondary);
   margin-bottom: 8px;
+  font-family: var(--font-family-base);
 }
 
 .quantityControls {
@@ -89,6 +95,7 @@
   min-width: 20px;
   text-align: center;
   color: var(--text-primary);
+  font-family: var(--font-family-base);
 }
 
 .productActions {
@@ -117,6 +124,7 @@
   font-weight: bold;
   margin-top: auto;
   color: var(--text-primary);
+  font-family: var(--font-family-base);
 }
 
 .summaryDetails {
@@ -133,6 +141,7 @@
   margin-bottom: 10px;
   font-size: 0.95rem;
   color: var(--text-secondary);
+  font-family: var(--font-family-base);
 }
 
 .total {
@@ -142,6 +151,7 @@
   border-top: 1px solid var(--border-color);
   padding-top: 10px;
   margin-top: 10px;
+  font-family: var(--font-family-base);
 }
 
 @media (max-width: 768px) {

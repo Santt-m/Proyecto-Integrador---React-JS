@@ -5,6 +5,8 @@ import { useTheme } from '../../context/ThemeContext';
 import { useToast } from '../../components/Toast/Toast';
 import SEOHead from '../../components/SEOHead/SEOHead';
 import styles from './Login.module.css';
+// Importamos la configuración
+import config from './config.json';
 
 function Login() {
   const [email, setEmail] = useState('');
@@ -24,7 +26,7 @@ function Login() {
     
     try {
       await login(email, password);
-      showToast('¡Bienvenido de nuevo!', 'success');
+      showToast(config.toast.welcome, 'success');
       navigate('/');
     } catch (error) {
       setError(error.message);
@@ -37,20 +39,20 @@ function Login() {
   return (
     <>
       <SEOHead
-        title="Iniciar Sesión"
-        description="Inicia sesión en tu cuenta para acceder a ofertas exclusivas, realizar compras y gestionar tus pedidos."
-        keywords="login, iniciar sesión, acceso, cuenta usuario"
+        title={config.seo.title}
+        description={config.seo.description}
+        keywords={config.seo.keywords}
         canonical="https://proyecto-integrador-react-js-beta.vercel.app/login"
       />
       <div className={`${styles.loginContainer} ${theme}`}>
         <div className={styles.loginCard}>
-          <h2 className={styles.loginTitle}>Iniciar Sesión</h2>
+          <h2 className={styles.loginTitle}>{config.title}</h2>
           
           {error && <div className={styles.errorMessage}>{error}</div>}
           
           <form onSubmit={handleSubmit} className={styles.loginForm}>
             <div className={styles.formGroup}>
-              <label htmlFor="email">Correo Electrónico</label>
+              <label htmlFor="email">{config.form.email.label}</label>
               <input
                 type="email"
                 id="email"
@@ -58,13 +60,13 @@ function Login() {
                 onChange={(e) => setEmail(e.target.value)}
                 required
                 className={styles.input}
-                placeholder="tucorreo@ejemplo.com"
+                placeholder={config.form.email.placeholder}
                 autoComplete="email"
               />
             </div>
             
             <div className={styles.formGroup}>
-              <label htmlFor="password">Contraseña</label>
+              <label htmlFor="password">{config.form.password.label}</label>
               <input
                 type="password"
                 id="password"
@@ -72,7 +74,7 @@ function Login() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
                 className={styles.input}
-                placeholder="Tu contraseña"
+                placeholder={config.form.password.placeholder}
                 autoComplete="current-password"
               />
             </div>
@@ -81,14 +83,14 @@ function Login() {
               type="submit" 
               className={styles.loginButton}
               disabled={loading}
-              aria-label="Iniciar sesión"
+              aria-label={config.form.submitButton.default}
             >
-              {loading ? 'Iniciando sesión...' : 'Iniciar Sesión'}
+              {loading ? config.form.submitButton.loading : config.form.submitButton.default}
             </button>
           </form>
           
           <div className={styles.registerLink}>
-            ¿No tienes una cuenta? <Link to="/register">Regístrate aquí</Link>
+            {config.registerLink.text} <Link to="/register">{config.registerLink.linkText}</Link>
           </div>
         </div>
       </div>
