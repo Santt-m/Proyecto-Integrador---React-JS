@@ -24,7 +24,7 @@ const ChatHeader = ({
       </h2>
       
       {/* Botones de acción en el encabezado */}
-      <div className={styles.chatHeaderButtons} role="toolbar" aria-label="Controles del chat">
+      <div className={styles.chatHeaderButtons} role="toolbar" aria-label={uiTexts.headerButtons.controlsLabel}>
         {/* Botón para alternar sonido */}
         <button 
           className={styles.headerButton} 

@@ -2,11 +2,15 @@
   "userInputPatterns": {
     "saludos": [
       "hola", "buenos días", "buenas tardes", "buenas noches", "saludos", "qué tal", 
-      "cómo estás", "hey", "hi", "hello"
+      "cómo estás", "hey", "hi", "hello", "buenas", "buen día", "holi", "qué hay", 
+      "cómo va", "cómo anda", "qué pasa", "qué me cuentas", "qué más", "wena"
     ],
     "productos": [
       "productos", "qué venden", "qué ofrecen", "catálogo", "artículos", "productos disponibles", 
-      "categorías", "tipos de productos", "qué puedo comprar", "mostrar productos"
+      "categorías", "tipos de productos", "qué puedo comprar", "mostrar productos",
+      "qué tienen a la venta", "catálogo de productos", "venta de", "oferta de",
+      "gama de productos", "línea de productos", "artículos a la venta", "mercancía",
+      "merchandise", "inventario", "stock", "ítems"
     ],
     "tecnologia": [
       "tecnología", "electrónica", "gadgets", "computadoras", "laptops", "celulares", 
@@ -15,88 +19,435 @@
       "quiero un teléfono", "quiero comprar un teléfono", "busco un teléfono",
       "quiero una televisión", "quiero comprar una televisión", "busco una televisión",
       "busco una tv", "quiero una tv", "quiero comprar una laptop", "busco una computadora",
-      "quiero comprar una tablet", "quiero un smartwatch", "quiero una consola"
+      "quiero comprar una tablet", "quiero un smartwatch", "quiero una consola",
+      "iphone", "android", "apple", "samsung", "xiaomi", "huawei", "motorola", "sony",
+      "notebook", "ordenador", "pc", "mac", "macbook", "chromebook", "ipad", "kindle",
+      "gopro", "drones", "altavoces inteligentes", "smart speakers", "echo", "alexa",
+      "google home", "chromecast", "apple tv", "airpods", "wearables", "smartband",
+      "monitor", "disco duro", "ssd", "usb", "memoria", "ram", "procesador", "gpu",
+      "tarjeta gráfica", "periféricos", "teclado", "mouse", "impresora", "escáner",
+      "router", "wifi", "bluetooth", "cables", "adaptadores", "cargadores", "baterías",
+      "power bank", "realidad virtual", "vr", "gaming", "ps5", "playstation", "xbox",
+      "nintendo switch", "nvidia", "amd", "intel", "tecnológico"
     ],
     "moda": [
       "moda", "ropa", "vestimenta", "zapatos", "calzado", "accesorios", "bolsos", "carteras",
       "joyas", "relojes", "cinturones", "sombreros", "gafas", "lentes", "ropa de hombre",
-      "ropa de mujer", "ropa infantil", "ropa de niños", "tendencias"
+      "ropa de mujer", "ropa infantil", "ropa de niños", "tendencias", "camisas", "blusas",
+      "pantalones", "jeans", "vaqueros", "faldas", "vestidos", "trajes", "chaquetas",
+      "abrigos", "suéteres", "sudaderas", "hoodies", "ropa deportiva", "ropa interior",
+      "calcetines", "medias", "leggings", "bufandas", "guantes", "bikinis", "bañadores",
+      "trajes de baño", "zapatillas", "botas", "sandalias", "tacones", "collares",
+      "pulseras", "aretes", "pendientes", "anillos", "fashion", "estilo", "look",
+      "casual", "formal", "vintage", "retro", "streetwear", "haute couture", "prêt-à-porter",
+      "urban", "bohemio", "minimalista", "elegante", "chic", "trendy", "de marca", "diseñador",
+      "prendas", "outfits", "conjuntos", "colecciones", "temporada"
     ],
     "hogar": [
       "hogar", "casa", "muebles", "decoración", "electrodomésticos", "cocina", "baño", 
       "dormitorio", "sala", "comedor", "jardín", "iluminación", "alfombras", "cortinas",
-      "utensilios", "herramientas", "almacenamiento"
+      "utensilios", "herramientas", "almacenamiento", "sofás", "sillones", "estanterías",
+      "mesas", "sillas", "camas", "colchones", "armarios", "mesitas de noche", "lámparas",
+      "espejos", "cuadros", "plantas", "macetas", "vajilla", "cubertería", "ollas",
+      "sartenes", "nevera", "refrigerador", "horno", "microondas", "lavavajillas",
+      "lavadora", "secadora", "aspiradora", "plancha", "licuadora", "batidora", "tostadora",
+      "cafetera", "freidora", "procesador de alimentos", "robot de cocina", "menaje",
+      "textiles", "ropa de cama", "sábanas", "mantas", "edredones", "almohadas",
+      "toallas", "manteles", "cojines", "decorativo", "adornos", "accesorios para el hogar",
+      "bricolaje", "diy", "pintura", "barbacoa", "terraza", "balcón", "exterior", "interior",
+      "home", "furnishing", "furniture", "decor"
     ],
     "deportes": [
       "deportes", "equipamiento deportivo", "ropa deportiva", "calzado deportivo", "fitness",
       "gimnasio", "entrenamiento", "fútbol", "baloncesto", "tenis", "natación", "ciclismo",
-      "running", "yoga", "camping", "pesca", "montañismo", "accesorios deportivos"
+      "running", "yoga", "camping", "pesca", "montañismo", "accesorios deportivos",
+      "zapatillas deportivas", "camisetas deportivas", "bicicletas", "pelotas", "balones",
+      "raquetas", "pesas", "mancuernas", "esterillas", "colchonetas", "guantes deportivos",
+      "rodilleras", "tobilleras", "muñequeras", "cinturones de entrenamiento", "bandas elásticas",
+      "tiendas de campaña", "sacos de dormir", "mochilas de senderismo", "bastones de trekking",
+      "esquí", "snowboard", "patinaje", "skate", "surf", "paddleboard", "boxeo", "artes marciales",
+      "golf", "hockey", "rugby", "voleibol", "atletismo", "triatlón", "senderismo", "escalada",
+      "buceo", "snorkel", "equitación", "deportes acuáticos", "deportes de aventura",
+      "deportes extremos", "deportes de equipo", "deportes individuales", "botellas deportivas",
+      "suplementos deportivos", "proteínas", "nutrición deportiva", "monitores cardíacos",
+      "pulsómetros", "entrenadores personales", "personal trainers", "gimnasios", "centros deportivos",
+      "clubes deportivos", "competiciones", "carreras", "maratones", "medias maratones"
     ],
     "belleza": [
       "belleza", "cosméticos", "maquillaje", "skincare", "cuidado facial", "cremas", "perfumes",
       "fragancias", "cabello", "shampoo", "acondicionador", "tintes", "uñas", "esmaltes",
-      "cuidado personal", "higiene", "tratamientos", "mascarillas"
+      "cuidado personal", "higiene", "tratamientos", "mascarillas", "base de maquillaje",
+      "correctores", "polvos", "rubor", "colorete", "bronceador", "iluminador", "contouring",
+      "sombras de ojos", "delineadores", "máscara de pestañas", "rímel", "cejas", "labiales",
+      "brillos labiales", "bálsamos labiales", "limpiadores faciales", "tónicos", "sérums",
+      "hidratantes", "protector solar", "antiarrugas", "antiedad", "exfoliantes", "peelings",
+      "mascarillas faciales", "aceites esenciales", "agua micelar", "geles de ducha",
+      "jabones", "desodorantes", "antitranspirantes", "depilación", "afeitado", "cuchillas",
+      "cremas de afeitar", "ceras", "champús", "productos para el cabello", "acondicionadores",
+      "mascarillas capilares", "aceites capilares", "productos para peinar", "secadores",
+      "planchas de pelo", "rizadores", "cepillos", "peines", "esmaltes de uñas", "quitaesmaltes",
+      "manicura", "pedicura", "spa", "masajes", "aromaterapia", "beauty", "makeup", "cosmetics"
     ],
     "alimentos": [
       "alimentos", "comida", "bebidas", "vinos", "licores", "café", "té", "snacks", "dulces",
       "chocolates", "orgánicos", "gourmet", "saludables", "sin gluten", "sin azúcar",
-      "vegetarianos", "veganos", "suplementos alimenticios"
+      "vegetarianos", "veganos", "suplementos alimenticios", "frutas", "verduras", "hortalizas",
+      "carnes", "pescados", "mariscos", "lácteos", "quesos", "yogures", "leche", "huevos",
+      "pan", "cereales", "arroz", "pasta", "legumbres", "frutos secos", "semillas", "aceites",
+      "vinagres", "salsas", "condimentos", "especias", "hierbas", "infusiones", "zumos", "jugos",
+      "refrescos", "agua", "cerveza", "sidra", "cava", "champagne", "whisky", "ron", "vodka",
+      "tequila", "gin", "aperitivos", "postres", "helados", "pasteles", "tartas", "galletas",
+      "barritas", "miel", "mermeladas", "conservas", "enlatados", "congelados", "precocinados",
+      "platos preparados", "dieta", "dietéticos", "alimentación infantil", "papillas", "comida para bebés",
+      "superalimentos", "proteínas", "vitaminas", "minerales", "fibra", "probióticos", "prebióticos",
+      "keto", "paleo", "bio", "eco", "km0", "comida rápida", "fast food", "comida casera", "homemade",
+      "cocina internacional", "cocina asiática", "cocina italiana", "cocina mexicana", "cocina mediterránea"
     ],
     "envios": [
       "envíos", "entregas", "shipping", "envío a domicilio", "costo de envío", "tiempo de envío",
       "envío gratis", "rastrear pedido", "cuánto tarda", "cómo recibir", "dónde entregan",
-      "seguimiento de pedido", "tracking", "envíos internacionales"
+      "seguimiento de pedido", "tracking", "envíos internacionales", "gastos de envío",
+      "política de envíos", "envío express", "envío estándar", "envío urgente", "entrega en el día",
+      "entrega al día siguiente", "recogida en tienda", "envío gratuito", "tarifas de envío",
+      "calculadora de envío", "código de seguimiento", "número de seguimiento", "paquetería",
+      "mensajería", "courier", "transportista", "horario de entrega", "dirección de envío",
+      "cambio de dirección", "devolución", "retorno", "etiqueta de envío", "embalaje", "paquete"
     ],
     "pagos": [
       "pagos", "métodos de pago", "formas de pago", "tarjetas", "crédito", "débito", 
       "transferencia bancaria", "efectivo", "billetera virtual", "cuotas", "interés",
-      "mercadopago", "paypal", "descuentos", "promociones", "ofertas", "medios de pago"
+      "mercadopago", "paypal", "descuentos", "promociones", "ofertas", "medios de pago",
+      "tarjeta de crédito", "tarjeta de débito", "visa", "mastercard", "american express", "amex",
+      "transferencia online", "banca electrónica", "e-banking", "pago electrónico", "pago digital",
+      "pago móvil", "pago NFC", "contactless", "sin contacto", "pago en efectivo", "contra reembolso",
+      "cash on delivery", "monedero electrónico", "e-wallet", "apple pay", "google pay", "samsung pay",
+      "financiación", "crédito al consumo", "préstamo", "pago a plazos", "cuotas sin intereses", 
+      "cuotas con intereses", "tasa de interés", "fecha de vencimiento", "fecha de pago", "plazo de pago"
     ],
     "devoluciones": [
       "devoluciones", "cambios", "garantía", "producto defectuoso", "no me gusta", "equivocado",
       "roto", "dañado", "mal estado", "política de devoluciones", "reembolso", "dinero de vuelta",
-      "cómo devolver", "plazo de devolución", "requisitos para devolver"
+      "cómo devolver", "plazo de devolución", "requisitos para devolver", "cambiar producto",
+      "política de cambios", "condiciones de devolución", "procedimiento de devolución",
+      "retorno de mercancía", "autorización de devolución", "etiqueta de devolución",
+      "envío de devolución", "gastos de devolución", "devolución gratuita", "periodo de prueba",
+      "satisfacción garantizada", "no satisfecho", "insatisfecho", "defectuoso", "no funciona",
+      "fallos", "desperfectos", "averiado", "error en pedido", "producto incorrecto", "talla incorrecta",
+      "color incorrecto", "modelo incorrecto", "reclamar", "reclamación", "queja", "atención al cliente"
     ],
     "garantia": [
       "garantía", "garantías", "tiempo de garantía", "cobertura", "productos con garantía",
       "hacer válida la garantía", "extender garantía", "garantía extendida", "reparación",
-      "servicio técnico", "soporte", "falla", "defecto de fábrica"
+      "servicio técnico", "soporte", "falla", "defecto de fábrica", "garantía legal",
+      "garantía comercial", "garantía del fabricante", "garantía adicional", "servicio postventa",
+      "período de garantía", "cobertura de garantía", "exclusiones de garantía", "condiciones de garantía",
+      "términos de garantía", "vigencia de garantía", "validez de garantía", "reclamación de garantía",
+      "solicitud de garantía", "tramitar garantía", "certificado de garantía", "reparar bajo garantía",
+      "sustituir bajo garantía", "repuestos originales", "piezas de recambio"
     ],
     "tiendaFisica": [
       "tienda física", "sucursal", "local", "showroom", "dirección", "ubicación", "dónde están ubicados",
       "horario de atención", "visitar tienda", "comprar en persona", "ver productos físicamente",
-      "prueba de productos", "dirección de la tienda", "cómo llegar"
+      "prueba de productos", "dirección de la tienda", "cómo llegar", "tiendas cercanas",
+      "localizador de tiendas", "mapa de tiendas", "red de tiendas", "cadena de tiendas",
+      "tienda insignia", "tienda principal", "sede central", "punto de venta", "outlet", 
+      "centro comercial", "mall", "horario comercial", "horario de apertura", "horario de cierre", 
+      "días de apertura", "abierto", "cerrado", "atención al público", "servicio presencial", 
+      "estacionamiento", "parking", "aparcamiento", "accesibilidad", "transporte público"
     ],
     "cuenta": [
       "cuenta", "registro", "registrarme", "iniciar sesión", "login", "contraseña", "recuperar contraseña",
       "olvide mi contraseña", "crear cuenta", "beneficios de tener cuenta", "perfil", "datos personales",
-      "historial de compras", "mis compras", "favoritos", "lista de deseos"
+      "historial de compras", "mis compras", "favoritos", "lista de deseos", "crear una cuenta",
+      "registrarse", "sign up", "sign in", "log in", "acceder", "usuario", "username", "email",
+      "correo electrónico", "verificación", "verificar cuenta", "confirmar cuenta", "activar cuenta",
+      "desactivar cuenta", "eliminar cuenta", "cerrar cuenta", "dar de baja", "modificar datos",
+      "actualizar información", "cambiar email", "cambiar contraseña", "seguridad de la cuenta",
+      "autenticación", "verificación en dos pasos", "2FA", "preguntas de seguridad"
     ],
     "descuentos": [
       "descuentos", "promociones", "ofertas", "cuánto descuento", "cupones", "códigos promocionales",
       "rebajas", "liquidación", "outlet", "día de descuentos", "black friday", "cyber monday",
-      "hot sale", "ventas especiales", "programa de fidelidad", "puntos"
+      "hot sale", "ventas especiales", "programa de fidelidad", "puntos", "descuento por volumen",
+      "descuentos por cantidad", "promoción especial", "oferta limitada", "oferta del día",
+      "deal of the day", "flash sale", "venta relámpago", "temporada de rebajas", "mid season sale",
+      "end of season", "final de temporada", "stock liquidación", "hasta agotar existencias",
+      "descuento aplicable", "acumulable", "no acumulable", "promoción combinable",
+      "regalo", "gift", "2x1", "3x2", "compre uno lleve dos", "buy one get one free", "bogof",
+      "cashback", "reembolso", "porcentaje de descuento", "monto fijo de descuento", "cupón de descuento",
+      "código de descuento", "promo code", "voucher", "vale descuento", "tarjeta regalo", "gift card",
+      "primera compra", "cliente nuevo", "cliente recurrente", "cliente vip", "membership",
+      "programa de referidos", "referir a un amigo", "afiliados", "partners", "colaboradores",
+      "influencers", "embajadores de marca", "discount", "promotion", "special offer", "sale",
+      "clearance"
     ],
     "contacto": [
       "contacto", "contactar", "atención al cliente", "servicio al cliente", "teléfono", "email",
       "correo electrónico", "formulario de contacto", "chat", "whatsapp", "redes sociales",
-      "hablar con un representante", "ayuda", "soporte"
+      "hablar con un representante", "ayuda", "soporte", "línea de atención", "call center",
+      "centro de llamadas", "número de teléfono", "número de contacto", "horario de atención",
+      "disponibilidad", "tiempo de respuesta", "consulta", "pregunta", "duda", "inquietud",
+      "solicitud", "petición", "reclamo", "felicitación", "sugerencia", "feedback", "comentario",
+      "opinión", "mensaje", "comunicarse", "ponerse en contacto", "mantener informado",
+      "chat en vivo", "asistente virtual", "facebook", "instagram", "twitter"
     ],
     "compra": [
       "comprar", "cómo comprar", "proceso de compra", "hacer un pedido", "carrito de compras",
       "agregar al carrito", "checkout", "confirmar compra", "completar compra", "finalizar compra",
       "error de compra", "compra fallida", "compra exitosa", "recibo", "factura",
-      "quiero comprar", "deseo comprar", "me gustaría comprar", "voy a comprar"
+      "quiero comprar", "deseo comprar", "me gustaría comprar", "voy a comprar",
+      "añadir al carrito", "add to cart", "shopping cart", "seguir comprando", "continue shopping",
+      "proceder al pago", "proceed to checkout", "finalizar pedido", "resumen de compra",
+      "order summary", "verificar pedido", "revisar pedido", "modificar pedido", "vaciar carrito",
+      "empty cart", "guardar para después", "save for later", "comprar ahora", "buy now",
+      "compra inmediata", "compra express", "compra rápida", "compra con un clic", "1-click purchase",
+      "compra como invitado", "guest checkout", "sin registro", "with registration",
+      "datos de facturación", "billing details", "dirección de facturación", "dirección de envío",
+      "shipping address", "same as billing", "igual que facturación", "notas de pedido",
+      "order notes", "instrucciones especiales", "special instructions", "términos y condiciones",
+      "terms and conditions", "políticas de privacidad", "privacy policy", "aceptar términos",
+      "accept terms", "adquirir", "obtener", "conseguir", "purchase", "buy", "order", "acquisition"
     ],
     "disponibilidad": [
       "disponibilidad", "stock", "hay disponible", "cuándo vuelve a haber", "agotado", "sin stock",
       "tienen disponible", "cuándo llega", "próximo lanzamiento", "pre-venta", "reservar",
-      "notificarme cuando esté disponible"
+      "notificarme cuando esté disponible", "en stock", "in stock", "fuera de stock", "out of stock",
+      "disponible", "no disponible", "temporalmente agotado", "temporarily unavailable",
+      "últimas unidades", "last units", "pocas unidades", "low stock", "existencias", "inventario",
+      "cantidad disponible", "available quantity", "límite por cliente", "limit per customer",
+      "disponibilidad inmediata", "entrega inmediata", "entrega diferida", "delayed delivery",
+      "pedido pendiente", "backorder", "lista de espera", "waiting list", "reserva", "reservation",
+      "pre-order", "lanzamiento", "release", "fecha de lanzamiento", "release date",
+      "disponible en tienda", "store availability", "reposición", "restock", "nuevas existencias",
+      "new arrivals", "productos nuevos", "nuevos productos", "edición limitada", "limited edition",
+      "exclusivo", "exclusive", "edición especial", "special edition", "colección", "collection",
+      "serie", "series", "versión", "version", "modelo", "model", "availability", "in stock status"
     ],
     "regalo": [
       "regalo", "quiero hacer un regalo", "busco un regalo", "para regalar", "regalo para",
       "idea de regalo", "sugerencia de regalo", "presente", "obsequio", "envolver para regalo",
-      "tarjeta de regalo", "gift card", "regalos para", "opciones de regalo"
+      "tarjeta de regalo", "gift card", "regalos para", "opciones de regalo", "envoltura de regalo",
+      "gift wrapping", "papel de regalo", "empaque para regalo", "caja de regalo", "gift box",
+      "set de regalo", "gift set", "pack regalo", "gift pack", "canasta de regalo", "gift basket",
+      "regalo personalizado", "personalized gift", "regalo corporativo", "corporate gift",
+      "regalo de empresa", "business gift", "regalo de boda", "wedding gift", "regalo de cumpleaños",
+      "birthday gift", "regalo de aniversario", "anniversary gift", "regalo de navidad",
+      "christmas gift", "regalo para hombre", "gift for man", "regalo para mujer", "gift for woman",
+      "regalo para niño", "gift for boy", "regalo para niña", "gift for girl", "regalo para bebé",
+      "baby gift", "regalo para pareja", "couple gift", "regalo para amigo", "friend gift",
+      "regalo para amiga", "girlfriend gift", "regalo para novio", "boyfriend gift",
+      "regalo para novia", "girlfriend gift", "regalo para esposo", "husband gift",
+      "regalo para esposa", "wife gift", "regalo para padres", "parents gift", "regalo para mamá",
+      "mom gift", "regalo para papá", "dad gift", "regalo barato", "cheap gift", "regalo caro",
+      "expensive gift", "regalo original", "original gift", "regalo único", "unique gift",
+      "regalo significativo", "meaningful gift", "gift ideas", "present", "gifting"
+    ],
+    "soporte": [
+      "soporte", "ayuda", "asistencia", "problemas", "soluciones", "FAQ", "preguntas frecuentes",
+      "centro de ayuda", "help center", "soporte técnico", "technical support", "servicio técnico",
+      "technical service", "solución de problemas", "troubleshooting", "guía de usuario",
+      "user guide", "manual", "instructions", "instrucciones", "tutorial", "how-to", "cómo hacer",
+      "paso a paso", "step by step", "resolver problema", "solve issue", "arreglar", "fix",
+      "reparar", "repair", "diagnosticar", "diagnose", "error", "fallo", "bug", "glitch",
+      "no funciona", "not working", "mal funcionamiento", "malfunction", "defectuoso", "defective",
+      "averiado", "damaged", "configurar", "configure", "setup", "instalación", "installation",
+      "actualización", "update", "actualizar", "upgrade", "compatibilidad", "compatibility",
+      "requisitos", "requirements", "sistema operativo", "operating system", "Windows", "Mac",
+      "iOS", "Android", "Linux", "conectividad", "connectivity", "red", "network", "wifi",
+      "bluetooth", "USB", "HDMI", "drivers", "controladores", "forzar cierre", "force quit",
+      "reiniciar", "restart", "restablecer", "reset", "restaurar", "restore", "valores de fábrica",
+      "factory settings", "recuperación", "recovery", "respaldo", "backup", "ticket de soporte",
+      "support ticket", "caso", "case", "incidencia", "incident", "helpdesk", "mesa de ayuda"
+    ],
+    "intentosMaliciosos": [
+      "script", "alert\\(", "javascript:", "<script>", "eval\\(", "document.cookie", "XSS", "SQL", "inyección", 
+      "ataque", "hackear", "hack", "vulnerabilidad", "console.log", "exec\\(", "function\\(\\)", 
+      "document.write", "innerHTML", "window.location", "localStorage", "sessionStorage", "passwd", 
+      "password", "contraseña", "admin", "root", "\\$\\('#", "\\$.ajax", "angular", "react", "vue", 
+      "Object.keys", "constructor", "__proto__", "toString\\(\\)", "valueOf\\(\\)", "fetch\\(", "XMLHttpRequest",
+      "Promise", "async", "await", "setTimeout", "setInterval", "requestAnimationFrame"
+    ],
+    "insultos": [
+      "tonto", "estúpido", "idiota", "imbécil", "pendejo", "bobo", "tarado", "inútil", 
+      "inservible", "basura", "mierda", "puta", "puto", "marica", "maricón", "gay", "lesbiana",
+      "negro", "chino", "judio", "árabe", "gordo", "feo", "retrasado", "mongólico", "autista",
+      "discapacitado", "deficiente", "anormal", "enfermo", "perro", "animal", "bestia", "cerdo",
+      "vaca", "jodido", "cagada", "maldito", "huevón", "gil", "boludo", "pelotudo", "gilipollas",
+      "capullo", "cabron", "cabrón", "hijo de", "hdp", "ctm", "ptm", "fuck", "fucking", "asshole",
+      "bitch", "shit", "crap", "damn", "joder", "coño", "polla", "verga", "pene", "vagina", "teta"
+    ],
+    "preguntasDesubicadas": [
+      "sexo", "porno", "pornografía", "xxx", "desnudo", "desnuda", "nudes", "caliente", "hot",
+      "chat erótico", "escort", "prostitutas", "prostitución", "drogas", "marihuana", "cocaína",
+      "heroína", "armas", "pistola", "bomba", "explosivo", "matar", "asesinar", "suicidio", "morir",
+      "robar", "trata de", "estafa", "fraude", "fake", "blanqueo", "dinero negro", "delito", "crimen",
+      "ilegal", "prohibido", "vender drogas", "comprar drogas", "darknet", "dark web", "deep web",
+      "tor", "bitcoin", "cripto", "anónimo", "oculto", "terrorismo", "terrorista", "amenaza"
+    ],
+    "preguntasSinSentido": [
+      "blablabla", "asdfghjkl", "qwerty", "123456", "ñlkjhgfd", "zxcvbn", "!@#$%^&*", "random",
+      "prueba", "test", "hhhhhhhh", "aaaaaaaa", "jajajaja", "jajaja", "jeje", "ajajaj", "lol",
+      "lmao", "xd", "uwu", "owo", ":|", ":p", ":v", "¯\\_(ツ)_/¯", "whatever", "como sea", "porque sí",
+      "porque no", "no sé", "yo que sé", "me aburro", "aburrido", "nada", "cualquier cosa", "lo que sea",
+      "estoy aburrido", "cuéntame un chiste", "dime algo gracioso", "eres real", "eres humano", 
+      "eres una IA", "eres robot", "programa", "algoritmo", "código", "sistema"
+    ],
+    "preguntasFueraDeContexto": [
+      "helado", "película", "cine", "netflix", "amazon prime", "disney plus", "hbo", "spotify",
+      "música", "canción", "cantante", "artista", "concierto", "festival", "teatro", "obra",
+      "restaurante", "comida", "pizza", "hamburguesa", "sushi", "tacos", "burritos", "pasta",
+      "receta", "cocinar", "chef", "bar", "cerveza", "vino", "cocktail", "bebida", "café",
+      "viaje", "hotel", "vuelo", "avión", "tren", "bus", "coche", "alquiler", "vacaciones",
+      "clima", "tiempo", "lluvia", "sol", "calor", "frío", "temperatura", "previsión",
+      "noticias", "política", "elecciones", "presidente", "gobierno", "partido", "candidato",
+      "deporte", "fútbol", "baloncesto", "tenis", "golf", "natación", "gimnasio", "entrenar"
+    ],
+    "patronesInsultos": [
+      "eres (un |una )?(tonto|estúpido|idiota|inútil|basura|mierda)",
+      "no sirves para nada",
+      "(eres|estás) (malo|pésimo|horrible)",
+      "chatbot de (mierda|porquería)",
+      "asistente (de pacotilla|inútil)",
+      "que mal programado",
+      "bot (estúpido|tonto|inútil)",
+      "(odio|detesto) (este|tu|al) (bot|chatbot|asistente)"
+    ],
+    "patronesInyeccionCodigo": [
+      "<script",
+      "function\\(",
+      "\\{\\{.*\\}\\}",
+      "SELECT.*FROM",
+      "INSERT INTO",
+      "UPDATE.*SET",
+      "DELETE FROM",
+      "DROP TABLE",
+      "eval\\(",
+      "document\\.cookie",
+      "window\\.",
+      "localStorage",
+      "sessionStorage",
+      "alert\\(",
+      "prompt\\(",
+      "confirm\\(",
+      "console\\.log",
+      "(?:<|\\\\u003c)(?:\\/|\\\\u002f)?(?:script|iframe|img|svg|style|link|form|input|button|object|embed)"
+    ],
+    "patronesContenidoInapropiado": [
+      "porn",
+      "sex",
+      "desnud",
+      "xxx",
+      "adult",
+      "cómo hackear",
+      "cómo robar",
+      "drogas",
+      "armas",
+      "cómo (estafar|engañar)",
+      "contenido pirata",
+      "apuestas",
+      "casino"
+    ],
+    "patronesFueraDeContexto": [
+      "receta (de|para)",
+      "el clima",
+      "pronóstico",
+      "resultado (del partido|de fútbol|deportivo)",
+      "noticias (de|sobre)",
+      "traduce",
+      "cuentame (un chiste|una historia)",
+      "escribe (un poema|una canción)",
+      "quiero ver (una película|series)",
+      "restaurantes cerca",
+      "hoteles en",
+      "vuelos (a|hacia|desde)",
+      "cómo llegar a",
+      "mapas",
+      "uber",
+      "jugar (a|con)"
+    ],
+    "patronesSinSentido": [
+      "^[a-z]{1,2}$",
+      "^(as+df+|qw+er+ty+|zx+cv+)$",
+      "^(jaja|haha|lol|jejeje){3,}$",
+      "^([\\W_]){4,}$",
+      "^(test|prueba|hola){5,}$",
+      "^(..)\\1{3,}$"
+    ],
+    "iteracion": [
+      "continuar con la iteración", "seguir con la iteración", "desea continuar con la iteración", 
+      "quiere continuar con la iteración", "siguiente iteración", "continuar iterando", 
+      "seguir iterando", "iterar de nuevo", "nueva iteración", "próxima iteración",
+      "continuar el proceso", "seguir con el proceso", "desea continuar con el proceso"
+    ],
+    "identidadBot": [
+      "quien eres", "que eres", "eres real", "eres una persona", "eres humano", 
+      "eres un bot", "eres una ia", "eres inteligencia artificial", "eres un robot",
+      "eres un programa", "como te llamas", "tu nombre", "te llamas", "te crearon",
+      "te programaron", "te cansas", "te cansaste", "te aburres", "estas cansado"
+], 
+      "climaPatrones": [
+      "clima", "tiempo", "lluvia", "llover", "temperatura", "sol", "calor", "frio",
+      "llovera", "lluvioso", "soleado", "nublado", "pronostico", "meteorologia"
+    ],
+    "horaPatrones": [
+      "que hora es", "que hora son", "hora actual", "hora es", 
+      "dime la hora", "sabes la hora", "me dices la hora"
+],
+      "fechaPatrones": [
+      "que dia es", "que fecha es", "fecha de hoy", "dia es hoy",
+      "dime la fecha", "cual es la fecha", "a que dia estamos"
+    ],
+    "metodoPagoPatrones": [
+      "metodos de pago", "forma de pago", "formas de pago", "como pagar", 
+      "opciones de pago", "metodos pago", "aceptan tarjeta", "aceptan efectivo",
+      "pago con tarjeta", "pago con transferencia", "cuales son los metodos de pago",
+      "que metodos de pago", "pagar con"
+    ],
+    "agradecimientoPatrones": [
+      "gracias", "te lo agradezco", "muchas gracias", "muy amable", 
+      "thx", "thanks", "thank you", "agradecido", "te agradezco"
+    ],
+    "garantiaPatrones": [
+      "garantia", "garantias", "garantizar", "garantizan", "garantizado", 
+      "devolucion por garantia", "warranty", "tiene garantia", "cuanto tiempo de garantia",
+      "aplica garantia", "como funciona la garantia"
+    ],
+    "insultosPatrones": [
+      "estupido", "idiota", "tonto", "inutil", "basura", "malo", "pesimo",
+      "horrible", "odio", "no sirves", "no funciona", "no entiendes", "aprende",
+      "imbecil", "absurdo", "ridiculo", "pesimo servicio", "mala atencion"
+    ],
+    "preguntasPersonales": [
+      "como estas", "como te sientes", "que haces", "que te gusta", 
+      "tienes hambre", "tienes sed", "quieres", "queres", "te gustaria", "te gusta",
+      "estas feliz", "estas triste", "estas aburrido", "estas cansado",
+      "donde vives", "donde estas", "que piensas", "vamos", "nos vamos", "ir",
+      "salir", "jugar", "bailar", "cantar", "comer", "beber", "dormir"
+],
+      "frasesSinSentido": [
+      "puedes bailar", "puedes cantar", "puedes volar", "tienes mascota",
+      "tu color favorito", "tu comida favorita", "tu bebida favorita",
+      "helado", "pizza", "hamburguesa", "cerveza", "vino", "vacaciones",
+      "pancho", "hotdog", "perrito caliente", "cine", "teatro", "concierto",
+      "playa", "montaña", "parque", "viaje", "paseo", "paris", "londres",
+      "nueva york", "tokyo", "roma", "barcelona", "madrid", "buenos aires",
+      "casarte", "novio", "novia", "amigo", "amiga", "familia", "hermano", "hermana"
+    ],
+    "lugaresFueraContexto": [
+      "playa", "cine", "teatro", "parque", "montaña", "bosque", "desierto",
+      "paris", "londres", "roma", "tokyo", "nueva york", "madrid", "barcelona",
+      "restaurante", "bar", "club", "discoteca", "hotel", "hostal", "camping"
+    ],
+    "disponibilidadPatrones": [
+      "tienen", "hay", "disponible", "stock", "existencia", "queda", "quedan",
+      "venden", "disponibilidad", "conseguir", "encontrar", "busco"
+    ],
+    "presupuestoPatrones": [
+      "presupuesto", "gastar", "invertir", "cuestan", "cuesta", "precio", 
+      "economico", "barato", "costoso", "gama alta", "gama baja", "gama media"
+    ],
+    "respuestasAfirmativas": [
+      "si", "sí", "claro", "por supuesto", "afirmativo", "correcto", "exacto", "seguro", "ok", "vale"
     ]
   }
 }

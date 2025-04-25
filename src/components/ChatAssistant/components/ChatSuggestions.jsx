@@ -23,6 +23,17 @@ const ChatSuggestions = ({
   // Función para manejar clic en sugerencia
   const handleSuggestionClick = (suggestion) => {
     if (onSuggestionClick) {
+      // Enviar directamente mediante el evento personalizado
+      const event = new CustomEvent('sendSuggestion', { 
+        detail: { 
+          suggestion,
+          clearInput: true // Indicar que se debe limpiar el input antes de procesar
+        } 
+      });
+      document.dispatchEvent(event);
+      
+      // También llamar a onSuggestionClick para mantener compatibilidad
+      // pero solo para actualización de UI, no para envío de mensajes
       onSuggestionClick(suggestion);
     }
   };
@@ -46,10 +57,10 @@ const ChatSuggestions = ({
         <button 
           onClick={toggleMinimized}
           className={styles.minimizeButton}
-          aria-label="Mostrar sugerencias"
-          title="Mostrar sugerencias"
+          aria-label={uiTexts.suggestions?.showLabel || "Mostrar sugerencias"}
+          title={uiTexts.suggestions?.showTitle || "Mostrar sugerencias"}
         >
-          <span>También puedes preguntarme</span>
+          <span>{uiTexts.suggestions?.minimizedText || "También puedes preguntarme"}</span>
           <FaChevronUp />
         </button>
       </div>
@@ -64,15 +75,15 @@ const ChatSuggestions = ({
         aria-live="polite"
         aria-relevant="additions"
         role="region"
-        aria-label="Preguntas frecuentes sugeridas"
+        aria-label={uiTexts.suggestions?.frequentQuestionsLabel || "Preguntas frecuentes sugeridas"}
       >
         <div className={styles.suggestionsHeader}>
           <p id="suggestionLabel">{uiTexts.suggestions?.initialTitle || "Prueba estas preguntas:"}</p>
           <button 
             onClick={toggleMinimized}
             className={styles.minimizeButton}
-            aria-label="Minimizar sugerencias"
-            title="Minimizar sugerencias"
+            aria-label={uiTexts.suggestions?.hideLabel || "Minimizar sugerencias"}
+            title={uiTexts.suggestions?.hideTitle || "Minimizar sugerencias"}
           >
             <FaChevronDown />
           </button>
@@ -88,7 +99,7 @@ const ChatSuggestions = ({
               onClick={() => handleSuggestionClick(suggestion)}
               className={styles.suggestionChip}
               style={{ '--index': index }}
-              aria-label={`Preguntar: ${suggestion}`}
+              aria-label={`${uiTexts.suggestions?.askLabel || "Preguntar"}: ${suggestion}`}
             >
               {suggestion}
             </button>
@@ -106,15 +117,15 @@ const ChatSuggestions = ({
         aria-live="polite"
         aria-relevant="additions"
         role="region"
-        aria-label="Categorías de productos"
+        aria-label={uiTexts.suggestions?.categoriesLabel || "Categorías de productos"}
       >
         <div className={styles.suggestionsHeader}>
           <p id="categoryLabel">{uiTexts.suggestions?.categoriesTitle || "Explora por categorías:"}</p>
           <button 
             onClick={toggleMinimized}
             className={styles.minimizeButton}
-            aria-label="Minimizar sugerencias"
-            title="Minimizar sugerencias"
+            aria-label={uiTexts.suggestions?.hideLabel || "Minimizar sugerencias"}
+            title={uiTexts.suggestions?.hideTitle || "Minimizar sugerencias"}
           >
             <FaChevronDown />
           </button>
@@ -130,7 +141,7 @@ const ChatSuggestions = ({
               onClick={() => handleCategoryClick(category)}
               className={styles.categoryChip}
               style={{ '--index': index }}
-              aria-label={`Ver productos de ${category.name}`}
+              aria-label={`${uiTexts.suggestions?.viewLabel || "Ver productos de"} ${category.name}`}
             >
               {category.name}
             </button>
@@ -148,15 +159,15 @@ const ChatSuggestions = ({
         aria-live="polite"
         aria-relevant="additions"
         role="region"
-        aria-label="Sugerencias adicionales"
+        aria-label={uiTexts.suggestions?.additionalLabel || "Sugerencias adicionales"}
       >
         <div className={styles.suggestionsHeader}>
           <p id="moreSuggestionLabel">{uiTexts.suggestions?.moreTitle || "¿Necesitas ayuda con algo más?"}</p>
           <button 
             onClick={toggleMinimized}
             className={styles.minimizeButton}
-            aria-label="Minimizar sugerencias"
-            title="Minimizar sugerencias"
+            aria-label={uiTexts.suggestions?.hideLabel || "Minimizar sugerencias"}
+            title={uiTexts.suggestions?.hideTitle || "Minimizar sugerencias"}
           >
             <FaChevronDown />
           </button>
@@ -172,7 +183,7 @@ const ChatSuggestions = ({
               onClick={() => handleSuggestionClick(suggestion)}
               className={styles.suggestionChip}
               style={{ '--index': index }}
-              aria-label={`Preguntar: ${suggestion}`}
+              aria-label={`${uiTexts.suggestions?.askLabel || "Preguntar"}: ${suggestion}`}
             >
               {suggestion}
             </button>

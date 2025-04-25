@@ -9,18 +9,46 @@
     "messageFeedback": "¿Fue útil?",
     "messageFeedbackYes": "Sí, fue útil",
     "messageFeedbackNo": "No, no fue útil",
-    "typingIndicator": "El asistente está escribiendo una respuesta..."
+    "typingIndicator": "El asistente está escribiendo una respuesta...",
+    "messageToAssistant": "Mensaje para el asistente",
+    "suggestionsAvailable": "Sugerencias disponibles. Use flechas para navegar.",
+    "assistantLabel": "Asistente virtual de chat"
+  },
+  "chatMessages": {
+    "botLabel": "Mensaje de asistente",
+    "userLabel": "Mensaje de usuario",
+    "linkMessageLabel": "Mensaje con enlaces"
   },
   "suggestions": {
     "initialTitle": "Preguntas frecuentes:",
     "categoriesTitle": "Explora por categoría:",
-    "moreTitle": "También puedes preguntarme:"
+    "moreTitle": "También puedes preguntarme:",
+    "suggestionsLabel": "Sugerencias",
+    "showLabel": "Mostrar sugerencias",
+    "showTitle": "Mostrar sugerencias",
+    "hideLabel": "Minimizar sugerencias",
+    "hideTitle": "Minimizar sugerencias",
+    "frequentQuestionsLabel": "Preguntas frecuentes sugeridas",
+    "categoriesLabel": "Categorías de productos",
+    "additionalLabel": "Sugerencias adicionales",
+    "askLabel": "Preguntar",
+    "viewLabel": "Ver productos de",
+    "minimizedText": "También puedes preguntarme"
   },
   "quickActions": {
     "search": "Buscar",
     "track": "Rastrear",
     "catalog": "Catálogo",
-    "contact": "Contacto"
+    "contact": "Contacto",
+    "actionsLabel": "Acciones rápidas del chat",
+    "searchTitle": "Buscar productos",
+    "searchLabel": "Buscar productos",
+    "trackTitle": "Rastrear pedido",
+    "trackLabel": "Rastrear estado de pedido",
+    "catalogTitle": "Ver catálogo",
+    "catalogLabel": "Ver catálogo de productos",
+    "contactTitle": "Contacto",
+    "contactLabel": "Ir a página de contacto"
   },
   "headerButtons": {
     "sound": {
@@ -33,7 +61,15 @@
       "maximize": "Maximizar chat"
     },
     "close": "Cerrar asistente",
-    "open": "Abrir asistente"
+    "open": "Abrir asistente",
+    "controlsLabel": "Controles del chat"
+  },
+  "emojiPicker": {
+    "label": "Selector de emojis",
+    "open": "Abrir selector de emojis",
+    "close": "Cerrar selector de emojis",
+    "title": "Emojis",
+    "emojiLabel": "Emoji"
   },
   "commandResponses": {
     "helpText": "<strong>Comandos disponibles:</strong><br>/buscar [término] - Buscar productos<br>/categorias - Ver todas las categorías<br>/ofertas - Ver ofertas actuales<br>/help - Ver esta ayuda",
@@ -95,5 +131,264 @@
     "Ver productos recomendados",
     "¿Cómo funcionan las reseñas de productos?"
   ],
-  "emojis": ["😊", "👍", "❤️", "😂", "🙏", "😍", "🤔", "😢", "👏", "🔥", "✨", "👌"]
+  "emojis": ["😊", "👍", "❤️", "😂", "🙏", "😍", "🤔", "😢", "👏", "🔥", "✨", "👌"],
+  "productResponses": {
+    "availability": {
+      "inStock": "¡Sí! Tenemos <strong>{productName}</strong> disponible en stock ({stock} unidades). Precio: ${price}{discount}. <a href=\"/product/{productId}\" class=\"chatLink\">Ver detalles</a>",
+      "lowStock": "¡Buenas noticias! Todavía nos quedan {stock} unidades de <strong>{productName}</strong>. Te recomendamos realizar tu compra pronto. Precio: ${price}{discount}. <a href=\"/product/{productId}\" class=\"chatLink\">Ver detalles</a>",
+      "outOfStock": "Lo sentimos, actualmente no tenemos <strong>{productName}</strong> en stock. Puedes registrarte en la página del producto para recibir una notificación cuando esté disponible. <a href=\"/product/{productId}\" class=\"chatLink\">Ver detalles</a>",
+      "categoryAvailable": "Sí, tenemos varios productos en la categoría {category}. Algunos ejemplos son:<br><br>",
+      "noProducts": "Actualmente no tenemos información sobre productos en la categoría {category}. ¿Puedo ayudarte a encontrar algo más?",
+      "viewAllCategory": "<a href=\"/products?category={categoryId}\" class=\"chatLink\">Ver todos los productos de {category}</a>"
+    },
+    "stock": {
+      "available": "<span style=\"color: #2a9d8f;\">✓ Disponible ({stock} unidades)</span><br>",
+      "lowStock": "<span style=\"color: #e9c46a;\">⚠️ Quedan pocas unidades ({stock})</span><br>",
+      "outOfStock": "<span style=\"color: #e63946;\">✗ Agotado temporalmente</span><br>"
+    },
+    "budget": {
+      "intro": "He encontrado estos productos dentro de tu presupuesto de ${budget}:<br><br>",
+      "noProductsFound": "Lo siento, no he encontrado productos que se ajusten a tu presupuesto de ${budget}. ¿Te gustaría ampliar el presupuesto o buscar en otras categorías?",
+      "viewAllBudget": "<a href=\"/products?maxPrice={budget}\" class=\"chatLink\">Ver todos los productos dentro de tu presupuesto</a>",
+      "viewAllOffers": "<a href=\"/products?onSale=true\" class=\"chatLink\">Ver todas las ofertas</a>",
+      "moreOptions": "<br><br>¿Te gustaría ver opciones en otra categoría o con un presupuesto diferente?",
+      "otherSuggestions": "<br><br>¿Puedo ayudarte a encontrar algo más específico?"
+    },
+    "gift": {
+      "recommendationsIntro": "¡Tengo excelentes ideas de regalo para tu {recipient} dentro de tu presupuesto de ${budget}!<br><br>",
+      "askBudget": "¡Excelente! Estás buscando un regalo para tu {recipient}. ¿Podrías indicarme aproximadamente cuánto quieres gastar? Así podré recomendarte opciones que se ajusten a tu presupuesto.",
+      "askRecipient": "Entiendo que estás buscando un regalo con un presupuesto aproximado de ${budget}. ¿Para quién es el regalo? Esto me ayudará a ofrecerte recomendaciones más personalizadas.",
+      "askBoth": "¡Claro! Puedo ayudarte a encontrar el regalo perfecto. ¿Para quién estás buscando el regalo (mamá, papá, pareja, amigo/a, niño/a)? También sería útil saber aproximadamente cuánto quieres gastar.",
+      "followUp": "¿Te gustaría ver más opciones o tienes alguna preferencia específica como color o características que deba tener el regalo?"
+    },
+    "discount": {
+      "show": "<span style=\"text-decoration: line-through;\">$</span> <span style=\"color: #e63946; font-weight: bold;\">${discountedPrice}</span> <span style=\"color: #e63946;\">({discountPercent}% descuento - ahorras ${savingsAmount})</span>",
+      "withDiscount": " con {discount}% de descuento",
+      "featured": " <span style=\"color: #2a9d8f;\">⭐ Producto destacado</span>"
+    }
+  },
+  "recipientNames": {
+    "mama": "mamá",
+    "papa": "papá",
+    "pareja": "pareja",
+    "amigo": "amigo/a",
+    "niño": "niño/a",
+    "adolescente": "adolescente"
+  },
+  "predictiveSuggestions": {
+    "common": [
+      "¿Cómo puedo realizar una compra?",
+      "¿Cuáles son los métodos de pago disponibles?",
+      "¿Cuánto tiempo tarda el envío?",
+      "¿Tienen envío gratuito?",
+      "¿Cómo puedo rastrear mi pedido?",
+      "¿Cuál es la política de devoluciones?",
+      "¿Tienen sucursales físicas?",
+      "¿Cuál es el horario de atención al cliente?",
+      "¿Tienen descuentos o promociones?",
+      "¿Cómo puedo contactarlos?",
+      "¿Tienen productos en oferta?",
+      "¿Necesito una cuenta para comprar?",
+      "¿Cómo cambio mi contraseña?",
+      "¿Tienen servicio de atención postventa?",
+      "¿Ofrecen garantía en los productos?"
+    ],
+    "advanced": [
+      "¿Tienen programa de fidelización?",
+      "¿Cuál es el proceso para solicitar una factura?",
+      "¿Realizan envíos internacionales?",
+      "¿Tienen opción de compra como invitado?",
+      "¿Puedo cancelar mi pedido una vez realizado?",
+      "¿Cómo puedo hacer un seguimiento de mi paquete?",
+      "¿Ofrecen opciones de envío express?",
+      "¿Tienen algún descuento por primera compra?",
+      "¿Cuál es la mejor oferta que tienen actualmente?",
+      "¿Pueden recomendarme productos similares a los que he visto?"
+    ],
+    "quieroSuggestions": [
+      "Quiero comprar un smartphone",
+      "Quiero encontrar productos para el hogar",
+      "Quiero saber más sobre las formas de pago",
+      "Quiero ver ofertas especiales",
+      "Quiero un producto con envío rápido",
+      "Quiero hacer un regalo para mi pareja",
+      "Quiero algo de tecnología por menos de $1000",
+      "Quiero un televisor de calidad",
+      "Quiero devolver mi compra",
+      "Quiero conocer las últimas tendencias",
+      "Quiero consultar el estado de mi pedido",
+      "Quiero comprar por primera vez",
+      "Quiero recibir notificaciones de ofertas",
+      "Quiero comparar productos similares",
+      "Quiero asesoramiento para elegir"
+    ],
+    "quieroComprarSuggestions": [
+      "Quiero comprar un celular nuevo",
+      "Quiero comprar ropa deportiva",
+      "Quiero comprar algo para mi casa",
+      "Quiero comprar un regalo para mi mamá",
+      "Quiero comprar productos en oferta",
+      "Quiero comprar electrodomésticos",
+      "Quiero comprar tecnología de última generación",
+      "Quiero comprar con envío gratis",
+      "Quiero comprar muebles para mi living",
+      "Quiero comprar accesorios de moda",
+      "Quiero comprar por menos de $500",
+      "Quiero comprar algo para mi mascota",
+      "Quiero comprar productos de calidad"
+    ],
+    "necesito": [
+      "Necesito ayuda para elegir un producto",
+      "Necesito encontrar un regalo urgente",
+      "Necesito cambiar mi dirección de envío",
+      "Necesito saber cuándo llega mi pedido",
+      "Necesito un presupuesto para equipar mi casa",
+      "Necesito resolver un problema con mi compra",
+      "Necesito consejo sobre qué modelo elegir",
+      "Necesito un televisor nuevo por menos de $800",
+      "Necesito opciones de envío más rápidas",
+      "Necesito instrucciones para mi compra"
+    ],
+    "buscoSuggestions": [
+      "Busco ofertas de temporada",
+      "Busco productos para mi cocina",
+      "Busco un celular con buena cámara",
+      "Busco ropa de moda a buen precio",
+      "Busco electrodomésticos eficientes",
+      "Busco accesorios para mi computadora",
+      "Busco un televisor grande",
+      "Busco muebles modernos",
+      "Busco artículos de decoración",
+      "Busco algo con descuento"
+    ],
+    "meGustaría": [
+      "Me gustaría ver productos de tecnología",
+      "Me gustaría saber sobre métodos de pago",
+      "Me gustaría conocer las ofertas actuales",
+      "Me gustaría encontrar un regalo",
+      "Me gustaría comprar en cuotas sin interés",
+      "Me gustaría recibir asesoramiento",
+      "Me gustaría cambiar mi producto",
+      "Me gustaría un descuento por cantidad"
+    ],
+    "ayudameSuggestions": [
+      "Ayúdame a elegir un smartphone",
+      "Ayúdame a encontrar ofertas",
+      "Ayúdame con mi proceso de compra",
+      "Ayúdame a rastrear mi pedido",
+      "Ayúdame a decidir qué modelo es mejor",
+      "Ayúdame con el proceso de devolución",
+      "Ayúdame a crear una cuenta"
+    ],
+    "recomendacionesSuggestions": [
+      "Recomiéndame productos de tecnología",
+      "Recomiéndame algo para regalar",
+      "Recomiéndame el mejor celular calidad-precio",
+      "Recomiéndame electrodomésticos eficientes",
+      "Recomiéndame productos en oferta",
+      "Recomiéndame accesorios para mi dispositivo"
+    ],
+    "seasonal": {
+      "spring": [
+        "¿Tienen colección de primavera?",
+        "¿Qué productos recomiendan para esta temporada?",
+        "¿Hay ofertas primaverales disponibles?"
+      ],
+      "summer": [
+        "¿Qué productos de verano tienen disponibles?",
+        "¿Tienen descuentos para la temporada de verano?",
+        "¿Recomendaciones para productos frescos de verano?"
+      ],
+      "autumn": [
+        "¿Tienen colección de otoño?",
+        "¿Qué productos recomiendan para el clima de otoño?",
+        "¿Hay ofertas por cambio de temporada?"
+      ],
+      "winter": [
+        "¿Qué productos de invierno recomiendan?",
+        "¿Tienen descuentos navideños?",
+        "¿Hay ofertas especiales de fin de año?"
+      ]
+    },
+    "contextual": {
+      "envio": [
+        "¿Cuándo llegará mi pedido?",
+        "¿Ofrecen envío gratuito?",
+        "¿Puedo cambiar la dirección de envío?",
+        "¿Qué empresa de mensajería utilizan?",
+        "¿Cuál es el costo de envío?",
+        "¿Cuánto tarda el envío a mi ubicación?",
+        "¿Hacen envíos internacionales?",
+        "¿Puedo rastrear mi paquete?"
+      ],
+      "pago": [
+        "¿Aceptan pagos con PayPal?",
+        "¿Puedo pagar en cuotas?",
+        "¿Ofrecen descuento por transferencia bancaria?",
+        "¿Es seguro comprar con tarjeta en la web?",
+        "¿Qué tarjetas de crédito aceptan?",
+        "¿Tienen pago contra entrega?",
+        "¿Puedo pagar con múltiples métodos?",
+        "¿Cómo solicito factura de mi compra?"
+      ],
+      "productos": [
+        "¿Tienen más colores disponibles?",
+        "¿Cuándo repondrán stock?",
+        "¿Este producto tiene garantía?",
+        "¿Tienen productos similares a este?",
+        "¿Cuál es la diferencia entre estos modelos?",
+        "¿Qué características tiene este producto?",
+        "¿Este producto es compatible con...?",
+        "¿Cuál es el modelo más reciente?"
+      ],
+      "garantia": [
+        "¿Cuánto tiempo de garantía ofrecen?",
+        "¿Cómo puedo solicitar una devolución?",
+        "¿Cubren gastos de envío en devoluciones?",
+        "¿Cuál es el plazo para cambios?",
+        "¿Qué cubre la garantía exactamente?",
+        "¿Dónde puedo llevar el producto si falla?",
+        "¿Tienen servicio técnico propio?",
+        "¿Ofrecen garantía extendida?"
+      ],
+      "cuentaUsuario": [
+        "¿Cómo recupero mi contraseña?",
+        "¿Cómo cambio mis datos personales?",
+        "¿Dónde veo mis pedidos anteriores?",
+        "¿Puedo guardar productos en favoritos?",
+        "¿Cómo actualizo mi dirección?",
+        "¿Puedo tener múltiples direcciones guardadas?",
+        "¿Cómo elimino mi cuenta?",
+        "¿Recibo beneficios por crear una cuenta?"
+      ],
+      "regalo": [
+        "¿Ofrecen empaque para regalo?",
+        "¿Pueden enviar sin factura si es un regalo?",
+        "¿Tienen tarjetas de regalo?",
+        "¿Qué recomiendan para regalo?",
+        "¿Puedo añadir un mensaje personalizado?",
+        "¿Qué opciones de regalo tienen por menos de $500?",
+        "¿Envían directamente a la dirección del destinatario?",
+        "¿Ofrecen recomendaciones según edad/género?"
+      ]
+    },
+    "categoryPreferences": [
+      "Ofertas en {category}",
+      "Productos recomendados de {category}",
+      "Novedades en {category}",
+      "¿Cuál es el mejor producto de {category}?",
+      "Tendencias en {category}",
+      "Quiero comprar algo de {category}",
+      "Necesito un producto de {category}",
+      "Ayúdame a elegir un {category}"
+    ],
+    "searchSuffix": "Buscar \"{inputText}\"",
+    "infoSuffix": "Información sobre {inputText}",
+    "offerSuffix": "¿Tienen {inputText} en oferta?",
+    "recomendacionSuffix": "Recomiéndame {inputText}",
+    "comparativaSuffix": "Comparar diferentes {inputText}",
+    "mejorSuffix": "¿Cuál es el mejor {inputText}?",
+    "presupuestoSuffix": "¿Tienen {inputText} por menos de $500?",
+    "disponibilidadSuffix": "¿Tienen {inputText} disponible?"
+  }
 }

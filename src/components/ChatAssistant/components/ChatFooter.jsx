@@ -34,14 +34,26 @@ const ChatFooter = ({
   
   // Manejar clic en una sugerencia predictiva
   const handleSuggestionClick = (suggestion) => {
-    if (setInputValue && onSuggestionClick) {
-      setInputValue(suggestion);
-      onSuggestionClick(suggestion);
-      if (inputRef.current) {
-        inputRef.current.focus();
-      }
-    } else if (setInputValue) {
-      setInputValue(suggestion);
+    if (setInputValue) {
+      // Primero, evitar que se envíe el texto parcial
+      // Cancelar cualquier envío pendiente del texto actual
+      const currentTextInInput = inputRef.current?.value || '';
+      
+      // Solo enviar la sugerencia completa mediante el evento personalizado
+      const event = new CustomEvent('sendSuggestion', { 
+        detail: { 
+          suggestion,
+          clearInput: true  // Indicar que se debe limpiar el input antes de procesar
+        } 
+      });
+      document.dispatchEvent(event);
+      
+      // Limpiar el input inmediatamente para evitar que se envíe texto parcial
+      setInputValue('');
+      
+      // No llamamos a onSuggestionClick para evitar envíos duplicados
+      
+      // Enfocar el input
       if (inputRef.current) {
         inputRef.current.focus();
       }
@@ -52,14 +64,14 @@ const ChatFooter = ({
     <div className={styles.chatFooter}>
       {/* Selector de emojis */}
       {showEmojiPicker && (
-        <div className={styles.emojiPicker} role="dialog" aria-label="Selector de emojis">
+        <div className={styles.emojiPicker} role="dialog" aria-label={uiTexts.emojiPicker.label}>
           <div className={styles.emojiGrid}>
             {emojis.map((emoji, index) => (
               <button 
                 key={index} 
                 onClick={() => insertEmoji(emoji)}
                 className={styles.emojiButton}
-                aria-label={`Emoji ${emoji}`}
+                aria-label={`${uiTexts.emojiPicker.emojiLabel} ${emoji}`}
               >
                 {emoji}
               </button>
@@ -70,7 +82,7 @@ const ChatFooter = ({
       
       {/* Sugerencias predictivas */}
       {predictiveSuggestions.length > 0 && (
-        <div className={styles.predictiveSuggestions} role="listbox" aria-label="Sugerencias">
+        <div className={styles.predictiveSuggestions} role="listbox" aria-label={uiTexts.suggestions.suggestionsLabel}>
           {predictiveSuggestions.map((suggestion, index) => (
             <div 
               key={index}
@@ -91,8 +103,8 @@ const ChatFooter = ({
         <button 
           className={styles.emojiToggle}
           onClick={() => setShowEmojiPicker(!showEmojiPicker)}
-          aria-label={showEmojiPicker ? "Cerrar selector de emojis" : "Abrir selector de emojis"}
-          title="Emojis"
+          aria-label={showEmojiPicker ? uiTexts.emojiPicker.close : uiTexts.emojiPicker.open}
+          title={uiTexts.emojiPicker.title}
           type="button"
         >
           <FaSmile />
@@ -106,7 +118,7 @@ const ChatFooter = ({
           ref={inputRef}
           placeholder={searchMode ? uiTexts.chatInterface.searchPlaceholder : uiTexts.chatInterface.inputPlaceholder}
           className={styles.chatInput}
-          aria-label="Mensaje para el asistente"
+          aria-label={uiTexts.chatInterface.messageToAssistant}
           autoComplete="off"
         />
         
@@ -124,7 +136,7 @@ const ChatFooter = ({
       
       {/* Texto de ayuda para lectores de pantalla */}
       <div className="sr-only" aria-live="polite">
-        {predictiveSuggestions?.length > 0 ? 'Sugerencias disponibles. Use flechas para navegar.' : ''}
+        {predictiveSuggestions?.length > 0 ? uiTexts.chatInterface.suggestionsAvailable : ''}
       </div>
     </div>
   );

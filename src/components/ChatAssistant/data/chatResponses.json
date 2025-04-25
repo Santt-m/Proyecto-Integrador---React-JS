@@ -138,7 +138,12 @@
     "agradecimiento": "¡De nada! 😊 Estoy aquí para ayudarte. ¿Hay algo más en lo que pueda asistirte?",
     "busqueda": "🔍 Puedo ayudarte a encontrar productos. ¿Qué estás buscando? Puedes decirme el tipo de producto, características o marca.",
     "recomendacion": "✨ Me encantaría recomendarte productos. Para darte las mejores sugerencias, dime qué categoría te interesa o qué tipo de producto estás buscando.",
-    "insatisfaccion": "😔 Lamento escuchar eso. Me gustaría ayudarte a solucionar cualquier problema que estés experimentando. ¿Podrías darme más detalles para poder asistirte mejor?"
+    "insatisfaccion": "😔 Lamento escuchar eso. Me gustaría ayudarte a solucionar cualquier problema que estés experimentando. ¿Podrías darme más detalles para poder asistirte mejor?",
+    "identidadBot": [
+      "Soy un asistente virtual diseñado para ayudarte con consultas sobre nuestra tienda, productos y servicios. Puedo responderte sobre métodos de pago, envíos, garantías y mucho más. ¿En qué puedo ayudarte hoy?",
+      "Soy el asistente virtual de MiTienda, estoy aquí para ayudarte con información sobre nuestros productos, responder preguntas sobre envíos, garantías y brindarte recomendaciones personalizadas.",
+      "Me llamo MiTienda Assistant, soy un chatbot diseñado para asistirte con todo lo relacionado a nuestra tienda online. Puedo ayudarte a encontrar productos, resolver dudas y ofrecerte la mejor experiencia de compra."
+    ]
   },
   "fechaHora": {
     "respuestaFecha": [
@@ -175,5 +180,68 @@
       "Un producto que está siendo muy popular y coincide con tus intereses es {producto3}."
     ],
     "conclusion": "¿Te gustaría ver más detalles de alguno de estos productos o prefieres que te muestre otras recomendaciones?"
-  }
+  },
+  "respuestasSeguridad": [
+    "Por razones de seguridad, no puedo procesar ese tipo de solicitudes. ¿En qué puedo ayudarte con nuestros productos?",
+    "Detecto contenido que podría comprometer la seguridad. Por favor, realiza solo consultas relacionadas con nuestra tienda.",
+    "Esa solicitud no puede ser procesada. Si necesitas ayuda con algún producto o servicio de nuestra tienda, estoy aquí para asistirte.",
+    "Por políticas de seguridad, no puedo responder a ese tipo de consultas. ¿Hay algo sobre nuestros productos en lo que pueda ayudarte?",
+    "Lo siento, pero no puedo procesar comandos o scripts. Si tienes alguna consulta sobre nuestra tienda, con gusto te ayudaré."
+  ],
+  "respuestasEducadas": [
+    "Entiendo que puedas sentirte frustrado. ¿Hay algo específico sobre nuestros productos o servicios en lo que pueda ayudarte?",
+    "Preferiría mantener nuestra conversación respetuosa. Estoy aquí para ayudarte con cualquier consulta sobre nuestra tienda.",
+    "Comprendo que a veces la tecnología puede ser frustrante. ¿Cómo puedo asistirte hoy con nuestros productos?",
+    "Te agradezco que mantengamos un tono cordial. ¿En qué puedo orientarte sobre nuestros productos o servicios?",
+    "Por favor, mantengamos una comunicación respetuosa para poder ayudarte mejor. ¿Qué estás buscando en nuestra tienda?"
+  ],
+  "respuestasRedireccion": [
+    "Estoy especializado en brindar información sobre los productos y servicios de nuestra tienda. ¿Puedo ayudarte con alguna consulta específica sobre nuestro catálogo?",
+    "Mi función es asistirte con información sobre nuestros productos. Si buscas ese tipo de contenido, te recomiendo utilizar otros servicios especializados.",
+    "No puedo proporcionar ese tipo de información. Sin embargo, estaré encantado de ayudarte a encontrar productos en nuestra tienda que se ajusten a tus necesidades.",
+    "Ese tema está fuera de mi ámbito. Estoy aquí para ayudarte con información sobre nuestros productos, ofertas y procesos de compra.",
+    "Mi objetivo es asistirte con nuestros productos y servicios. Para ese tipo de consultas, existen otros recursos más adecuados. ¿Puedo ayudarte con algo relacionado a nuestra tienda?"
+  ],
+  "respuestasSinSentido": [
+    "No estoy seguro de entender tu mensaje. ¿Puedes reformular tu pregunta sobre nuestros productos o servicios?",
+    "Parece que tu mensaje es confuso para mí. Por favor, ¿podrías ser más específico sobre lo que buscas en nuestra tienda?",
+    "No logro comprender tu consulta. Estoy aquí para ayudarte con información sobre nuestros productos y servicios. ¿Puedes aclarar tu pregunta?",
+    "Tu mensaje no es claro para mí. Recuerda que soy un asistente de compras y puedo ayudarte a encontrar productos o resolver dudas sobre nuestra tienda.",
+    "Lo siento, pero no comprendo lo que intentas comunicar. ¿Puedo ayudarte a encontrar algún producto específico o brindarte información sobre nuestros servicios?"
+  ],
+  "respuestasFueraDeContexto": [
+    "Actualmente solo puedo ayudarte con información sobre los productos y servicios disponibles en nuestra tienda. ¿Hay algo de nuestro catálogo que te interese?",
+    "Mi especialidad es brindarte información sobre nuestra tienda online. Para ese tema específico, te recomiendo consultar sitios especializados. ¿Puedo ayudarte con alguno de nuestros productos?",
+    "No dispongo de información sobre ese tema. Estoy aquí para asistirte con consultas relacionadas a nuestra tienda, productos y procesos de compra. ¿En qué puedo ayudarte?",
+    "Ese tema está fuera de mi conocimiento. Sin embargo, puedo ayudarte a encontrar productos en nuestra tienda o resolver dudas sobre nuestros servicios. ¿Qué te gustaría saber?",
+    "Lamentablemente no puedo ayudarte con eso. Mi función es brindarte soporte sobre nuestra tienda online. ¿Te gustaría conocer alguno de nuestros productos o tienes alguna duda sobre nuestros servicios?"
+  ],
+  "respuestasInsultos": [
+    "Entiendo que puedas estar frustrado. Estoy aquí para ayudarte con consultas sobre productos y servicios de nuestra tienda. ¿En qué puedo asistirte hoy?",
+    "Lamento que te sientas así. Mi objetivo es proporcionarte la mejor asistencia posible. ¿Hay algo específico sobre nuestros productos en lo que pueda ayudarte?",
+    "Soy un asistente virtual diseñado para responder preguntas sobre nuestra tienda y productos. ¿Puedo ayudarte a encontrar algo en particular?",
+    "Te invito a que me hagas preguntas sobre nuestra tienda o productos. Estoy aquí para asistirte de la mejor manera posible.",
+    "Mi propósito es brindarte información útil sobre nuestra tienda. Si tienes alguna pregunta específica sobre productos o servicios, con gusto te ayudaré."
+  ],
+  "respuestasInyeccionCodigo": [
+    "He detectado un contenido que podría ser código. Por motivos de seguridad, no puedo procesar este tipo de mensajes. ¿En qué puedo ayudarte con nuestra tienda?",
+    "Por razones de seguridad, no puedo responder a mensajes que contengan código o comandos. ¿Hay algún producto o servicio de nuestra tienda sobre el que necesites información?",
+    "Lo siento, no puedo procesar código. Si necesitas ayuda con algún producto o servicio de nuestra tienda, por favor házmelo saber.",
+    "No puedo ejecutar ni procesar código por políticas de seguridad. Estoy aquí para asistirte con información sobre nuestros productos y servicios.",
+    "Parece que has enviado algún tipo de código o comando, lo cual no puedo procesar. Puedo ayudarte con información sobre nuestra tienda y productos."
+  ],
+  "respuestasContenidoInapropiado": [
+    "Lo siento, no puedo proporcionar información sobre ese tema. Estoy aquí para ayudarte con consultas relacionadas con nuestra tienda y productos.",
+    "Ese tipo de consultas están fuera de mi ámbito. Puedo asistirte con información sobre nuestros productos y servicios, ¿necesitas ayuda con alguno de ellos?",
+    "Mi función es proporcionar asistencia sobre los productos y servicios de nuestra tienda. ¿Puedo ayudarte con alguna consulta relacionada?",
+    "No puedo responder a ese tipo de preguntas. Si estás interesado en nuestros productos o servicios, estaré encantado de ayudarte.",
+    "Estoy programado para asistir exclusivamente con información sobre nuestra tienda y productos. ¿Hay algo de nuestro catálogo que te interese?"
+  ],
+  "iteracion": [
+    "✅ ¡Por supuesto! Estamos listos para continuar con la siguiente iteración del proceso. ¿En qué puedo ayudarte ahora?",
+    "🔄 Sí, podemos continuar con la iteración. ¿Hay algún aspecto específico que desees abordar en esta fase?",
+    "👍 Claro que sí, continuemos con la iteración. ¿Cuál es el siguiente paso que deseas realizar?",
+    "🚀 Perfecto, estamos preparados para avanzar a la siguiente iteración. ¿Qué acción deseas tomar ahora?",
+    "✨ Estoy listo para continuar con la iteración. ¿Cuál es el próximo punto que quieres tratar?"
+  ]
 }

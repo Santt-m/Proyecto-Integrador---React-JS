@@ -13,7 +13,7 @@ const TypingIndicator = () => {
       className={styles.typingIndicatorContainer}
       role="status" 
       aria-live="polite"
-      aria-label={uiTexts.chatInterface.typingIndicator || "El asistente está escribiendo una respuesta"}
+      aria-label={uiTexts.chatInterface.typingIndicator}
     >
       <div className={styles.messageSender} aria-hidden="true">
         <FaRobot />

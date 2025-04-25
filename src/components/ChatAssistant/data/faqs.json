@@ -148,5 +148,65 @@
     "question": "¿Puedo rastrear mi pedido en tiempo real?",
     "answer": "Sí, todos nuestros envíos incluyen seguimiento en tiempo real. Una vez que tu pedido es despachado, recibirás un correo electrónico con un enlace de seguimiento. También puedes acceder a esta información desde tu cuenta en la sección 'Mis pedidos'. Nuestro sistema se actualiza cada 2-4 horas y permite ver la ubicación exacta del paquete y su estado actual.",
     "keywords": ["rastreo tiempo real", "seguimiento en vivo", "ubicación pedido", "donde está mi paquete", "tracking en directo"]
+  },
+  {
+    "id": 26,
+    "question": "¿Son seguros mis datos personales?",
+    "answer": "Tu privacidad es nuestra prioridad. Utilizamos encriptación SSL de 256 bits para proteger tus datos y nunca compartimos tu información con terceros sin tu consentimiento. Toda la información se almacena en servidores seguros con múltiples capas de protección y cumplimos con todas las regulaciones de protección de datos vigentes. Puedes consultar nuestra política de privacidad completa en el pie de página del sitio.",
+    "keywords": ["datos personales", "información personal", "privacidad", "protección de datos", "seguridad de información", "datos seguros", "cookies"]
+  },
+  {
+    "id": 27,
+    "question": "¿Qué medidas de seguridad tiene la web contra fraudes?",
+    "answer": "Implementamos múltiples medidas de seguridad: verificación en dos pasos para cuentas, monitoreo de actividades sospechosas, pasarelas de pago certificadas PCI DSS, y análisis regular de vulnerabilidades. Nuestro equipo de seguridad trabaja constantemente para mantener tus datos y transacciones protegidos. Si detectas alguna actividad sospechosa, contáctanos inmediatamente a seguridad@mitiendareact.com.",
+    "keywords": ["seguridad", "fraude", "protección", "medidas", "hackeo", "robo de datos", "phishing", "estafa"]
+  },
+  {
+    "id": 28,
+    "question": "¿Cómo puedo reportar contenido inapropiado?",
+    "answer": "Si encuentras contenido inapropiado o potencialmente ofensivo en nuestro sitio, por favor repórtalo inmediatamente a moderacion@mitiendareact.com incluyendo detalles como la URL donde lo encontraste y una descripción del problema. Nuestro equipo revisará el reporte dentro de 24 horas y tomará las medidas apropiadas. Agradecemos tu colaboración para mantener nuestra comunidad segura y respetuosa.",
+    "keywords": ["contenido inapropiado", "ofensivo", "reportar", "denunciar", "inapropiado", "inadecuado", "abusivo"]
+  },
+  {
+    "id": 29,
+    "question": "¿Tienen un código de conducta para los usuarios?",
+    "answer": "Sí, contamos con un código de conducta que todos los usuarios deben respetar. Este incluye mantener un lenguaje apropiado en reseñas y comentarios, no compartir contenido ofensivo o ilegal, respetar la propiedad intelectual y mantener interacciones respetuosas con otros usuarios y nuestro personal. El incumplimiento puede resultar en la suspensión de la cuenta. Puedes consultar el código completo en nuestros Términos y Condiciones.",
+    "keywords": ["código de conducta", "reglas", "normas", "comportamiento", "conducta", "usuarios", "términos", "condiciones"]
+  },
+  {
+    "id": 30,
+    "question": "¿Puedo hablar con un humano en vez del chatbot?",
+    "answer": "Comprendo que a veces prefieras hablar con una persona. Aunque estoy diseñado para resolver la gran mayoría de consultas sobre nuestros productos y servicios de forma rápida y eficiente, ¡puedo sorprenderte con lo útil que puedo ser! 😊 Dame una oportunidad de ayudarte primero. Si tu consulta requiere atención especializada, también puedes contactar con nuestro equipo humano por teléfono al +54 11 5678-9012 o por email a atencion@mitiendareact.com. ¡Estamos para ayudarte!",
+    "keywords": ["hablar con humano", "agente real", "persona real", "no quiero bot", "servicio humano", "asistente humano", "representante"]
+  },
+  {
+    "id": 31,
+    "question": "¿Qué hacen con mis datos de navegación y búsqueda?",
+    "answer": "Utilizamos tus datos de navegación y búsqueda para mejorar tu experiencia en la tienda, ofreciéndote recomendaciones personalizadas y optimizando nuestro sitio. Estos datos se analizan de forma agregada y anónima para estadísticas internas. No vendemos esta información a terceros. Puedes gestionar tus preferencias de cookies y seguimiento en cualquier momento desde el panel 'Configuración de privacidad' en tu cuenta. Para más detalles, consulta nuestra Política de Privacidad.",
+    "keywords": ["datos navegación", "historial", "cookies", "rastreo", "seguimiento", "privacidad navegación", "analíticas"]
+  },
+  {
+    "id": 32,
+    "question": "¿Cómo maneja la tienda los bots y cuentas automatizadas?",
+    "answer": "Implementamos sistemas avanzados de detección de bots que incluyen CAPTCHA, análisis de comportamiento y verificación de actividad para prevenir acciones automatizadas maliciosas. Las compras a gran escala inusuales son revisadas manualmente. Aplicamos límites de compra en artículos de alta demanda para garantizar disponibilidad para todos los clientes. Si detectamos actividad sospechosa, podemos solicitar verificación adicional o suspender temporalmente la cuenta para proteger nuestra plataforma.",
+    "keywords": ["bots", "automatizado", "captcha", "compras automáticas", "scalpers", "cuentas falsas", "verificación"]
+  },
+  {
+    "id": 33,
+    "question": "¿Tienen herramientas de accesibilidad para usuarios con discapacidades?",
+    "answer": "Nuestro sitio está diseñado siguiendo las pautas WCAG 2.1 para asegurar la accesibilidad. Ofrecemos: navegación completa por teclado, compatibilidad con lectores de pantalla, textos alternativos en imágenes, contraste adecuado y opción de fuente y tamaño ajustables. Puedes activar el modo de accesibilidad haciendo clic en el ícono correspondiente en la parte inferior de la página. Trabajamos continuamente para mejorar estas funciones y agradecemos cualquier sugerencia.",
+    "keywords": ["accesibilidad", "discapacidad", "WCAG", "lector pantalla", "navegación teclado", "contraste", "texto alternativo"]
+  },
+  {
+    "id": 34,
+    "question": "¿Puedo confiar en este chatbot para información importante?",
+    "answer": "Nuestro chatbot está diseñado para proporcionar información precisa y actualizada sobre nuestros productos, servicios y políticas. Sin embargo, para decisiones importantes o información crítica, te recomendamos verificar los detalles en las secciones oficiales de nuestro sitio web o contactar directamente con nuestro servicio de atención al cliente. El chatbot aprende constantemente, pero siempre priorizamos la precisión de la información proporcionada por nuestros canales oficiales.",
+    "keywords": ["confiar", "chatbot", "asistente", "información oficial", "precisión", "confianza", "robot"]
+  },
+  {
+    "id": 35,
+    "question": "¿Qué debo hacer si recibo mensajes sospechosos supuestamente de la tienda?",
+    "answer": "Si recibes comunicaciones sospechosas que dicen ser de nuestra tienda (emails, SMS, llamadas), no hagas clic en enlaces ni proporciones información personal. Nunca solicitamos contraseñas o datos bancarios completos por email. Verifica siempre que los correos provengan de nuestros dominios oficiales (@mitiendareact.com). Reporta inmediatamente estos mensajes a phishing@mitiendareact.com y contacta con nuestro servicio al cliente. Mantén actualizado tu software y utiliza contraseñas fuertes.",
+    "keywords": ["phishing", "estafa", "correo falso", "suplantación", "email sospechoso", "mensaje falso", "fraude"]
   }
 ]

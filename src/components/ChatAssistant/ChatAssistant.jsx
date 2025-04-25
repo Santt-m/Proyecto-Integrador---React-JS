@@ -27,7 +27,7 @@ import {
   getBudgetRecommendations,
   normalizeText,
   detectUserPreferredCategory
-} from './utils/chatUtils';
+} from './utils';
 
 // Importar datos de interfaz
 import uiTexts from './data/uiTexts.json';
@@ -65,11 +65,11 @@ function ChatAssistant() {
   const [recentSearches, setRecentSearches] = useState([]);
   
   // Valores dinámicos para sugerencias
-  const [suggestions] = useState([
-    "¿Cómo realizar una compra?",
+  const [suggestions] = useState(uiTexts.defaultSuggestions || [
+    "¿Cómo realizo una compra?",
     "¿Cuáles son los métodos de pago?",
-    "¿Tienen tiendas físicas?",
-    "¿Cómo rastreo mi pedido?"
+    "¿Tienen envío gratis?",
+    "¿Qué ofertas tienen disponibles?"
   ]);
   
   // Obtener categorías de productos
@@ -256,7 +256,27 @@ function ChatAssistant() {
     
     // Generar sugerencias predictivas basadas en la entrada
     if (e.target.value.trim().length >= 2) {
-      const suggestions = generatePredictiveSuggestions(e.target.value, categories, recentSearches);
+      // Crear un objeto con las preferencias del usuario detectadas
+      const userPreferences = {
+        preferredCategory: detectUserPreferredCategory(messages),
+        interestedInShipping: messages.some(msg => 
+          msg.sender === 'user' && 
+          normalizeText(msg.text).includes('envio')),
+        recentQueries: messages
+          .filter(msg => msg.sender === 'user')
+          .slice(-5)
+          .map(msg => msg.text)
+      };
+      
+      // Llamar a la función mejorada con más contexto
+      const suggestions = generatePredictiveSuggestions(
+        e.target.value, 
+        categories, 
+        recentSearches,
+        userPreferences,
+        messages
+      );
+      
       setPredictiveSuggestions(suggestions);
     } else {
       setPredictiveSuggestions([]);
@@ -264,8 +284,8 @@ function ChatAssistant() {
     
     // Resetear la sugerencia resaltada
     setHighlightedSuggestion(-1);
-  }, [categories, recentSearches]);
-  
+  }, [categories, recentSearches, messages]);
+
   // Manejar teclas especiales (Enter, flechas para sugerencias)
   const handleKeyDown = useCallback((e) => {
     // Enter para enviar mensaje
@@ -383,8 +403,76 @@ function ChatAssistant() {
     handleSendMessageRef.current = handleSendMessage;
   }, [handleSendMessage]);
 
+  // Escuchar el evento de sugerencia enviada desde ChatFooter o ChatSuggestions
+  useEffect(() => {
+    const handleSendSuggestion = (event) => {
+      const { suggestion, clearInput } = event.detail;
+      
+      // Limpiar el input inmediatamente si se indica (para evitar envíos dobles)
+      if (clearInput) {
+        setCurrentInput('');
+      }
+      
+      // Crear un mensaje del usuario con la sugerencia completa
+      const userMessage = {
+        id: Date.now(),
+        sender: 'user',
+        text: suggestion,
+        timestamp: Date.now()
+      };
+      
+      // Añadir el mensaje del usuario al chat
+      setMessages(prev => [...prev, userMessage]);
+      
+      // Limpiar el input y las sugerencias
+      setPredictiveSuggestions([]);
+      setIsTyping(true);
+      
+      // Generar respuesta del bot con un tiempo de espera realista
+      setTimeout(() => {
+        let botResponse;
+        
+        // Verificar si es una consulta de disponibilidad de producto
+        const availabilityQuery = isProductAvailabilityQuery(suggestion);
+        
+        if (availabilityQuery.isAvailability) {
+          // Generar respuesta de disponibilidad
+          botResponse = getAvailabilityResponse(availabilityQuery);
+        } else if (searchMode) {
+          botResponse = generateSearchResponse(suggestion, categories);
+          setSearchMode(false);
+        } else {
+          // Verificar si es una consulta de presupuesto/recomendaciones
+          const budgetQuery = isBudgetQuery(suggestion);
+          if (budgetQuery.isBudget) {
+            botResponse = getBudgetRecommendations(budgetQuery);
+          } else {
+            // Generar respuesta basada en el análisis del mensaje
+            botResponse = determineResponse(suggestion, {
+              preferredCategory: detectUserPreferredCategory(messages),
+              interestedInShipping: messages.some(msg => 
+                msg.sender === 'user' && 
+                normalizeText(msg.text).includes('envio')),
+            });
+          }
+        }
+        
+        // Añadir la respuesta del bot
+        addBotMessage(botResponse);
+      }, 1500);
+    };
+    
+    // Registrar el evento
+    document.addEventListener('sendSuggestion', handleSendSuggestion);
+    
+    // Limpiar el evento al desmontar
+    return () => {
+      document.removeEventListener('sendSuggestion', handleSendSuggestion);
+    };
+  }, [messages, addBotMessage, categories, searchMode]);
+
   return (
-    <div className={`${styles.chatAssistantContainer} ${theme}`} role="complementary" aria-label="Asistente virtual de chat">
+    <div className={`${styles.chatAssistantContainer} ${theme}`} role="complementary" aria-label={uiTexts.chatInterface.assistantLabel}>
       {/* Botón flotante para abrir/cerrar el chat */}
       <button 
         className={`${styles.chatButton} ${isOpen ? styles.open : ''}`}

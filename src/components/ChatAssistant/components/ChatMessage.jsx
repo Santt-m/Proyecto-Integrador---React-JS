@@ -1,7 +1,7 @@
 import React from 'react';
 import styles from '../ChatAssistant.module.css';
 import { FaUser, FaRobot, FaThumbsUp, FaThumbsDown } from 'react-icons/fa';
-import { formatTime, renderHTML } from '../utils/chatUtils';
+import { formatTime, renderHTML } from '../utils';
 import uiTexts from '../data/uiTexts.json';
 
 /**
@@ -25,7 +25,7 @@ const ChatMessage = ({ message, messageToRate, handleFeedback }) => {
     <div 
       className={`${styles.message} ${isBot ? styles.botMessage : styles.userMessage}`}
       role={isBot ? "log" : "complementary"}
-      aria-label={`Mensaje de ${isBot ? 'asistente' : 'usuario'}`}
+      aria-label={isBot ? uiTexts.chatMessages?.botLabel || 'Mensaje de asistente' : uiTexts.chatMessages?.userLabel || 'Mensaje de usuario'}
     >
       <div className={styles.messageContent}>
         <div className={styles.messageSender} aria-hidden="true">
@@ -36,7 +36,7 @@ const ChatMessage = ({ message, messageToRate, handleFeedback }) => {
             <span 
               dangerouslySetInnerHTML={renderHTML(text)}
               role="region"
-              aria-label="Mensaje con enlaces"
+              aria-label={uiTexts.chatMessages?.linkMessageLabel || 'Mensaje con enlaces'}
             />
           ) : (
             <span>{text}</span>
@@ -47,7 +47,7 @@ const ChatMessage = ({ message, messageToRate, handleFeedback }) => {
             <div 
               className={styles.feedbackButtons}
               role="group"
-              aria-label="¿Fue útil esta respuesta?"
+              aria-label={uiTexts.chatInterface.messageFeedback}
             >
               <span className={styles.feedbackText}>{uiTexts.chatInterface.messageFeedback}</span>
               <button 
