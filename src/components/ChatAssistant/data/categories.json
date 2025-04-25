@@ -1,0 +1,50 @@
+[
+  {
+    "id": "tecnologia",
+    "name": "Tecnología",
+    "description": "Nuestra sección de tecnología incluye los últimos smartphones, laptops, tablets, accesorios y gadgets.",
+    "keywords": ["tecnologia", "tech", "electronica", "gadgets", "dispositivos", "smartphone", "celular", "laptop", "computadora"]
+  },
+  {
+    "id": "moda",
+    "name": "Moda",
+    "description": "En nuestra categoría de moda encontrarás las últimas tendencias en ropa, calzado y accesorios para todas las edades.",
+    "keywords": ["moda", "ropa", "calzado", "indumentaria", "vestimenta", "fashion", "camiseta", "pantalon", "zapatos"]
+  },
+  {
+    "id": "hogar",
+    "name": "Hogar",
+    "description": "Transformamos tu hogar con nuestra amplia selección de muebles, decoración y electrodomésticos de alta calidad.",
+    "keywords": ["hogar", "casa", "muebles", "decoracion", "deco", "living", "cocina", "electrodomesticos"]
+  },
+  {
+    "id": "deportes",
+    "name": "Deportes",
+    "description": "Equipamiento deportivo de primer nivel para todos los deportes y niveles de experiencia.",
+    "keywords": ["deportes", "deporte", "fitness", "ejercicio", "entrenamiento", "gimnasio", "futbol", "running"]
+  },
+  {
+    "id": "belleza",
+    "name": "Belleza",
+    "description": "Productos de belleza y cuidado personal de las mejores marcas, desde maquillaje hasta rutinas de skincare completas.",
+    "keywords": ["belleza", "cosmeticos", "maquillaje", "skincare", "cuidado", "perfumes", "crema", "locion"]
+  },
+  {
+    "id": "alimentos",
+    "name": "Alimentos",
+    "description": "Descubre nuestra selección de productos alimenticios gourmet, orgánicos y de primera necesidad.",
+    "keywords": ["alimentos", "comida", "gourmet", "organico", "bebidas", "snacks", "alimentacion"]
+  },
+  {
+    "id": "ofertas",
+    "name": "Ofertas",
+    "description": "No te pierdas nuestras increíbles ofertas y descuentos en productos seleccionados de todas las categorías.",
+    "keywords": ["ofertas", "descuentos", "promociones", "rebaja", "sale", "liquidacion"]
+  },
+  {
+    "id": "nuevos",
+    "name": "Recién llegados",
+    "description": "Explora nuestros productos más recientes, las últimas tendencias y novedades que acaban de llegar a nuestra tienda.",
+    "keywords": ["nuevos", "recien llegados", "novedades", "nuevo ingreso", "tendencias", "ultimo modelo"]
+  }
+]

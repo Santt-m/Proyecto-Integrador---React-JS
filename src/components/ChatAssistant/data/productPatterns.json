@@ -1,0 +1,132 @@
+[
+  { 
+    "regex": "smartphone|celular|iphone|samsung|xiaomi|android|ios", 
+    "category": "tecnologia", 
+    "response": "Tenemos una gran variedad de smartphones de las mejores marcas. Puedes ver todos nuestros smartphones <a href='/products?category=tecnologia&subcategory=smartphones' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "laptop|notebook|computadora|pc|macbook|windows|ordenador", 
+    "category": "tecnologia", 
+    "response": "Contamos con las mejores laptops del mercado. Puedes ver todos nuestros equipos <a href='/products?category=tecnologia&subcategory=laptops' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "auricular|headphone|audífono|airpods|bluetooth|sonido", 
+    "category": "tecnologia", 
+    "response": "Tenemos auriculares con y sin cable de las mejores marcas. Puedes ver todos nuestros auriculares <a href='/products?category=tecnologia&subcategory=audio' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "tablet|ipad|tableta|galaxy tab", 
+    "category": "tecnologia", 
+    "response": "Disponemos de una amplia selección de tablets con diferentes tamaños de pantalla y prestaciones. Puedes ver nuestra colección de tablets <a href='/products?category=tecnologia&subcategory=tablets' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "smartwatch|reloj inteligente|apple watch|wearable", 
+    "category": "tecnologia", 
+    "response": "Contamos con los mejores relojes inteligentes del mercado, perfectos para monitorear tu actividad física y mantenerte conectado. Explora nuestra colección <a href='/products?category=tecnologia&subcategory=smartwatches' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "camara|fotografia|canon|nikon|sony|reflex|mirrorless|gopro", 
+    "category": "tecnologia", 
+    "response": "Tenemos cámaras para todos los niveles, desde aficionados hasta profesionales. Puedes ver nuestra selección de equipos fotográficos <a href='/products?category=tecnologia&subcategory=camaras' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "remera|camiseta|camisa|pantalón|vestido|jean|ropa|prenda", 
+    "category": "moda", 
+    "response": "Nuestra colección de ropa incluye las últimas tendencias. Puedes ver toda nuestra colección de moda <a href='/products?category=moda' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "zapatilla|zapato|calzado|deportiva|botas|sandalias", 
+    "category": "moda", 
+    "response": "Tenemos calzado para todas las ocasiones. Puedes ver todo nuestro calzado <a href='/products?category=moda&subcategory=calzado' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "accesorio|pulsera|collar|anillo|arete|pendiente|gorra|sombrero|cinturon|bufanda|guante", 
+    "category": "moda", 
+    "response": "Completa tu look con nuestra selección de accesorios de moda. Puedes ver todos nuestros accesorios <a href='/products?category=moda&subcategory=accesorios' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "mueble|silla|mesa|sofá|sillón|estantería|librero|escritorio", 
+    "category": "hogar", 
+    "response": "Contamos con muebles de alta calidad para todos los ambientes. Puedes ver todos nuestros muebles <a href='/products?category=hogar&subcategory=muebles' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "cocina|utensilios|sartén|olla|plato|vaso|cubierto", 
+    "category": "hogar", 
+    "response": "Tenemos todo lo que necesitas para tu cocina. Puedes ver todos nuestros productos de cocina <a href='/products?category=hogar&subcategory=cocina' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "electrodomestico|refrigerador|nevera|lavarropas|lavadora|heladera|microondas|licuadora|tostadora|cafetera", 
+    "category": "hogar", 
+    "response": "Disponemos de una amplia gama de electrodomésticos para hacer tu vida más fácil. Explora nuestra selección <a href='/products?category=hogar&subcategory=electrodomesticos' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "decoracion|lampara|cuadro|espejo|alfombra|cortina|cojin|almohadon", 
+    "category": "hogar", 
+    "response": "Transforma tu hogar con nuestra colección de artículos decorativos. Descubre todas nuestras opciones <a href='/products?category=hogar&subcategory=decoracion' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "deporte|pelota|gimnasio|pesa|fitness|pilates|yoga|running", 
+    "category": "deportes", 
+    "response": "Equipamos a deportistas de todos los niveles. Puedes ver todos nuestros equipos deportivos <a href='/products?category=deportes' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "bicicleta|ciclismo|mountain bike|BMX|ruta|rodado", 
+    "category": "deportes", 
+    "response": "Contamos con bicicletas para todas las disciplinas y accesorios para ciclismo. Explora nuestro catálogo <a href='/products?category=deportes&subcategory=ciclismo' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "futbol|soccer|camiseta|pelota|botines|canillera", 
+    "category": "deportes", 
+    "response": "Tenemos todo lo que necesitas para el fútbol, desde equipaciones hasta accesorios. Mira nuestra selección <a href='/products?category=deportes&subcategory=futbol' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "natacion|piscina|traje de baño|gorro|gafa|antiparras", 
+    "category": "deportes", 
+    "response": "Disponemos de artículos para natación de alta calidad. Visita nuestra sección <a href='/products?category=deportes&subcategory=natacion' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "maquillaje|labial|sombra|base|rubor|esmalte|pintura", 
+    "category": "belleza", 
+    "response": "Tenemos los mejores productos de maquillaje. Puedes ver toda nuestra colección de maquillaje <a href='/products?category=belleza&subcategory=maquillaje' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "crema|loción|serum|skincare|facial|hidratante|protector solar", 
+    "category": "belleza", 
+    "response": "Cuidamos tu piel con los mejores productos. Puedes ver todos nuestros productos para el cuidado de la piel <a href='/products?category=belleza&subcategory=skincare' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "perfume|fragancia|colonia|eau de toilette|eau de parfum", 
+    "category": "belleza", 
+    "response": "Contamos con una selección de las mejores fragancias nacionales e importadas. Descubre tu aroma ideal <a href='/products?category=belleza&subcategory=perfumes' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "cabello|pelo|shampoo|acondicionador|tratamiento|tinte|coloracion", 
+    "category": "belleza", 
+    "response": "Tenemos todo lo que necesitas para el cuidado y estilizado de tu cabello. Explora nuestros productos <a href='/products?category=belleza&subcategory=cabello' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "alimento|comida|snack|bebida|gourmet|organico", 
+    "category": "alimentos", 
+    "response": "Ofrecemos una selección de alimentos de alta calidad, incluyendo opciones orgánicas y gourmet. Descubre nuestros productos <a href='/products?category=alimentos' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "vino|cerveza|licor|bebida alcoholica|whisky|gin", 
+    "category": "alimentos", 
+    "response": "Contamos con una amplia selección de bebidas para todos los gustos. Explora nuestra bodega virtual <a href='/products?category=alimentos&subcategory=bebidas' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "saludable|dietetico|sin gluten|sin lactosa|vegano|vegetariano", 
+    "category": "alimentos", 
+    "response": "Disponemos de una amplia variedad de productos para dietas especiales. Descubre nuestras opciones saludables <a href='/products?category=alimentos&subcategory=saludable' class='chatLink'>aquí</a>."
+  },
+  { 
+    "regex": "oferta|descuento|promocion|rebaja|liquidacion|sale", 
+    "category": "ofertas", 
+    "response": "¡Tenemos increíbles ofertas y promociones especiales! 🔥 Actualmente contamos con descuentos de hasta 30% en productos seleccionados de tecnología, moda y hogar. Nuestras ofertas destacadas incluyen smartphones con 15% de descuento, electrodomésticos con hasta 25% off y prendas de temporada con promociones 2x1. Además, si tu compra supera los $10,000, ¡el envío es gratis! <a href='/products?onSale=true' class='chatLink'>Ver todas las ofertas actuales</a>.<br><br>¿Hay alguna categoría de ofertas en particular que te interese explorar?"
+  },
+  { 
+    "regex": "nuevo|recien llegado|novedad|ultimo modelo|nueva temporada", 
+    "category": "nuevos", 
+    "response": "Descubre nuestros productos más recientes y las últimas novedades que han llegado a nuestra tienda <a href='/products?newArrivals=true' class='chatLink'>aquí</a>."
+  }
+]

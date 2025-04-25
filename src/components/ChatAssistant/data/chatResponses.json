@@ -1,0 +1,179 @@
+{
+  "saludos": [
+    "👋 ¡Hola! Soy el asistente virtual de MiTienda. ¿En qué puedo ayudarte hoy?",
+    "✨ ¡Bienvenido/a a MiTienda! Estoy aquí para asistirte en lo que necesites.",
+    "👋 ¡Hola! ¿Cómo puedo ayudarte en tu experiencia de compra hoy?"
+  ],
+  "procesosConPasos": {
+    "compra": {
+      "titulo": "🛒 <strong>Cómo realizar una compra:</strong>",
+      "pasos": [
+        "Navega a la sección de Productos y explora nuestro catálogo",
+        "Selecciona el producto que deseas adquirir",
+        "Haz clic en 'Agregar al carrito'",
+        "Cuando estés listo, ve al carrito y haz clic en 'Proceder al pago'",
+        "Completa la información de envío y selecciona el método de pago",
+        "Revisa tu pedido y confirma la compra"
+      ],
+      "conclusion": "¡Listo! Recibirás un correo electrónico con la confirmación de tu compra. ✅"
+    },
+    "devolucion": {
+      "titulo": "🔄 <strong>Proceso de devolución:</strong>",
+      "pasos": [
+        "Inicia sesión en tu cuenta dentro de los 14 días de recibir tu pedido",
+        "Ve a 'Mis pedidos' y selecciona el producto a devolver",
+        "Completa el formulario de devolución indicando el motivo",
+        "Recibirás por email una etiqueta de envío prepagada",
+        "Empaca el producto en su embalaje original",
+        "Envíalo a través de nuestra empresa de logística asociada"
+      ],
+      "conclusion": "💰 El reembolso se procesará en 3-5 días hábiles después de recibir y verificar el producto."
+    },
+    "seguimiento": {
+      "titulo": "🔍 <strong>Para rastrear tu pedido:</strong>",
+      "pasos": [
+        "Inicia sesión en tu cuenta de MiTienda",
+        "Ve a la sección 'Mis Pedidos'",
+        "Selecciona el pedido que deseas rastrear",
+        "Haz clic en 'Ver detalles de seguimiento'"
+      ],
+      "conclusion": "📦 También puedes proporcionarme tu número de pedido y te ayudaré a verificar su estado actual."
+    },
+    "cambio": {
+      "titulo": "🔄 <strong>Para solicitar un cambio:</strong>",
+      "pasos": [
+        "Contacta a nuestro servicio al cliente dentro de los 30 días de recibido el producto",
+        "Describe el motivo del cambio (talla incorrecta, producto defectuoso, etc.)",
+        "Recibirás instrucciones por email sobre cómo proceder",
+        "Envía el producto en su empaque original con todos sus accesorios",
+        "Una vez recibido, procesaremos tu solicitud en 48-72 horas"
+      ],
+      "conclusion": "🔄 Para cambios de talla o color, verifica primero la disponibilidad del nuevo producto."
+    },
+    "cuenta": {
+      "titulo": "👤 <strong>Cómo crear una cuenta:</strong>",
+      "pasos": [
+        "Haz clic en el botón 'Registrarse' en la esquina superior derecha",
+        "Completa el formulario con tus datos personales",
+        "Crea una contraseña segura",
+        "Acepta los términos y condiciones",
+        "Haz clic en 'Crear cuenta'"
+      ],
+      "conclusion": "✅ Recibirás un email de confirmación. ¡Bienvenido a nuestra comunidad!"
+    }
+  },
+  "infoConListas": {
+    "metodosPago": {
+      "titulo": "💳 <strong>Métodos de pago disponibles:</strong>",
+      "items": [
+        "💳 Tarjetas de crédito y débito (Visa, Mastercard, American Express)",
+        "🔄 PayPal",
+        "📱 Mercado Pago",
+        "🏦 Transferencias bancarias"
+      ],
+      "conclusion": "🔒 Todas nuestras transacciones están protegidas con la más alta seguridad."
+    },
+    "envios": {
+      "titulo": "🚚 <strong>Información sobre envíos:</strong>",
+      "secciones": [
+        {
+          "subtitulo": "⏱️ <strong>Tiempos estimados:</strong>",
+          "items": [
+            "Capital: 1-2 días hábiles",
+            "Zona metropolitana: 2-3 días hábiles",
+            "Interior del país: 3-5 días hábiles"
+          ]
+        },
+        {
+          "subtitulo": "💰 <strong>Costos:</strong>",
+          "items": [
+            "Envío gratis en compras superiores a $10,000",
+            "Envío normal: $800 - $1,500 según ubicación",
+            "Envío express (24h): disponible con cargo adicional"
+          ]
+        }
+      ],
+      "conclusion": "📦 Recibirás un código de seguimiento por email cuando tu pedido sea despachado."
+    },
+    "garantias": {
+      "titulo": "🛡️ <strong>Información sobre garantías:</strong>",
+      "items": [
+        "Todos nuestros productos cuentan con garantía del fabricante",
+        "Tecnología: 6-24 meses según el producto",
+        "Electrodomésticos: 12 meses",
+        "Moda y accesorios: 30 días por defectos de fabricación",
+        "Muebles: 6 meses en estructura"
+      ],
+      "conclusion": "📝 Conserva tu factura de compra para hacer válida cualquier garantía."
+    },
+    "horarios": {
+      "titulo": "🕒 <strong>Nuestro horario de atención:</strong>",
+      "items": [
+        "🏬 <strong>Tienda física:</strong> lunes a viernes de 9:00 AM a 6:00 PM",
+        "🌐 <strong>Tienda online:</strong> disponible 24/7 para tus compras",
+        "👩‍💻 <strong>Atención al cliente:</strong> 8:00 AM a 8:00 PM todos los días"
+      ]
+    }
+  },
+  "respuestasEmojis": {
+    "corazon": "¡Gracias por el cariño! 💕 Me alegra que te guste nuestra tienda. ¿En qué puedo ayudarte hoy?",
+    "pulgarArriba": "¡Muchas gracias! 👍 Estoy aquí para ayudarte. ¿Necesitas información sobre algún producto o servicio?",
+    "sonrisa": "¡Qué bueno verte feliz! 😊 ¿Hay algo en especial que estés buscando hoy?",
+    "pensando": "Parece que estás pensando... 🤔 ¿Tienes alguna duda sobre nuestros productos o servicios? Estoy aquí para resolverla.",
+    "triste": "Lamento verte así 😔 ¿Hay algo en lo que pueda ayudarte para mejorar tu experiencia?",
+    "risa": "¡Me encanta tu sentido del humor! 😄 ¿En qué puedo asistirte hoy?",
+    "otrosEmojis": "Veo que enviaste un emoji. ¿En qué puedo ayudarte hoy? Puedes preguntarme por productos, envíos, o métodos de pago."
+  },
+  "mensajesGenericos": {
+    "noEntiendo": [
+      "Lo siento, no he podido entender tu consulta. ¿Podrías reformularla de otra manera? 🤔",
+      "Disculpa, no tengo información sobre eso. ¿Puedo ayudarte con otra cosa? 🙏",
+      "No estoy seguro de entender tu pregunta. ¿Podrías ser más específico, por favor? 🧐"
+    ],
+    "mensajeVacio": "Parece que no has escrito nada. ¿En qué puedo ayudarte hoy? Puedes preguntarme sobre productos, envíos, pagos o cualquier otra duda.",
+    "mensajeCorto": "Tu mensaje es muy breve. Para poder ayudarte mejor, ¿podrías proporcionarme más detalles sobre tu consulta?",
+    "tiempo": "⏰ Son las {hora}. ¿En qué más puedo ayudarte?",
+    "fecha": "📅 Hoy es {fecha}. Espero que estés teniendo un buen día. ✨",
+    "clima": "🌦️ Lo siento, no tengo acceso a información del clima en tiempo real. Te recomiendo consultar una aplicación de clima o un servicio meteorológico para obtener esa información.",
+    "agradecimiento": "¡De nada! 😊 Estoy aquí para ayudarte. ¿Hay algo más en lo que pueda asistirte?",
+    "busqueda": "🔍 Puedo ayudarte a encontrar productos. ¿Qué estás buscando? Puedes decirme el tipo de producto, características o marca.",
+    "recomendacion": "✨ Me encantaría recomendarte productos. Para darte las mejores sugerencias, dime qué categoría te interesa o qué tipo de producto estás buscando.",
+    "insatisfaccion": "😔 Lamento escuchar eso. Me gustaría ayudarte a solucionar cualquier problema que estés experimentando. ¿Podrías darme más detalles para poder asistirte mejor?"
+  },
+  "fechaHora": {
+    "respuestaFecha": [
+      "📅 Hoy es {fecha}. ¿En qué puedo ayudarte hoy?",
+      "Según mi calendario, hoy es {fecha}. ¿Necesitas información sobre algún producto o servicio?"
+    ],
+    "respuestaHora": [
+      "⏰ En este momento son las {hora}. ¿En qué puedo asistirte?",
+      "El reloj marca las {hora}. ¿Hay algo en lo que pueda ayudarte?"
+    ]
+  },
+  "garantias": {
+    "tecnologia": "Para productos de tecnología, ofrecemos garantías de 6 a 24 meses dependiendo del tipo de producto. La garantía cubre defectos de fabricación y malfuncionamiento no causado por el usuario. Para hacer efectiva la garantía, necesitarás la factura de compra original.",
+    "electrodomesticos": "Nuestros electrodomésticos incluyen garantía de 12 meses que cubre partes y mano de obra para reparaciones por defectos de fabricación. Para activar tu garantía, registra tu producto en nuestra página web.",
+    "moda": "Los productos de moda tienen una garantía de 30 días por defectos de fabricación. No cubre desgaste normal ni daños causados por uso inadecuado. Conserva tu factura y etiquetas originales para cualquier reclamo.",
+    "muebles": "Nuestros muebles cuentan con 6 meses de garantía en la estructura. Para realizar un reclamo, envíanos fotos del producto y la descripción del problema junto con tu número de orden."
+  },
+  "presupuesto": {
+    "bajo": "Para tu presupuesto, te recomiendo explorar nuestras ofertas especiales y productos de gama económica. Tenemos excelentes opciones con gran relación calidad-precio que se ajustarán perfectamente a lo que buscas. ¿Te gustaría que te muestre algunas alternativas específicas?",
+    "medio": "Con ese presupuesto tienes acceso a una excelente variedad de productos de calidad. Puedo mostrarte opciones destacadas que ofrecen un buen equilibrio entre características y precio. ¿Hay alguna categoría específica que te interese explorar?",
+    "alto": "Tu presupuesto te permite acceder a nuestros productos premium y de alta gama con características avanzadas. Puedo recomendarte opciones exclusivas con la mejor calidad y tecnología disponible. ¿En qué categoría estás interesado?"
+  },
+  "ofertas": {
+    "tecnologia": "🔥 **Ofertas en Tecnología**: Actualmente tenemos smartphones con hasta 20% de descuento, laptops con 15% off y accesorios desde $499. Además, llevando dos productos de audio obtienes un 30% en el segundo. <a href='/products?category=tecnologia&onSale=true' class='chatLink'>Ver ofertas en tecnología</a>",
+    "moda": "👕 **Ofertas en Moda**: Aprovecha nuestras promociones con hasta 40% de descuento en ropa de temporada, calzado con 25% off y accesorios desde $299. También tenemos promociones 2x1 en prendas seleccionadas. <a href='/products?category=moda&onSale=true' class='chatLink'>Ver ofertas en moda</a>",
+    "hogar": "🏠 **Ofertas en Hogar**: Descuentos de hasta 30% en muebles, 25% en electrodomésticos y decoración desde $199. Además, tenemos combo de cocina con 35% off comprando 3 o más productos. <a href='/products?category=hogar&onSale=true' class='chatLink'>Ver ofertas en hogar</a>",
+    "general": "🛍️ **Ofertas Destacadas**: Tenemos increíbles descuentos en todas nuestras categorías, con rebajas de hasta 40% en productos seleccionados, promociones 2x1 y envío gratis en compras mayores a $10,000. ¡No te pierdas estas oportunidades por tiempo limitado! <a href='/products?onSale=true' class='chatLink'>Ver todas las ofertas</a>"
+  },
+  "recomendaciones": {
+    "titulo": "🌟 <strong>Recomendaciones personalizadas para ti:</strong>",
+    "productos": [
+      "Basado en tu historial, creo que te encantará nuestro {producto1} que combina calidad y precio asequible.",
+      "Te recomiendo especialmente {producto2}, que tiene excelentes valoraciones de nuestros clientes.",
+      "Un producto que está siendo muy popular y coincide con tus intereses es {producto3}."
+    ],
+    "conclusion": "¿Te gustaría ver más detalles de alguno de estos productos o prefieres que te muestre otras recomendaciones?"
+  }
+}

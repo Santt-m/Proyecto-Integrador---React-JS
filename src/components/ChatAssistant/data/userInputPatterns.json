@@ -1,0 +1,102 @@
+{
+  "userInputPatterns": {
+    "saludos": [
+      "hola", "buenos días", "buenas tardes", "buenas noches", "saludos", "qué tal", 
+      "cómo estás", "hey", "hi", "hello"
+    ],
+    "productos": [
+      "productos", "qué venden", "qué ofrecen", "catálogo", "artículos", "productos disponibles", 
+      "categorías", "tipos de productos", "qué puedo comprar", "mostrar productos"
+    ],
+    "tecnologia": [
+      "tecnología", "electrónica", "gadgets", "computadoras", "laptops", "celulares", 
+      "smartphones", "tablets", "accesorios tecnológicos", "auriculares", "televisores",
+      "smart tv", "cámaras", "impresoras", "gaming", "consolas", "videojuegos",
+      "quiero un teléfono", "quiero comprar un teléfono", "busco un teléfono",
+      "quiero una televisión", "quiero comprar una televisión", "busco una televisión",
+      "busco una tv", "quiero una tv", "quiero comprar una laptop", "busco una computadora",
+      "quiero comprar una tablet", "quiero un smartwatch", "quiero una consola"
+    ],
+    "moda": [
+      "moda", "ropa", "vestimenta", "zapatos", "calzado", "accesorios", "bolsos", "carteras",
+      "joyas", "relojes", "cinturones", "sombreros", "gafas", "lentes", "ropa de hombre",
+      "ropa de mujer", "ropa infantil", "ropa de niños", "tendencias"
+    ],
+    "hogar": [
+      "hogar", "casa", "muebles", "decoración", "electrodomésticos", "cocina", "baño", 
+      "dormitorio", "sala", "comedor", "jardín", "iluminación", "alfombras", "cortinas",
+      "utensilios", "herramientas", "almacenamiento"
+    ],
+    "deportes": [
+      "deportes", "equipamiento deportivo", "ropa deportiva", "calzado deportivo", "fitness",
+      "gimnasio", "entrenamiento", "fútbol", "baloncesto", "tenis", "natación", "ciclismo",
+      "running", "yoga", "camping", "pesca", "montañismo", "accesorios deportivos"
+    ],
+    "belleza": [
+      "belleza", "cosméticos", "maquillaje", "skincare", "cuidado facial", "cremas", "perfumes",
+      "fragancias", "cabello", "shampoo", "acondicionador", "tintes", "uñas", "esmaltes",
+      "cuidado personal", "higiene", "tratamientos", "mascarillas"
+    ],
+    "alimentos": [
+      "alimentos", "comida", "bebidas", "vinos", "licores", "café", "té", "snacks", "dulces",
+      "chocolates", "orgánicos", "gourmet", "saludables", "sin gluten", "sin azúcar",
+      "vegetarianos", "veganos", "suplementos alimenticios"
+    ],
+    "envios": [
+      "envíos", "entregas", "shipping", "envío a domicilio", "costo de envío", "tiempo de envío",
+      "envío gratis", "rastrear pedido", "cuánto tarda", "cómo recibir", "dónde entregan",
+      "seguimiento de pedido", "tracking", "envíos internacionales"
+    ],
+    "pagos": [
+      "pagos", "métodos de pago", "formas de pago", "tarjetas", "crédito", "débito", 
+      "transferencia bancaria", "efectivo", "billetera virtual", "cuotas", "interés",
+      "mercadopago", "paypal", "descuentos", "promociones", "ofertas", "medios de pago"
+    ],
+    "devoluciones": [
+      "devoluciones", "cambios", "garantía", "producto defectuoso", "no me gusta", "equivocado",
+      "roto", "dañado", "mal estado", "política de devoluciones", "reembolso", "dinero de vuelta",
+      "cómo devolver", "plazo de devolución", "requisitos para devolver"
+    ],
+    "garantia": [
+      "garantía", "garantías", "tiempo de garantía", "cobertura", "productos con garantía",
+      "hacer válida la garantía", "extender garantía", "garantía extendida", "reparación",
+      "servicio técnico", "soporte", "falla", "defecto de fábrica"
+    ],
+    "tiendaFisica": [
+      "tienda física", "sucursal", "local", "showroom", "dirección", "ubicación", "dónde están ubicados",
+      "horario de atención", "visitar tienda", "comprar en persona", "ver productos físicamente",
+      "prueba de productos", "dirección de la tienda", "cómo llegar"
+    ],
+    "cuenta": [
+      "cuenta", "registro", "registrarme", "iniciar sesión", "login", "contraseña", "recuperar contraseña",
+      "olvide mi contraseña", "crear cuenta", "beneficios de tener cuenta", "perfil", "datos personales",
+      "historial de compras", "mis compras", "favoritos", "lista de deseos"
+    ],
+    "descuentos": [
+      "descuentos", "promociones", "ofertas", "cuánto descuento", "cupones", "códigos promocionales",
+      "rebajas", "liquidación", "outlet", "día de descuentos", "black friday", "cyber monday",
+      "hot sale", "ventas especiales", "programa de fidelidad", "puntos"
+    ],
+    "contacto": [
+      "contacto", "contactar", "atención al cliente", "servicio al cliente", "teléfono", "email",
+      "correo electrónico", "formulario de contacto", "chat", "whatsapp", "redes sociales",
+      "hablar con un representante", "ayuda", "soporte"
+    ],
+    "compra": [
+      "comprar", "cómo comprar", "proceso de compra", "hacer un pedido", "carrito de compras",
+      "agregar al carrito", "checkout", "confirmar compra", "completar compra", "finalizar compra",
+      "error de compra", "compra fallida", "compra exitosa", "recibo", "factura",
+      "quiero comprar", "deseo comprar", "me gustaría comprar", "voy a comprar"
+    ],
+    "disponibilidad": [
+      "disponibilidad", "stock", "hay disponible", "cuándo vuelve a haber", "agotado", "sin stock",
+      "tienen disponible", "cuándo llega", "próximo lanzamiento", "pre-venta", "reservar",
+      "notificarme cuando esté disponible"
+    ],
+    "regalo": [
+      "regalo", "quiero hacer un regalo", "busco un regalo", "para regalar", "regalo para",
+      "idea de regalo", "sugerencia de regalo", "presente", "obsequio", "envolver para regalo",
+      "tarjeta de regalo", "gift card", "regalos para", "opciones de regalo"
+    ]
+  }
+}

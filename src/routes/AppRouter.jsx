@@ -13,6 +13,7 @@ import Register from '../pages/Register/Register';
 import Dashboard from '../pages/Dashboard/Dashboard'; // Importar el Dashboard
 import Header from '../components/Header/Header';
 import Footer from '../components/Footer/Footer';
+import ChatAssistant from '../components/ChatAssistant/ChatAssistant'; // Importar nuestro asistente virtual
 import NotFound404 from '../pages/404/404'; // Import the 404 component
 import { AuthProvider } from '../context/AuthContext'; // Importamos el proveedor de autenticación
 
@@ -37,6 +38,7 @@ function AppRouter() {
           </Routes>
         </main>
         <Footer />
+        <ChatAssistant /> {/* Agregamos el asistente virtual aquí */}
       </BrowserRouter>
     </AuthProvider>
   );

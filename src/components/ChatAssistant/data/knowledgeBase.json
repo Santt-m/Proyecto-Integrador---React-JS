@@ -1,0 +1,96 @@
+{
+  "saludos": [
+    "Hola, ¿en qué puedo ayudarte hoy?",
+    "¡Bienvenido/a! Estoy aquí para asistirte.",
+    "¡Hola! Soy el asistente virtual. ¿Cómo puedo ayudarte?"
+  ],
+  "productos": [
+    "Tenemos una amplia variedad de productos. Puedes explorarlos en la sección de Productos.",
+    "Nuestros productos están organizados por categorías para facilitar tu búsqueda.",
+    "Contamos con categorías como tecnología, moda, hogar, deportes, belleza y alimentos. ¿Qué te interesa explorar?"
+  ],
+  "tecnologia": [
+    "En nuestra sección de tecnología encontrarás smartphones, laptops, accesorios y más. ¿Buscas algo específico?",
+    "Tenemos las últimas novedades en tecnología con garantía de hasta 2 años. ¿Te gustaría ver algún producto en particular?"
+  ],
+  "moda": [
+    "Nuestra sección de moda incluye ropa para hombres, mujeres y niños. También tenemos accesorios y calzado.",
+    "Encontrarás las últimas tendencias en moda con descuentos especiales regularmente. ¿Buscas algo en particular?"
+  ],
+  "hogar": [
+    "En la categoría de hogar tenemos muebles, decoración, electrodomésticos y artículos de cocina.",
+    "Transforma tu hogar con nuestra selección de productos para todas las habitaciones. ¿Necesitas algo específico?"
+  ],
+  "deportes": [
+    "En la sección de deportes encontrarás equipamiento, ropa deportiva y accesorios para diferentes disciplinas.",
+    "Ya sea que practiques fútbol, running, ciclismo o yoga, tenemos todo lo que necesitas. ¿Qué deporte practicas?"
+  ],
+  "belleza": [
+    "Nuestra categoría de belleza incluye maquillaje, cuidado facial, corporal y capilar.",
+    "Trabajamos con las mejores marcas de belleza para cuidar tu piel y realzar tu belleza natural. ¿Buscas algún producto específico?"
+  ],
+  "alimentos": [
+    "En nuestra sección de alimentos encontrarás productos gourmet, orgánicos y de primera necesidad.",
+    "Todos nuestros alimentos pasan por estrictos controles de calidad. ¿Qué tipo de alimentos estás buscando?"
+  ],
+  "envios": [
+    "Realizamos envíos a todo el país. El tiempo estimado es de 3-5 días hábiles.",
+    "Para compras superiores a $10.000, ¡el envío es gratis!",
+    "Puedes seguir tu pedido desde la sección \"Mis Pedidos\" en tu cuenta o contactándonos directamente."
+  ],
+  "pagos": [
+    "Aceptamos tarjetas de crédito, débito, transferencias bancarias, MercadoPago y PayPal.",
+    "Todas nuestras transacciones son seguras y encriptadas.",
+    "Ofrecemos hasta 12 cuotas sin interés en productos seleccionados con tarjetas participantes."
+  ],
+  "devoluciones": [
+    "Puedes solicitar un cambio o devolución dentro de los 30 días posteriores a tu compra.",
+    "Para iniciar un proceso de devolución, contacta a nuestro servicio al cliente.",
+    "Es importante mantener el packaging original y todos los accesorios para aplicar a una devolución."
+  ],
+  "garantia": [
+    "Todos nuestros productos cuentan con garantía de fabricante, desde 6 meses hasta 2 años según el tipo de producto.",
+    "Para hacer efectiva la garantía, conserva tu factura de compra y contacta a nuestro servicio al cliente.",
+    "Los términos específicos de la garantía se detallan en la descripción de cada producto."
+  ],
+  "tiendaFisica": [
+    "Contamos con una tienda showroom en Buenos Aires. La dirección es Av. Libertador 1234.",
+    "El horario de atención es de lunes a viernes de 9:00 AM a 6:00 PM.",
+    "En nuestra tienda física puedes ver y probar algunos de nuestros productos destacados antes de comprar."
+  ],
+  "cuenta": [
+    "Puedes crear una cuenta haciendo clic en \"Registrarse\" en la esquina superior derecha del sitio.",
+    "Una cuenta te permite hacer seguimiento de tus pedidos, guardar favoritos y acceder a ofertas exclusivas.",
+    "Si ya tienes una cuenta, simplemente haz clic en \"Iniciar Sesión\" e ingresa tus credenciales."
+  ],
+  "descuentos": [
+    "Ofrecemos descuentos especiales para compras mayoristas. Contáctanos para recibir una cotización personalizada.",
+    "Regularmente tenemos promociones y ofertas especiales. Suscríbete a nuestro newsletter para enterarte primero.",
+    "Los usuarios registrados reciben ofertas exclusivas por email."
+  ],
+  "contacto": [
+    "Puedes contactarnos por teléfono al +54 11 5678-9012.",
+    "También puedes enviarnos un email a info@mitiendareact.com.",
+    "O si prefieres, completa el formulario de contacto en nuestra página web."
+  ],
+  "regalo": [
+    "Tenemos muchas opciones para regalos según la ocasión y presupuesto. ¿Podrías decirme para quién es el regalo y aproximadamente cuánto quieres gastar?",
+    "Ofrecemos servicio de envoltura para regalo por un cargo adicional de $200 y podemos incluir una tarjeta personalizada con tu mensaje.",
+    "Algunos de nuestros productos más populares para regalar son: smartwatches, sets de belleza, accesorios de moda y juegos de mesa. ¿Te gustaría ver opciones en alguna de estas categorías?"
+  ],
+  "compra": [
+    "Para realizar una compra en nuestra tienda online, simplemente busca el producto que deseas, agrégalo al carrito y sigue los pasos para completar el pago.",
+    "El proceso de compra es sencillo y seguro. Puedes pagar con diferentes métodos y elegir tu opción de envío preferida.",
+    "Si tienes alguna duda durante el proceso de compra, nuestro equipo de atención al cliente está disponible para ayudarte."
+  ],
+  "disponibilidad": [
+    "La disponibilidad de nuestros productos se muestra en tiempo real en la página de cada producto.",
+    "Si un producto está agotado, puedes registrarte para recibir una notificación cuando vuelva a estar disponible.",
+    "Actualizamos nuestro inventario regularmente para garantizar que la información de disponibilidad sea precisa."
+  ],
+  "noEntiendo": [
+    "Lo siento, no he entendido tu consulta. ¿Podrías reformularla?",
+    "Disculpa, no tengo información sobre eso. ¿Puedo ayudarte con otra cosa?",
+    "No estoy seguro de entender. ¿Podrías ser más específico?"
+  ]
+}

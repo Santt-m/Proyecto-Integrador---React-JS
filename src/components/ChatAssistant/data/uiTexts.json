@@ -1,0 +1,99 @@
+{
+  "chatInterface": {
+    "title": "Asistente Virtual",
+    "inputPlaceholder": "Escribe tu mensaje...",
+    "searchPlaceholder": "¿Qué producto estás buscando?",
+    "emptyMessages": "No hay mensajes para mostrar",
+    "loadingMore": "Cargando más mensajes...",
+    "sendButtonLabel": "Enviar mensaje",
+    "messageFeedback": "¿Fue útil?",
+    "messageFeedbackYes": "Sí, fue útil",
+    "messageFeedbackNo": "No, no fue útil",
+    "typingIndicator": "El asistente está escribiendo una respuesta..."
+  },
+  "suggestions": {
+    "initialTitle": "Preguntas frecuentes:",
+    "categoriesTitle": "Explora por categoría:",
+    "moreTitle": "También puedes preguntarme:"
+  },
+  "quickActions": {
+    "search": "Buscar",
+    "track": "Rastrear",
+    "catalog": "Catálogo",
+    "contact": "Contacto"
+  },
+  "headerButtons": {
+    "sound": {
+      "on": "Desactivar sonido",
+      "off": "Activar sonido"
+    },
+    "clear": "Limpiar historial",
+    "minimize": {
+      "minimize": "Minimizar chat",
+      "maximize": "Maximizar chat"
+    },
+    "close": "Cerrar asistente",
+    "open": "Abrir asistente"
+  },
+  "commandResponses": {
+    "helpText": "<strong>Comandos disponibles:</strong><br>/buscar [término] - Buscar productos<br>/categorias - Ver todas las categorías<br>/ofertas - Ver ofertas actuales<br>/help - Ver esta ayuda",
+    "searchNoTerm": "Para buscar productos, por favor especifica qué estás buscando después del comando /buscar.",
+    "searchWithTerm": "Aquí tienes algunos resultados para \"{searchTerm}\": <a href=\"/products?search={searchTermEncoded}\" class=\"chatLink\">Ver resultados de búsqueda</a>",
+    "categoriesTitle": "<strong>Categorías disponibles:</strong><br>",
+    "offersResponse": "Puedes ver todas nuestras ofertas actuales <a href=\"/products?onSale=true\" class=\"chatLink\">haciendo clic aquí</a>.",
+    "unknownCommand": "Lo siento, no reconozco ese comando. Escribe /help para ver los comandos disponibles."
+  },
+  "notifications": {
+    "newMessages": "nuevos mensajes"
+  },
+  "feedbackResponses": {
+    "positive": "¡Me alegra haber sido de ayuda! ¿Hay algo más en lo que pueda asistirte?",
+    "negative": "Lamento no haber podido resolver tu consulta adecuadamente. ¿Podrías decirme qué información estás buscando para intentar ayudarte mejor?"
+  },
+  "initialMessage": "¡Hola! Soy el asistente virtual de MiTienda. ¿Cómo puedo ayudarte hoy?",
+  "searchMode": "¿Qué producto estás buscando? Puedes indicarme categoría, tipo o características específicas.",
+  "trackOrder": "Para rastrear tu pedido, necesito tu número de orden. Por favor, escríbelo a continuación o <a href=\"/account/orders\" class=\"chatLink\">ingresa a tu cuenta</a> para ver todos tus pedidos.",
+  "categoryResult": "Aquí tienes nuestros productos de {categoryName}: <a href=\"/products?category={categoryId}\" class=\"chatLink\">Ver {categoryName}</a>. ¿Buscas algo específico dentro de esta categoría?",
+  "defaultSuggestions": [
+    "¿Cómo realizo una compra?",
+    "¿Cuáles son los métodos de pago?",
+    "¿Tienen envío gratis?",
+    "¿Qué ofertas tienen disponibles?",
+    "Tengo un presupuesto de $200"
+  ],
+  "cartSuggestions": [
+    "¿Cómo finalizo mi compra?",
+    "¿Cuánto tarda el envío?",
+    "¿Puedo modificar mi pedido?",
+    "¿Tienen descuentos por cantidad?"
+  ],
+  "categorySuggestions": [
+    "Ver productos de tecnología",
+    "Mostrar productos de moda",
+    "Recomendarme productos de hogar",
+    "Buscar ofertas en deportes",
+    "Productos destacados en oferta"
+  ],
+  "budgetSuggestions": [
+    "¿Qué me recomiendas con $500?",
+    "Busco algo por menos de $1000",
+    "¿Cuáles son los mejores productos en oferta?",
+    "Necesito un regalo dentro de mi presupuesto",
+    "¿Qué puedo comprar con $200?"
+  ],
+  "offerSuggestions": [
+    "¿Cuáles son las mejores ofertas del momento?",
+    "¿Hay descuentos en tecnología?",
+    "¿Tienen promociones 2x1?",
+    "¿Cuándo inicia la próxima liquidación?",
+    "¿Qué productos tienen mayor descuento?"
+  ],
+  "preferredCategorySuggestions": [
+    "Ver más productos de {category}",
+    "Ofertas en {category}",
+    "Novedades en {category}",
+    "Ver productos recomendados",
+    "¿Cómo funcionan las reseñas de productos?"
+  ],
+  "emojis": ["😊", "👍", "❤️", "😂", "🙏", "😍", "🤔", "😢", "👏", "🔥", "✨", "👌"]
+}

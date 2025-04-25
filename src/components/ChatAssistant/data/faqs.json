@@ -1,0 +1,152 @@
+[
+  {
+    "id": 1,
+    "question": "¿Cómo realizo una compra?",
+    "answer": "Para realizar una compra, sigue estos pasos: 1) Navega a la sección de Productos 2) Selecciona el producto que deseas 3) Haz clic en 'Agregar al carrito' 4) Cuando estés listo, ve al carrito y haz clic en 'Proceder al pago' 5) Completa la información de envío y pago 6) ¡Listo! Recibirás un correo de confirmación de tu compra.",
+    "keywords": ["compra", "comprar", "pagar", "proceso", "cómo comprar", "cómo pago"]
+  },
+  {
+    "id": 2,
+    "question": "¿Cuáles son los métodos de pago aceptados?",
+    "answer": "Aceptamos tarjetas de crédito y débito (Visa, Mastercard, American Express), PayPal, Mercado Pago y transferencias bancarias. Todas nuestras transacciones están protegidas con la más alta seguridad. Para conocer los términos y condiciones específicos de cada método de pago, consulta nuestra política de pagos en el sitio web.",
+    "keywords": ["métodos de pago", "pago", "tarjeta", "débito", "crédito", "transferencia", "mercadopago", "paypal"]
+  },
+  {
+    "id": 3,
+    "question": "¿Tienen envío gratis?",
+    "answer": "¡Sí! Ofrecemos envío gratuito en todas las compras superiores a $10.000 dentro del territorio nacional. Para compras menores, el costo de envío se calcula según la ubicación de entrega. Esta información es orientativa; los detalles exactos se confirmarán durante el proceso de compra y están sujetos a nuestra política de envíos actual.",
+    "keywords": ["envío gratis", "envío gratuito", "shipping", "delivery", "costo envío", "cobran envío"]
+  },
+  {
+    "id": 4,
+    "question": "¿Cómo hago un cambio o devolución?",
+    "answer": "Puedes solicitar un cambio o devolución dentro de los 30 días posteriores a tu compra. Solo necesitas conservar el empaque original y el producto en buen estado. Contacta a nuestro servicio al cliente para iniciar el proceso. Para información completa y legalmente vinculante, consulta nuestra política de devoluciones en la sección correspondiente del sitio web.",
+    "keywords": ["cambio", "devolución", "devolver", "reembolso", "no me gusta", "producto dañado"]
+  },
+  {
+    "id": 5,
+    "question": "¿Cuánto tarda el envío?",
+    "answer": "Nuestros envíos suelen tardar entre 3-5 días hábiles, dependiendo de tu ubicación. Una vez realizada la compra, recibirás un correo con el número de seguimiento para que puedas monitorear tu pedido en tiempo real. Los tiempos de entrega son estimativos y pueden variar según factores externos.",
+    "keywords": ["tiempo de envío", "demora", "cuándo llega", "plazos", "días", "seguimiento"]
+  },
+  {
+    "id": 6,
+    "question": "¿Los productos tienen garantía?",
+    "answer": "Todos nuestros productos cuentan con garantía de fabricante. El período de garantía varía según el tipo de producto, desde 6 meses hasta 2 años. Puedes verificar la garantía específica en la descripción de cada producto. Esta información es orientativa; para los términos exactos y legalmente vinculantes de la garantía, consulta la documentación que acompaña al producto o nuestra política de garantías.",
+    "keywords": ["garantía", "falla", "roto", "no funciona", "defectuoso", "arreglo"]
+  },
+  {
+    "id": 7,
+    "question": "¿Tienen tienda física?",
+    "answer": "Actualmente operamos principalmente de manera online, pero contamos con una tienda showroom en Buenos Aires. La dirección es Av. Libertador 1234. El horario de atención es de lunes a viernes de 9:00 AM a 6:00 PM. Te recomendamos verificar estos datos antes de tu visita, ya que pueden estar sujetos a cambios.",
+    "keywords": ["tienda física", "local", "showroom", "dirección", "sucursal", "visitar"]
+  },
+  {
+    "id": 8,
+    "question": "¿Cómo creo una cuenta?",
+    "answer": "Puedes crear una cuenta fácilmente haciendo clic en 'Registrarse' en la esquina superior derecha del sitio. Solo necesitas proporcionar tu nombre, correo electrónico y una contraseña. ¡Es rápido y sencillo! Al registrarte, aceptas nuestros términos y condiciones y política de privacidad.",
+    "keywords": ["crear cuenta", "registrarse", "registro", "usuario", "iniciar sesión", "login"]
+  },
+  {
+    "id": 9,
+    "question": "¿Ofrecen descuentos para compras mayoristas?",
+    "answer": "¡Sí! Ofrecemos descuentos especiales para compras al por mayor. Si estás interesado en realizar una compra mayorista, por favor contáctanos a través del formulario en la sección de Contacto o envíanos un correo a info@mitiendareact.com para recibir una cotización personalizada. Las cotizaciones están sujetas a confirmación y pueden tener condiciones específicas que se detallarán en cada caso.",
+    "keywords": ["mayorista", "por mayor", "descuentos", "volumen", "cantidad", "lote", "empresas"]
+  },
+  {
+    "id": 10,
+    "question": "¿Cómo puedo rastrear mi pedido?",
+    "answer": "Una vez que tu pedido ha sido enviado, recibirás un correo electrónico con el número de seguimiento. También puedes verificar el estado de tu pedido iniciando sesión en tu cuenta y navegando a la sección 'Mis pedidos'. La información de seguimiento es proporcionada por el servicio de logística y puede tomar hasta 24 horas en actualizarse.",
+    "keywords": ["rastrear", "seguimiento", "tracking", "dónde está", "estado del pedido", "número de seguimiento"]
+  },
+  {
+    "id": 11,
+    "question": "¿Cuál es su política de privacidad?",
+    "answer": "Tu privacidad es importante para nosotros. No compartimos tu información personal con terceros sin tu consentimiento. Puedes consultar nuestra política de privacidad completa en el pie de página de nuestro sitio web en la sección 'Política de Privacidad'. Ten en cuenta que esta respuesta es informativa; para información legalmente vinculante, consulta el documento oficial de nuestra política de privacidad.",
+    "keywords": ["privacidad", "datos personales", "información personal", "política", "datos", "confidencialidad", "seguridad datos"]
+  },
+  {
+    "id": 12,
+    "question": "¿Tienen un programa de fidelidad o puntos?",
+    "answer": "¡Sí! Nuestro programa de fidelidad te permite acumular puntos con cada compra que realices. Por cada $1000 gastados, recibes 10 puntos. Estos puntos pueden canjearse por descuentos en futuras compras. Regístrate en nuestra página para comenzar a acumular puntos. Los términos completos del programa están disponibles en la sección 'Programa de Fidelidad' de nuestro sitio.",
+    "keywords": ["fidelidad", "puntos", "programa", "recompensas", "beneficios", "cliente frecuente", "descuentos"]
+  },
+  {
+    "id": 13,
+    "question": "¿Tienen opción de envío express o en el mismo día?",
+    "answer": "Ofrecemos envío express que garantiza la entrega en 24-48 horas en las principales ciudades. También contamos con envío en el mismo día para pedidos realizados antes de las 11:00 AM en CABA y zonas cercanas. Ambas opciones tienen un costo adicional que se mostrará durante el proceso de compra. La disponibilidad de estos servicios puede variar según la ubicación y la capacidad logística del momento.",
+    "keywords": ["express", "envío rápido", "mismo día", "urgente", "24 horas", "inmediato", "envío urgente"]
+  },
+  {
+    "id": 14,
+    "question": "¿Puedo modificar o cancelar mi pedido?",
+    "answer": "Puedes modificar o cancelar tu pedido dentro de las primeras 2 horas después de realizarlo. Para hacerlo, inicia sesión en tu cuenta y ve a la sección 'Mis pedidos' o contáctanos inmediatamente por teléfono al +54 11 5678-9012. Una vez que el pedido entra en proceso de preparación, ya no es posible realizar cambios. Para política completa y legalmente vinculante, consulta nuestros términos y condiciones de venta.",
+    "keywords": ["modificar pedido", "cancelar", "cambiar pedido", "anular compra", "editar pedido", "detener envío"]
+  },
+  {
+    "id": 15,
+    "question": "¿Realizan envíos internacionales?",
+    "answer": "Actualmente realizamos envíos a todos los países de Latinoamérica. Los tiempos de entrega varían entre 7-15 días hábiles dependiendo del destino. El costo se calcula en base al peso del paquete y la distancia. Durante el proceso de compra podrás ver el costo exacto antes de confirmar tu pedido. Los envíos internacionales están sujetos a regulaciones aduaneras y posibles tasas adicionales según el país de destino.",
+    "keywords": ["internacional", "otro país", "extranjero", "fuera del país", "envío exterior", "envío fuera", "exportación"]
+  },
+  {
+    "id": 16,
+    "question": "¿Tienen un newsletter con ofertas?",
+    "answer": "Sí, enviamos un newsletter semanal con nuestras mejores ofertas, novedades y contenido exclusivo. Puedes suscribirte en la parte inferior de nuestra página principal. Como bienvenida, recibirás un cupón de descuento del 10% para tu primera compra. Puedes darte de baja en cualquier momento a través del enlace incluido en cada correo.",
+    "keywords": ["newsletter", "suscripción", "correo", "ofertas", "novedades", "descuentos email", "promociones"]
+  },
+  {
+    "id": 17,
+    "question": "¿Cómo puedo contactar al servicio al cliente?",
+    "answer": "Puedes contactarnos de varias formas: Por teléfono al +54 11 5678-9012, por correo electrónico a info@mitiendareact.com, o completando el formulario en nuestra sección de Contacto. Nuestro horario de atención es de lunes a viernes de 9:00 AM a 6:00 PM. Los tiempos de respuesta pueden variar según el volumen de consultas.",
+    "keywords": ["contacto", "atención", "servicio cliente", "ayuda", "asistencia", "hablar", "soporte"]
+  },
+  {
+    "id": 18,
+    "question": "¿Es seguro comprar en este sitio?",
+    "answer": "Absolutamente. Nuestro sitio cuenta con certificado SSL de 256 bits que encripta toda tu información. Además, no almacenamos datos de tarjetas de crédito. Trabajamos con las plataformas de pago más seguras del mercado y cumplimos con todas las normativas de protección de datos personales. Si bien implementamos las mejores prácticas de seguridad, te recomendamos también mantener tus dispositivos protegidos.",
+    "keywords": ["seguro", "seguridad", "confiable", "protección", "datos seguros", "fraude", "estafa"]
+  },
+  {
+    "id": 19,
+    "question": "¿Cuáles son sus políticas de envío y devoluciones?",
+    "answer": "Nuestras políticas de envío incluyen entrega en 3-5 días hábiles y envío gratuito en compras superiores a $10.000. Para devoluciones, ofrecemos un período de 30 días para cambios o reembolsos. Puedes consultar todos los detalles en las secciones 'Política de Envíos' y 'Devoluciones' en el pie de página de nuestro sitio. Esta información es orientativa; para términos legalmente vinculantes, consulta los documentos oficiales en nuestro sitio web.",
+    "keywords": ["políticas", "términos", "condiciones", "reglas", "normativa", "devolución", "envío"]
+  },
+  {
+    "id": 20,
+    "question": "¿Qué categorías de productos ofrecen?",
+    "answer": "Ofrecemos una amplia gama de productos en categorías como Tecnología, Moda, Hogar, Deportes, Belleza y Alimentos. Puedes explorar cada categoría desde nuestro menú de navegación o usar los filtros en la página de Productos para encontrar exactamente lo que estás buscando. Nuestro catálogo se actualiza regularmente, por lo que te recomendamos visitarlo con frecuencia para ver las novedades.",
+    "keywords": ["categorías", "tipos", "productos", "variedad", "secciones", "departamentos", "clasificación"]
+  },
+  {
+    "id": 21,
+    "question": "¿Cuál es el plazo para cambios por talla incorrecta?",
+    "answer": "Para cambios por talla incorrecta, tienes un plazo de 15 días desde la recepción del producto. El artículo debe estar sin usar, con etiquetas originales y en su empaque original. Los gastos de envío para el cambio son gratuitos en la primera solicitud. Para iniciar el proceso, dirígete a tu cuenta en la sección 'Mis pedidos' o contáctanos directamente.",
+    "keywords": ["cambio talla", "equivoqué talla", "talla incorrecta", "cambiar talla", "no me queda"]
+  },
+  {
+    "id": 22,
+    "question": "¿Tienen opción de regalo?",
+    "answer": "¡Sí! Ofrecemos servicio de envoltura para regalo por un cargo adicional de $200. Puedes seleccionar esta opción durante el proceso de compra y añadir una tarjeta personalizada con tu mensaje. También contamos con cajas de regalo premium a $500 para ocasiones especiales. Los productos marcados como regalo se envían sin factura de precio visible.",
+    "keywords": ["regalo", "envolver", "empaque regalo", "tarjeta regalo", "gift", "presente"]
+  },
+  {
+    "id": 23,
+    "question": "¿Hacen ventas corporativas o para empresas?",
+    "answer": "Efectivamente, contamos con un departamento especializado en ventas corporativas que ofrece condiciones especiales para empresas. Ofrecemos descuentos por volumen, opciones de personalización de productos y facilidades de pago. Para más información, escríbenos a empresas@mitiendareact.com detallando tu requerimiento y un asesor se pondrá en contacto contigo.",
+    "keywords": ["corporativo", "empresa", "venta empresarial", "compra corporativa", "personalizado empresa", "regalos empresariales"]
+  },
+  {
+    "id": 24,
+    "question": "¿Qué debo hacer si mi producto llega dañado?",
+    "answer": "Si tu producto llega dañado, debes notificárnoslo dentro de las 48 horas siguientes a la recepción. Toma fotografías del embalaje y del producto dañado, y envíalas junto con tu número de pedido a soporte@mitiendareact.com. Nuestro equipo evaluará el caso y te ofrecerá un reemplazo o reembolso según corresponda. No es necesario devolver el producto dañado en todos los casos.",
+    "keywords": ["dañado", "roto", "deteriorado", "golpeado", "llegó mal", "defectuoso", "producto estropeado"]
+  },
+  {
+    "id": 25,
+    "question": "¿Puedo rastrear mi pedido en tiempo real?",
+    "answer": "Sí, todos nuestros envíos incluyen seguimiento en tiempo real. Una vez que tu pedido es despachado, recibirás un correo electrónico con un enlace de seguimiento. También puedes acceder a esta información desde tu cuenta en la sección 'Mis pedidos'. Nuestro sistema se actualiza cada 2-4 horas y permite ver la ubicación exacta del paquete y su estado actual.",
+    "keywords": ["rastreo tiempo real", "seguimiento en vivo", "ubicación pedido", "donde está mi paquete", "tracking en directo"]
+  }
+]
